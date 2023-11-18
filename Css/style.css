@@ -1,0 +1,72 @@
+* {
+  font-size: 4rem;
+
+  font-family: Apercu, helvetica, sans-serif;
+}
+html {
+  /* font-size: 62.5%; thì ==> 1 rem = 10px */
+  font-size: 62.5%;
+  /*  */
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  /* z-index: 100; */
+}
+
+/* section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+} */
+/* phần này chung của Duy với Danh */
+.Duy-Danh {
+  display: flex;
+  min-height: 90rem;
+  gap: 4rem;
+}
+/* phần này chung của Duy với Danh */
+/* Phần này Danh Làm */
+.Duy-Danh .Danh {
+  flex-basis: 30%;
+}
+.Duy-Danh .Danh h3 {
+  text-align: center;
+  align-items: center;
+  color: white;
+  background-color: black;
+}
+img {
+  height: 15rem;
+  width: 15rem;
+  align-items: center;
+  border-radius: 1rem;
+  margin: 5rem;
+}
+
+.Danhdiv-1 {
+  display: flex;
+  border: black;
+  border-style: solid none none none;
+  min-height: 20vh;
+}
+.DanhAuthor p {
+  display: block;
+  font-family: Apercu, helvetica, sans-serif;
+  font-size: 3rem;
+  font-weight: 500;
+}
+.Danhdiv a {
+  text-decoration: none;
+  color: black;
+}
+/* kết thúc phần Danh làm*/
+
+.Duy-Danh .Duy {
+  flex-basis: 70%;
+  background-color: aquamarine;
+}
