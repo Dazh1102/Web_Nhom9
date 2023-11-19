@@ -19,10 +19,10 @@ html {
   /* z-index: 100; */
 }
 
-/* section {
+section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
-} */
+}
 /* phần này chung của Duy với Danh */
 .Duy-Danh {
   display: flex;
@@ -60,9 +60,25 @@ img {
   font-size: 3rem;
   font-weight: 500;
 }
+.Danhdiv {
+  flex-basis: 90%;
+}
+.DanhImg {
+  flex-basis: 10%;
+}
 .Danhdiv a {
   text-decoration: none;
   color: black;
+}
+.DanhTitle {
+  background-color: white;
+  display: flex;
+  color: white;
+}
+.DanhTitle-1 {
+  background-color: black;
+
+  border-radius: 1rem;
 }
 /* kết thúc phần Danh làm*/
 
