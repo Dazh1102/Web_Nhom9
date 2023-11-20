@@ -204,7 +204,7 @@ div.item-bao {
   height: 360px;
 }
 div.item-1 {
-  background: url(/Img/Mới\ sa\ thải\ 1\ ngày\,\ OpenAI\ đàm\ phán\ mời\ ‘cha\ đẻ’\ ChatGPT\ quay\ lại\ làm\ việc.webp);
+  background: url(../Img/Mới\ sa\ thải\ 1\ ngày\,\ OpenAI\ đàm\ phán\ mời\ ‘cha\ đẻ’\ ChatGPT\ quay\ lại\ làm\ việc.webp);
 
   background-size: cover;
   background-position: center;
@@ -212,20 +212,20 @@ div.item-1 {
 }
 
 .headRight-item-bao {
-  background: url(/Img/Mbappe\ lập\ hat-trick\ giúp\ Pháp\ thắng\ kỷ\ lục\ 14-0.webp);
+  background: url(../Img/Mbappe\ lập\ hat-trick\ giúp\ Pháp\ thắng\ kỷ\ lục\ 14-0.webp);
   background-size: cover;
   background-position-y: -20px;
   position: relative;
 }
 .bottomRight-item-bao-left {
-  background: url(/Img/Nga\ nối\ lại\ tấn\ công\ thủ\ đô\ Kiev\ sau\ 52\ ngày.webp);
+  background: url(../Img/Nga\ nối\ lại\ tấn\ công\ thủ\ đô\ Kiev\ sau\ 52\ ngày.webp);
   background-size: cover;
   position: relative;
 
   /* background-position-y: -20px; */
 }
 .bottomRight-item-bao-rigth {
-  background: url(/Img/Máy\ lọc\ không\ khí\ Meliwa\ ‘thuyết\ phục’\ Shark\ Hùng\ Anh\ như\ thế\ nào.webp);
+  background: url(../Img/Máy\ lọc\ không\ khí\ Meliwa\ ‘thuyết\ phục’\ Shark\ Hùng\ Anh\ như\ thế\ nào.webp);
   background-size: cover;
   margin-top: 3px;
   position: relative;
