@@ -145,6 +145,7 @@ div.item-1{
     bottom: -78px;
     transition: all 0.45s ease-in-out;
     opacity: 0;
+    font-size: 15px;
     
 }
 .container_bao:hover .style-bao{
