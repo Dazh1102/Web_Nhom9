@@ -263,7 +263,6 @@ footer {
   margin: 0;
   list-style: none;
 }
-
 .footer-contain ul li {
   display: inline-block;
 }
@@ -305,7 +304,9 @@ footer {
   padding-top: 25px;
   color: white;
 }
-
+.contain-2 h1{
+  font-size: 30px;
+}
 .list li {
   margin-top: 10px;
   font-size: 20px;
