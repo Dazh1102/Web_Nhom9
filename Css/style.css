@@ -19,10 +19,10 @@ html {
   /* z-index: 100; */
 }
 
-section {
+/* section {
   min-height: 100vh;
   padding: 10rem 9% 2rem;
-}
+} */
 /* phần này chung của Duy với Danh */
 .Duy-Danh {
   display: flex;
@@ -51,13 +51,12 @@ img {
 .Danhdiv-1 {
   display: flex;
   border: black;
-  border-style: solid none none none;
-  min-height: 20vh;
+  min-height: 10vh;
 }
 .DanhAuthor p {
   display: block;
   font-family: Apercu, helvetica, sans-serif;
-  font-size: 3rem;
+  font-size: 1.6rem;
   font-weight: 500;
 }
 .Danhdiv {
@@ -69,17 +68,18 @@ img {
 .Danhdiv a {
   text-decoration: none;
   color: black;
+  font-size: 3rem;
 }
 .DanhTitle {
   background-color: white;
-  display: flex;
+
   color: white;
+  width: 100%;
 }
 .DanhTitle-1 {
   background-color: black;
-
-  border-radius: 1rem;
 }
+
 /* kết thúc phần Danh làm*/
 
 .Duy-Danh .Duy {
@@ -491,3 +491,41 @@ header .container_phat .menu .down ul {
   font-size: 15px;
   color: black;
 }
+/* Đây là phần về các thành viên nhóm (Trang About) Danh làm */
+.About-container {
+  background-color: rgb(247, 237, 233);
+}
+.About-header {
+  font-size: 4rem;
+  padding: 10rem 9% 2rem;
+  background-color: rgb(255, 252, 250);
+}
+
+.About-thanhvien h1 {
+  font-size: 4rem;
+  padding: 10rem 9% 2rem;
+}
+.About-thanhvien {
+  font-size: 4rem;
+  padding: 10rem 9% 2rem;
+}
+.About-GioiThieu {
+  display: flex;
+  background-color: rgb(255, 252, 250);
+  border-radius: 5rem;
+}
+.About-img {
+  min-width: 30vh;
+  min-height: 20vh;
+}
+/* Đây là phần  về các thành viên nhóm (Trang About) */
+/* Phần gần đây do Danh làm */
+.Sony {
+  padding: 10rem 9% 2rem;
+  font-size: 4rem;
+}
+.sony-img {
+  width: 640px;
+  height: 427px;
+}
+/* Kết thúc phần sony */
