@@ -1,3 +1,14 @@
+/**
+* Template Name: BizPage
+* Updated: Sep 18 2023 with Bootstrap v5.3.2
+* Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+* Author: BootstrapMade.com
+* License: https://bootstrapmade.com/license/
+*/
+
+/*--------------------------------------------------------------
+# General
+--------------------------------------------------------------*/
 body {
   background: #fff;
   color: #666666;
@@ -36,8 +47,8 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Back to top button
---------------------------------------------------------------*/
+  # Back to top button
+  --------------------------------------------------------------*/
 .back-to-top {
   position: fixed;
   visibility: hidden;
@@ -104,8 +115,8 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Header
---------------------------------------------------------------*/
+  # Header
+  --------------------------------------------------------------*/
 #header {
   transition: all 0.5s;
   z-index: 997;
@@ -148,11 +159,11 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Navigation Menu
---------------------------------------------------------------*/
+  # Navigation Menu
+  --------------------------------------------------------------*/
 /**
-* Desktop Navigation 
-*/
+  * Desktop Navigation 
+  */
 .navbar {
   padding: 0;
 }
@@ -263,8 +274,8 @@ h6 {
 }
 
 /**
-* Mobile Navigation 
-*/
+  * Mobile Navigation 
+  */
 .mobile-nav-toggle {
   color: #fff;
   font-size: 28px;
@@ -368,8 +379,8 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Hero Section
---------------------------------------------------------------*/
+  # Hero Section
+  --------------------------------------------------------------*/
 #hero {
   width: 100%;
   height: 100vh;
@@ -519,14 +530,14 @@ h6 {
 }
 
 /*--------------------------------------------------------------
-# Sections
---------------------------------------------------------------*/
+  # Sections
+  --------------------------------------------------------------*/
 section {
   overflow: hidden;
 }
 
 /* Sections Header
---------------------------------*/
+  --------------------------------*/
 .section-header h3 {
   font-size: 32px;
   color: #111;
@@ -566,14 +577,14 @@ section {
 }
 
 /* Section with background
---------------------------------*/
+  --------------------------------*/
 .section-bg {
   background: #f7f7f7;
 }
 
 /*--------------------------------------------------------------
-# Breadcrumbs
---------------------------------------------------------------*/
+  # Breadcrumbs
+  --------------------------------------------------------------*/
 .breadcrumbs {
   padding: 20px 0;
   background-color: #f7f7f7;
@@ -622,7 +633,7 @@ section {
 }
 
 /* Featured Services Section
---------------------------------*/
+  --------------------------------*/
 #featured-services {
   background: #000;
 }
@@ -669,7 +680,7 @@ section {
 }
 
 /* About Us Section
---------------------------------*/
+  --------------------------------*/
 #about {
   background: url("../img/about-bg.jpg") center top no-repeat fixed;
   background-size: cover;
@@ -765,52 +776,172 @@ section {
 }
 
 /* Services Section
---------------------------------*/
-#services {
+  --------------------------------*/
+/* Phát làm phần Result */
+:root {
+  --primary-color: white;
+}
+#result {
   background: #fff;
   background-size: cover;
   padding: 60px 0 40px 0;
 }
-
-#services .box {
-  margin-bottom: 30px;
+#result .container .head-result {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-#services .icon {
-  float: left;
+#result .container .head-result .card {
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  margin: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
 }
-
-#services .icon i {
-  color: #18d26e;
-  font-size: 36px;
-  line-height: 0;
-  transition: 0.5s;
+#result .container .head-result .card .profile {
+  border-bottom: 0.2rem solid black;
+  margin: 10px;
 }
-
-#services .title {
-  margin-left: 60px;
+#result .container .head-result .card:hover {
+  background-color: rgb(185, 179, 179);
+  backdrop-filter: blur(20px);
+}
+#result .row .head-result .card .card-img img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  margin: 25px;
+}
+#result .row .head-result .card .card-img {
+}
+#result .row .head-result .card .card-img h2 {
+  font-family: "Times New Roman";
   font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 18px;
+  margin: 10px;
 }
-
-#services .title a {
-  color: #111;
+#result .row .head-result .card .card-img h3 {
+  font-size: 15px;
+  font-weight: 300;
+  margin: 5px;
 }
-
-#services .box:hover .title a {
-  color: #18d26e;
+#result .row .head-result .card .card-img p {
+  font-weight: 300;
+  margin: 5px;
 }
-
-#services .description {
-  font-size: 14px;
-  margin-left: 60px;
-  line-height: 24px;
-  margin-bottom: 0;
+#result .row .head-result .card .social a {
+  color: black;
+  font-size: 30px;
+  margin: 10px;
 }
+#result .row .head-result .card .social a:hover {
+  color: green;
+}
+#result .row .head-result .card button {
+  width: 120px;
+  height: 30px;
+  color: white;
+  background-color: black;
+  font-size: 16px;
+  border-radius: 15px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+  margin-left: 15px;
+}
+#result .row .head-result .card button:hover {
+  background-color: green;
+}
+#result .row .head-result .card .job {
+  margin: 10px;
+}
+#result .row .head-result .card .job .mission {
+  width: 170px;
+  height: auto;
+  border-bottom: 0.2rem solid black;
+}
+#result .row .head-result .card .job .mission h3 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Times New Roman";
+}
+#result .row .head-result .card .job .evaluate {
+  width: 170px;
+  height: auto;
+}
+#result .row .head-result .card .job .evaluate h3 {
+  font-size: 20px;
+  font-weight: 500;
+  font-family: "Times New Roman";
+}
+#result .row .head-result .card .job .evaluate .btn-evaluate {
+  width: 120px;
+  height: auto;
+  color: white;
+  font-size: 16px;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  transition: 0.5s;
+  cursor: pointer;
+  font-weight: bold;
+  margin: 10px;
+}
+#result .row .head-result .card .job .evaluate .btn-evaluate:hover {
+  background-color: green;
+}
+/* Phát lam result */
+/* #result {
+    background: #fff;
+    background-size: cover;
+    padding: 60px 0 40px 0;
+  }
+  
+  #result .box {
+    margin-bottom: 30px;
+  }
+  
+  #result .icon {
+    float: left;
+  }
+  
+  #result .icon i {
+    color: #18d26e;
+    font-size: 36px;
+    line-height: 0;
+    transition: 0.5s;
+  }
+  
+  #result .title {
+    margin-left: 60px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 18px;
+  }
+  
+  #result .title a {
+    color: #111;
+  }
+  
+  #result .box:hover .title a {
+    color: #18d26e;
+  }
+  
+  #result .description {
+    font-size: 14px;
+    margin-left: 60px;
+    line-height: 24px;
+    margin-bottom: 0;
+  } */
 
 /* Call To Action Section
---------------------------------*/
+  --------------------------------*/
 #call-to-action {
   background: linear-gradient(rgba(0, 142, 99, 0.1), rgba(0, 0, 0, 0.1)),
     url(../img/call-to-action-bg.jpg) fixed center center;
@@ -849,7 +980,7 @@ section {
 }
 
 /* Call To Action Section
---------------------------------*/
+  --------------------------------*/
 #skills {
   padding: 60px 0;
 }
@@ -881,7 +1012,7 @@ section {
 }
 
 /* Facts Section
---------------------------------*/
+  --------------------------------*/
 #facts {
   background: url("../img/facts-bg.jpg") center top no-repeat fixed;
   background-size: cover;
@@ -927,7 +1058,7 @@ section {
 }
 
 /* Portfolio Section
---------------------------------*/
+  --------------------------------*/
 #portfolio {
   padding: 60px 0;
 }
@@ -1080,8 +1211,8 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details
---------------------------------------------------------------*/
+  # Portfolio Details
+  --------------------------------------------------------------*/
 .portfolio-details {
   padding-top: 40px;
 }
@@ -1151,7 +1282,7 @@ section {
 }
 
 /* Clients Section
---------------------------------*/
+  --------------------------------*/
 #clients {
   padding: 60px 0;
 }
@@ -1183,7 +1314,7 @@ section {
 }
 
 /* Testimonials Section
---------------------------------*/
+  --------------------------------*/
 #testimonials {
   padding: 60px 0;
 }
@@ -1265,7 +1396,7 @@ section {
 }
 
 /* Team Section
---------------------------------*/
+  --------------------------------*/
 #team {
   background: #fff;
   padding: 60px 0;
@@ -1340,7 +1471,7 @@ section {
 }
 
 /* Contact Section
---------------------------------*/
+  --------------------------------*/
 #contact {
   padding: 60px 0;
 }
@@ -1488,8 +1619,8 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Blog
---------------------------------------------------------------*/
+  # Blog
+  --------------------------------------------------------------*/
 .blog {
   padding: 40px 0 20px 0;
 }
@@ -2012,8 +2143,8 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/
+  # Footer
+  --------------------------------------------------------------*/
 #footer {
   background: #000;
   padding: 0 0 30px 0;
@@ -2178,7 +2309,7 @@ section {
   color: #ddd;
 }
 
-/* Phần này Là Group Diary */
+/* Phần này Là Group Diary  Danh làm*/
 #customers {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -2219,7 +2350,7 @@ section {
   background-color: #04aa6d;
   color: white;
 }
-/* Phần này là tab Week */
+/* Phần này là tab Week  Danh Làm*/
 .tabs {
   position: relative;
   margin: 60px auto;
@@ -2377,166 +2508,30 @@ section {
   border-left: 8px solid rgba(63, 148, 148, 0.1);
 }
 .tabs {
-  width: 66.666%; /* 2/3 of the web page width */
-  height: 66.666vh; /* 2/3 of the viewport height */
-  margin: 0 auto; /* Center the tabs section on the page */
+  width: 66.666%;
+  height: 66.666vh;
+  margin: 0 auto;
 }
 
-/* Add the following styles to ensure the table and other content fit within the tabs */
 #customers {
-  width: 100%; /* Make the table take up the full width of the container */
+  width: 100%;
 }
 
 .content {
-  width: 100%; /* Make sure the content within the tabs takes up the full width */
+  width: 100%;
 }
 
-/* Adjust the styles for each content section if necessary */
 .content-1,
 .content-2,
 .content-3,
 .content-4 {
-  width: 100%; /* Make each content section take up the full width */
+  width: 100%;
 }
 
-/* If you want the content area to have a specific height within the .tabs section, you can adjust the height accordingly */
 .content-1,
 .content-2,
 .content-3,
 .content-4 {
-  height: 100%; /* Make each content section take up the full height of the .tabs section */
+  height: 100%;
 }
-/*  */
-#about .about-col h2 a:hover {
-  color: #18d26e;
-}
-
-#about .about-col p {
-  font-size: 14px;
-  line-height: 24px;
-  color: #333;
-  margin-bottom: 0;
-  padding: 0 20px 20px 20px;
-}
-
-/* Services Section
---------------------------------*/
-/* Phát làm phần Result */
-:root {
-  --primary-color: white;
-}
-#result {
-  background: #fff;
-  background-size: cover;
-  padding: 60px 0 40px 0;
-}
-#result .container .head-result {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-#result .container .head-result .card {
-  backdrop-filter: blur(20px);
-  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
-  width: 300px;
-  height: auto;
-  border-radius: 10px;
-  margin: 10px;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-}
-#result .container .head-result .card .profile {
-  border-bottom: 0.2rem solid black;
-  margin: 10px;
-}
-#result .container .head-result .card:hover {
-  background-color: rgb(185, 179, 179);
-  backdrop-filter: blur(20px);
-}
-#result .row .head-result .card .card-img img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin: 25px;
-}
-#result .row .head-result .card .card-img {
-}
-#result .row .head-result .card .card-img h2 {
-  font-family: "Times New Roman";
-  font-weight: 700;
-  margin: 10px;
-}
-#result .row .head-result .card .card-img h3 {
-  font-size: 15px;
-  font-weight: 300;
-  margin: 5px;
-}
-#result .row .head-result .card .card-img p {
-  font-weight: 300;
-  margin: 5px;
-}
-#result .row .head-result .card .social a {
-  color: black;
-  font-size: 30px;
-  margin: 10px;
-}
-#result .row .head-result .card .social a:hover {
-  color: green;
-}
-#result .row .head-result .card button {
-  width: 120px;
-  height: 30px;
-  color: white;
-  background-color: black;
-  font-size: 16px;
-  border-radius: 15px;
-  outline: none;
-  border: none;
-  transition: 0.5s;
-  cursor: pointer;
-  font-weight: bold;
-  margin: 10px;
-  margin-left: 15px;
-}
-#result .row .head-result .card button:hover {
-  background-color: green;
-}
-#result .row .head-result .card .job {
-  margin: 10px;
-}
-#result .row .head-result .card .job .mission {
-  width: 170px;
-  height: auto;
-  border-bottom: 0.2rem solid black;
-}
-#result .row .head-result .card .job .mission h3 {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: "Times New Roman";
-}
-#result .row .head-result .card .job .evaluate {
-  width: 170px;
-  height: auto;
-}
-#result .row .head-result .card .job .evaluate h3 {
-  font-size: 20px;
-  font-weight: 500;
-  font-family: "Times New Roman";
-}
-#result .row .head-result .card .job .evaluate .btn-evaluate {
-  width: 120px;
-  height: auto;
-  color: white;
-  font-size: 16px;
-  border-radius: 5px;
-  outline: none;
-  border: none;
-  transition: 0.5s;
-  cursor: pointer;
-  font-weight: bold;
-  margin: 10px;
-}
-#result .row .head-result .card .job .evaluate .btn-evaluate:hover {
-  background-color: green;
-}
+/* Kết Thúc Phần Danh Làm */
