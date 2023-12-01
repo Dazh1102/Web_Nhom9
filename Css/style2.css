@@ -40,7 +40,7 @@ section {
   color: white;
   background-color: black;
 }
-img {
+img1 {
   height: 15rem;
   width: 15rem;
   align-items: center;
@@ -209,7 +209,7 @@ div.item-bao{
     
 }
 div.item-1{
-    background: url(image/Mới\ sa\ thải\ 1\ ngày\,\ OpenAI\ đàm\ phán\ mời\ ‘cha\ đẻ’\ ChatGPT\ quay\ lại\ làm\ việc.webp);
+    background: url('../assets/img/Mới\ sa\ thải\ 1\ ngày\,\ OpenAI\ đàm\ phán\ mời\ ‘cha\ đẻ’\ ChatGPT\ quay\ lại\ làm\ việc.webp');
     
     background-size: cover;
     background-position: center;
@@ -218,7 +218,7 @@ div.item-1{
 }
 
 .headRight-item-bao{
-    background: url(image/Mbappe\ lập\ hat-trick\ giúp\ Pháp\ thắng\ kỷ\ lục\ 14-0.webp);
+    background: url('../assets/img/Mbappe\ lập\ hat-trick\ giúp\ Pháp\ thắng\ kỷ\ lục\ 14-0.webp');
     background-size: cover;  
     background-position-y: -20px;
     position: relative;
@@ -227,14 +227,14 @@ div.item-1{
  
 }
 .bottomRight-item-bao-left{
-    background: url(image/Nga\ nối\ lại\ tấn\ công\ thủ\ đô\ Kiev\ sau\ 52\ ngày.webp);
+    background: url('../assets/img/Nga\ nối\ lại\ tấn\ công\ thủ\ đô\ Kiev\ sau\ 52\ ngày.webp');
     background-size: cover;  
     position: relative;
     
     /* background-position-y: -20px; */
 }
 .bottomRight-item-bao-rigth{
-    background: url(image/Máy\ lọc\ không\ khí\ Meliwa\ ‘thuyết\ phục’\ Shark\ Hùng\ Anh\ như\ thế\ nào.webp);
+    background: url('../assets/img/Máy\ lọc\ không\ khí\ Meliwa\ ‘thuyết\ phục’\ Shark\ Hùng\ Anh\ như\ thế\ nào.webp');
     background-size: cover;  
     margin-top: 3px;
     position: relative;
@@ -242,10 +242,10 @@ div.item-1{
     /* background-position-y: -20px;     */
 }
 .style-bao{
-    background-color:rgba(255, 85, 85 , 1);
+    background-color:rgba(250, 250, 250,0.7);
     padding: 0 10;
     width: 100%;
-    color: white;
+    color: black;
     font-weight: 700;
     text-align: left;
     position: absolute;
@@ -253,12 +253,58 @@ div.item-1{
     transition: all 0.45s ease-in-out;
     opacity: 0;
     font-size: 15px;
+    list-style: none;
     
 }
 .container_bao:hover .style-bao{
     bottom: 0;
     opacity: 1;
 }
+.style-bao a { 
+   text-decoration: none;
+   color: black;
+}
+.style-bao a:hover{
+   box-shadow: 0 2px red;
+}
+
+/*_____________________ chatgpt _______________________ */
+wrapper1-bao{
+  padding: 0;
+  margin: 0;
+}
+.header-bao{
+  position: fixed;
+  top: 0;
+}
+.header-bao a{
+  text-decoration: none;
+  max-width: 100px;
+  display: flex;
+}
+.header-bao a:hover{
+  box-shadow: 0 2px black;
+}
+
+.content-bao{
+  margin: auto;
+  max-width: 870px;
+  font-weight: 900;
+  
+}
+
+.content-bao p { 
+  font-size: 18px;
+}
+.content-bao h3{ 
+  color: darkgray;
+  margin-left: 150px;
+}
+.comment_bao{
+  display: flex;
+} 
+
+
 /* kết thúc phần của Bảo */
 
 /*Phần của Hải*/
