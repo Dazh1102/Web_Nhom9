@@ -10,7 +10,7 @@ html {
   overflow-x: hidden;
 }
 
-.header {
+.header { 
   position: fixed;
   top: 0;
   left: 0;
@@ -40,7 +40,7 @@ section {
   color: white;
   background-color: black;
 }
-.img1 {
+.img {
   height: 15rem;
   width: 15rem;
   align-items: center;
