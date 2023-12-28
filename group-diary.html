@@ -9,8 +9,8 @@
     <meta content="" name="keywords" />
 
     <!-- Favicons -->
-    <link href="assets/img/favicon.png" rel="icon" />
-    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon" />
+    <link href="assets/img/logo.jpg" rel="icon">
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon">
 
     <!-- Google Fonts -->
     <link
@@ -37,52 +37,14 @@
 
     <!-- Template Main CSS File -->
     <link href="assets/css/style.css" rel="stylesheet" />
-<style>
-    .tabss {
-        display: flex;
-        justify-content: center;
-        margin-top: 20px;
-      }
 
-      .tab-btn {
-        background-color: #3498db;
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        cursor: pointer;
-        border-radius: 5px;
-        margin: 0 5px;
-        font-size: 40px;
-        height: 70px;
-      }
-
-      .tab-btn:hover {
-        background-color: #2980b9;
-      }
-
-      .tab-content {
-        display: none;
-        padding: 20px;
-        border: 1px solid #ddd;
-        margin-top: 20px;
-      }
-
-      .tab-content h2 {
-        color: #3498db;
-      }
-      .khoangTrang{
-        min-height: 700px;
-      }
-      .khoangCach{
-        height: 100px;
-      }
-
-      /* nháp */
- 
-    
-
-</style>
-
+    <!-- =======================================================
+  * Template Name: BizPage
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/bizpage-bootstrap-business-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
   </head>
 
   <body>
@@ -99,13 +61,13 @@
             <nav id="navbar" class="navbar">
               <ul>
                 <ul>
-                  <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-                  <li><a class="nav-link scrollto" href="#about">About</a></li>
+                  <li><a class="nav-link scrollto active" href="index.html">Home</a></li>
+                  <li><a class="nav-link scrollto" href="index.html">About</a></li>
                   
-                  <li><a class="nav-link scrollto" href="#result">Result</a></li>
-                  <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-                  <li><a class="nav-link scrollto" href="#team">Team</a></li>
-                  <li><a class="nav-link scrollto" href="#services">Services</a></li>
+                  <li><a class="nav-link scrollto" href="index.html">Result</a></li>
+                  <li><a class="nav-link scrollto " href="index.html">Portfolio</a></li>
+                  <li><a class="nav-link scrollto" href="index.html">Team</a></li>
+                  <li><a class="nav-link scrollto" href="index.html">Services</a></li>
                   <li><a class="nav-link  " href="blog.html">Blog</a></li>
                   <li class="dropdown"><a href="group-diary.html"><span>Group Diary</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
@@ -124,7 +86,7 @@
                       <li><a href="#">Week7</a></li>
                     </ul>
                   </li>
-                  <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+                  <li><a class="nav-link scrollto" href="index.html">Contact</a></li>
                   <li><a class="nav-link scrollto" href="web-news.html">Go to Projects</a></li>
               </ul>
               <i class="bi bi-list mobile-nav-toggle"></i>
@@ -145,291 +107,294 @@
       </div>
     </section>
     <!-- End Breadcrumbs -->
-        <div class="tabss">
-            <button class="tab-btn" onclick="openTab('tab1')">Week5</button>
-            <button class="tab-btn" onclick="openTab('tab2')">Week6</button>
-            <button class="tab-btn" onclick="openTab('tab3')">Week7</button>
+    <main id="main">
+      <section class="tabs">
+        <input
+          id="tab-1"
+          type="radio"
+          name="radio-set"
+          class="tab-selector-1"
+          checked="checked"
+        />
+        <label for="tab-1" class="tab-label-1">Week5 </label>
+
+        <input
+          id="tab-2"
+          type="radio"
+          name="radio-set"
+          class="tab-selector-2"
+        />
+        <label for="tab-2" class="tab-label-2">Week6</label>
+
+        <input
+          id="tab-3"
+          type="radio"
+          name="radio-set"
+          class="tab-selector-3"
+        />
+        <label for="tab-3" class="tab-label-3">Week7</label>
+
+        <input
+          id="tab-4"
+          type="radio"
+          name="radio-set"
+          class="tab-selector-4"
+        />
+        <label for="tab-4" class="tab-label-4">Week8</label>
+
+        <div class="clear-shadow"></div>
+
+        <div class="content">
+          <div class="content-1">
+            <table id="customers">
+              <tr>
+                <th>STT</th>
+                <th>MSSV</th>
+                <th>Họ Và Tên</th>
+                <th>Công Việc Được Giao</th>
+                <th>Ngày Thực Hiện</th>
+                <th>Ngày Kết Thúc</th>
+
+                <th>Kết Quả</th>
+                <th>Tiến Độ</th>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>22130033</td>
+                <td>Võ Công Danh</td>
+                <td>Tạo Group Diary , tạo Week5 và Trang About</td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>22130018</td>
+                <td>Hồ Quốc Bảo</td>
+                <td>Tạo 2 trang tin tức</td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>22130066</td>
+                <td>Đào Đức Hải</td>
+                <td>Tạo chức năng Go to project</td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>22130205</td>
+                <td>Ngô Tiến Phát</td>
+                <td>Tạo chức năng Result</td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td>22130063</td>
+                <td>Trần Anh Duy</td>
+                <td>
+                  Tạo 1 trang viết về tin tức liên kết với trang web tin tức
+                  chính
+                </td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>60%</td>
+              </tr>
+            </table>
+          </div>
+          <div class="content-2">
+              <table id="customers">
+                <tr>
+                  <th>STT</th>
+                  <th>MSSV</th>
+                  <th>Họ Và Tên</th>
+                  <th>Công Việc Được Giao</th>
+                  <th>Ngày Thực Hiện</th>
+                  <th>Ngày Kết Thúc</th>
+  
+                  <th>Kết Quả</th>
+                  <th>Tiến Độ</th>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>22130033</td>
+                  <td>Võ Công Danh</td>
+                  <td>Tạo Group Diary , tạo Week5 và Trang About</td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>22130018</td>
+                  <td>Hồ Quốc Bảo</td>
+                  <td>Tạo 2 trang tin tức</td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>22130066</td>
+                  <td>Đào Đức Hải</td>
+                  <td>Liên kết lại các menu</td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>22130205</td>
+                  <td>Ngô Tiến Phát</td>
+                  <td>Chỉnh sửa lại bài tập nhóm</td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>22130063</td>
+                  <td>Trần Anh Duy</td>
+                  <td>
+                    Tạo 1 trang viết về tin tức liên kết với trang web tin tức
+                  chính
+                  </td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>60%</td>
+                </tr>
+              </table>
+            </div>
+          <div class="content-3">
+              <table id="customers">
+                <tr>
+                  <th>STT</th>
+                  <th>MSSV</th>
+                  <th>Họ Và Tên</th>
+                  <th>Công Việc Được Giao</th>
+                  <th>Ngày Thực Hiện</th>
+                  <th>Ngày Kết Thúc</th>
+  
+                  <th>Kết Quả</th>
+                  <th>Tiến Độ</th>
+                </tr>
+                <tr>
+                  <td>01</td>
+                  <td>22130033</td>
+                  <td>Võ Công Danh</td>
+                  <td>Đưa cả 3 file này vào bt nhóm</td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>02</td>
+                  <td>22130018</td>
+                  <td>Hồ Quốc Bảo</td>
+                  <td>Làm biểu mẫu liên hệ</td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>03</td>
+                  <td>22130066</td>
+                  <td>Đào Đức Hải</td>
+                  <td>Design trên giấy</td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>04</td>
+                  <td>22130205</td>
+                  <td>Ngô Tiến Phát</td>
+                  <td>Cập nhật bài tập của nhóm đảm bảo có sử dụng Navigation, Animations, Default Settings và Guided Action </td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                <tr>
+                  <td>05</td>
+                  <td>22130063</td>
+                  <td>Trần Anh Duy</td>
+                  <td>
+                    file thiết kế trên figma
+                  </td>
+                  <td>25/12/2023</td>
+                  <td>29/12/2023</td>
+                  <td>Hoàn Thành</td>
+                  <td>60%</td>
+                </tr>
+              </table>
+            </div>
+          <!-- <div class="content-4">
+              <table id="customers">
+                <tr>
+                  <th>STT</th>
+                  <th>MSSV</th>
+                  <th>Họ Và Tên </th>
+                  <th>Công Việc Được Giao</th>
+                  <th>Kết Quả</th>
+                  <th>Tiến Độ</th>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>22130033</td>
+                  <td>Võ Công Danh</td>
+                  <td>Tạo Group Diary và Trang About</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                  <tr>
+                  <td>1</td>
+                  <td>22130033</td>
+                  <td>Võ Công Danh</td>
+                  <td>Tạo Group Diary và Trang About</td>
+                  <td>Hoàn Thành</td>
+                  <td>100%</td>
+                </tr>
+                  <tr>
+                  <td>1</td>
+                  <td>22130033</td>
+                  <td>Võ Công Danh</td>
+                  <td>Tạo Group Diary và Trang About</td>
+                  <td>Hoàn Thành</td>
+                  <td></td>
+                </tr>
+                  <tr>
+                  <td>1</td>
+                  <td>22130033</td>
+                  <td>Võ Công Danh</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                </tr>
+              </table>
+            </div> -->
         </div>
-        <div class="tab-content" id="tab1">
-          <div class="divaaa">
-            <table id="customers">
-              <tr>
-                <th>STT</th>
-                <th>MSSV</th>
-                <th>Họ Và Tên</th>
-                <th>Công Việc Được Giao</th>
-                <th>Ngày Thực Hiện</th>
-                <th>Ngày Kết Thúc</th>
-
-                <th>Kết Quả</th>
-                <th>Tiến Độ</th>
-              </tr>
-              <tr>
-                <td>01</td>
-                <td>22130033</td>
-                <td>Võ Công Danh</td>
-                <td>Tạo Group Diary , tạo Week5 và Trang About</td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-              <tr>
-                <td>02</td>
-                <td>22130018</td>
-                <td>Hồ Quốc Bảo</td>
-                <td>Tạo 2 trang tin tức</td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-              <tr>
-                <td>03</td>
-                <td>22130066</td>
-                <td>Đào Đức Hải</td>
-                <td>Tạo chức năng Go to project</td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-              <tr>
-                <td>04</td>
-                <td>22130205</td>
-                <td>Ngô Tiến Phát</td>
-                <td>Tạo chức năng Result</td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-              <tr>
-                <td>05</td>
-                <td>22130063</td>
-                <td>Trần Anh Duy</td>
-                <td>
-                  Tạo 1 trang viết về tin tức liên kết với trang web tin tức
-                  chính
-                </td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-          </table>
-          </div>  
-          <div class="khoangCach"></div>
-          <div class="divaaa">
-            <table id="customers">
-              <tr>
-                <th>STT</th>
-                <th>MSSV</th>
-                <th>Họ Và Tên</th>
-                <th>Công Việc Được Giao</th>
-                <th>Ngày Thực Hiện</th>
-                <th>Ngày Kết Thúc</th>
-
-                <th>Kết Quả</th>
-                <th>Tiến Độ</th>
-              </tr>
-              <tr>
-                <td>01</td>
-                <td>22130033</td>
-                <td>Võ Công Danh</td>
-                <td>Tạo Group Diary , tạo Week5 và Trang About</td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-              <tr>
-                <td>02</td>
-                <td>22130018</td>
-                <td>Hồ Quốc Bảo</td>
-                <td>Tạo 2 trang tin tức</td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-              <tr>
-                <td>03</td>
-                <td>22130066</td>
-                <td>Đào Đức Hải</td>
-                <td>Tạo chức năng Go to project</td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-              <tr>
-                <td>04</td>
-                <td>22130205</td>
-                <td>Ngô Tiến Phát</td>
-                <td>Tạo chức năng Result</td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-              <tr>
-                <td>05</td>
-                <td>22130063</td>
-                <td>Trần Anh Duy</td>
-                <td>
-                  Tạo 1 trang viết về tin tức liên kết với trang web tin tức
-                  chính
-                </td>
-                <td>26/11/2023</td>
-                <td>30/11/2023</td>
-                <td>Hoàn Thành</td>
-                <td>100%</td>
-              </tr>
-          </table>
-          </div>  
-        </div>     
-        <div class="tab-content" id="tab2"><div class="divaaa">
-          <table id="customers">
-            <tr>
-              <th>STT</th>
-              <th>MSSV</th>
-              <th>Họ Và Tên</th>
-              <th>Công Việc Được Giao</th>
-              <th>Ngày Thực Hiện</th>
-              <th>Ngày Kết Thúc</th>
-
-              <th>Kết Quả</th>
-              <th>Tiến Độ</th>
-            </tr>
-            <tr>
-              <td>01</td>
-              <td>22130033</td>
-              <td>Võ Công Danh</td>
-              <td>Tạo Group Diary , tạo Week5 và Trang About</td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>02</td>
-              <td>22130018</td>
-              <td>Hồ Quốc Bảo</td>
-              <td>Tạo 2 trang tin tức</td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>03</td>
-              <td>22130066</td>
-              <td>Đào Đức Hải</td>
-              <td>Tạo chức năng Go to project</td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>04</td>
-              <td>22130205</td>
-              <td>Ngô Tiến Phát</td>
-              <td>Tạo chức năng Result</td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>05</td>
-              <td>22130063</td>
-              <td>Trần Anh Duy</td>
-              <td>
-                Tạo 1 trang viết về tin tức liên kết với trang web tin tức
-                chính
-              </td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-        </table>
-        </div>  
-      </div>      </div>    
-        <div class="tab-content" id="tab3"><div class="divaaa">
-          <table id="customers">
-            <tr>
-              <th>STT</th>
-              <th>MSSV</th>
-              <th>Họ Và Tên</th>
-              <th>Công Việc Được Giao</th>
-              <th>Ngày Thực Hiện</th>
-              <th>Ngày Kết Thúc</th>
-
-              <th>Kết Quả</th>
-              <th>Tiến Độ</th>
-            </tr>
-            <tr>
-              <td>01</td>
-              <td>22130033</td>
-              <td>Võ Công Danh</td>
-              <td>Tạo Group Diary , tạo Week5 và Trang About</td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>02</td>
-              <td>22130018</td>
-              <td>Hồ Quốc Bảo</td>
-              <td>Tạo 2 trang tin tức</td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>03</td>
-              <td>22130066</td>
-              <td>Đào Đức Hải</td>
-              <td>Tạo chức năng Go to project</td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>04</td>
-              <td>22130205</td>
-              <td>Ngô Tiến Phát</td>
-              <td>Tạo chức năng Result</td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-            <tr>
-              <td>05</td>
-              <td>22130063</td>
-              <td>Trần Anh Duy</td>
-              <td>
-                Tạo 1 trang viết về tin tức liên kết với trang web tin tức
-                chính
-              </td>
-              <td>26/11/2023</td>
-              <td>30/11/2023</td>
-              <td>Hoàn Thành</td>
-              <td>100%</td>
-            </tr>
-        </table>
-        </div>  
-      </div>    
-     </div>
-      <div class="khoangTrang"></div>
-
+      </section>
+    </main>
     <!-- ======= Footer ======= -->
     <footer id="footer">
       <div class="footer-top">
@@ -530,19 +495,5 @@
 
     <!-- Template Main JS File -->
     <script src="assets/js/main.js"></script>
-    <script>
-      function openTab(tabName) {
-        var i, tabContent;
-  
-        // Ẩn tất cả các tab-content
-        tabContent = document.getElementsByClassName("tab-content");
-        for (i = 0; i < tabContent.length; i++) {
-          tabContent[i].style.display = "none";
-        }
-  
-        // Hiển thị tab-content tương ứng với tab được chọn
-        document.getElementById(tabName).style.display = "block";
-      }
-    </script>
   </body>
 </html>
