@@ -312,7 +312,7 @@
         </div>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-        <script>
+        <!-- <script>
             document.addEventListener("DOMContentLoaded", function () {
                 const wrapper = document.querySelector('.wrapper');
                 const closeButton = document.querySelector('.icon-close');
@@ -346,7 +346,53 @@
                 loginLink.addEventListener('click', showLoginForm);
                 registerLink.addEventListener('click', showRegisterForm);
             });
-        </script>
+        </script> -->
+        <!-- ... your existing HTML code ... -->
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const wrapper = document.querySelector('.wrapper');
+        const closeButton = document.querySelector('.icon-close');
+        const loginForm = document.querySelector('.form-box.login');
+        const registerForm = document.querySelector('.form-box.register');
+        const loginLink = document.querySelector('.login-link');
+        const registerLink = document.querySelector('.register-link');
+
+        // Function to handle successful login and redirect to Google
+        const redirectToGoogle = () => {
+            // Assuming the login is successful, you can redirect the user to Google.
+            window.location.href = 'https://dazh1102.github.io/Web_Nhom9/web-news.html';
+        };
+
+        closeButton.addEventListener('click', function () {
+            wrapper.classList.remove('active-popup');
+        });
+
+        // Set the initial form positions
+        loginForm.style.transform = 'translateX(0)';
+        registerForm.style.transform = 'translateX(400px)';
+
+        const showLoginForm = () => {
+            loginForm.style.transform = 'translateX(0)';
+            registerForm.style.transform = 'translateX(400px)';
+        };
+
+        const showRegisterForm = () => {
+            loginForm.style.transform = 'translateX(-400px)';
+            registerForm.style.transform = 'translateX(0)';
+        };
+
+        loginLink.addEventListener('click', showLoginForm);
+        registerLink.addEventListener('click', showRegisterForm);
+
+        // Add an event listener for the login button to simulate a successful login
+        const loginButton = document.querySelector('.btn');
+        loginButton.addEventListener('click', redirectToGoogle);
+    });
+</script>
+
+<!-- ... your existing HTML code ... -->
+
     </div>
 </body>
 
