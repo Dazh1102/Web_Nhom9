@@ -3,6 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
       body {
         font-family: sans-serif;
@@ -15,15 +19,15 @@
         color: #000000;
         text-align: center;
         padding: 1em;
-        font-size: 5rem;
+        font-size: 2rem;
       }
 
       main {
         padding: 100px;
-        margin-left: 400px;
+        margin-left: 100px;
       }
       section {
-        margin-bottom: 100px;
+        margin-bottom: 50px;
       }
       .most-1 {
         display: flex;
@@ -32,17 +36,44 @@
       }
 
       .img-id-12345 {
-        height: 300px;
-        width: 350px;
+        height: 150px;
+        width: 200px;
       }
       .p-idAuthor-12345 {
-        font-size: 20px;
+        font-size: 16px;
       }
       .p-id2-12345 {
-        font-size: 40px;
+        font-size: 20px;
       }
       .img12345 {
         margin-right: 100px;
+      }
+      nav {
+        background-color: aliceblue;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+      }
+
+      li {
+        margin: 0 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+      a:hover {
+        background-color: yellow;
       }
 
       footer {
@@ -54,83 +85,284 @@
         bottom: 0;
         width: 100%;
       }
+      footer {
+        background-color: rgb(65, 65, 65);
+        width: 100%;
+      }
+      .footer-contain {
+        display: flex;
+      }
+      .footer-contain ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .footer-contain ul li {
+        display: inline-block;
+      }
+      .contain-1 {
+        flex: 1;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .contain-1 h1 {
+        font-size: 60px;
+        font-weight: bold;
+      }
+      .social-network {
+        margin-top: 50px;
+      }
+      .social-network ul li {
+        margin: 0 3px;
+      }
+      .social-network ul li a {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 20px;
+        transition: all 0.5s;
+      }
+      .social-network ul li a:hover {
+        background-color: #fff;
+        color: #4e4e4e;
+      }
+      .contain-2 {
+        flex: 1;
+        padding-left: 80px;
+        padding-top: 25px;
+        color: white;
+      }
+
+      .list li {
+        margin-top: 10px;
+        font-size: 20px;
+        padding-bottom: 13px;
+        list-style-type: none;
+      }
+      .list li a {
+        text-decoration: none;
+      }
+      .white-link-color {
+        color: white;
+        transition: all 0.5s;
+      }
+      .white-link-color:hover {
+        color: rgb(112, 211, 241);
+      }
+
+      .copytext {
+        text-align: center;
+        position: relative;
+        margin-top: 20px;
+        color: #fff;
+      }
+      .copytext p {
+        border-top: 3px solid rgba(250, 250, 250, 0.1);
+        display: inline-block;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        font-size: 25px;
+      }
     </style>
     <title>Most Recent</title>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="web-news.html" style="border-bottom: black solid 0.1rem">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-desktop" aria-hidden="true"></i>
+            Smart Device
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-rss" aria-hidden="true"></i>
+            Internet And SocialNetWork
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-flask" aria-hidden="true"></i>
+            Scientific Discovery
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            Exhibition
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            NextWork Security
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-car" aria-hidden="true"></i>
+            Traffic technology
+          </a>
+        </li>
+        <li><a href="#section2"> Electronic</a></li>
+      </ul>
+    </nav>
     <header>
       <h1>Most Recent</h1>
     </header>
     <main id="articles-list">
       <section>
-        <div class="most-1">
+        <a class="most-1" href="trang1.html">
           <div class="img12345">
-            <a href="/weblienket/trang1.html"
-              ><img class="img-id-12345" src="/assets/img/sec1.webp " alt=""
-            /></a>
+            <img class="img-id-12345" src="./assets/img/sec1.webp " alt="" />
           </div>
-
           <div class="list12345">
-            <!-- <p class="p-idAuthor-12345">NENA FARRELL AND JAINA GREY</p> -->
             <p class="p-id2-12345">
               Undersea-Aged Champagne Is Starting to Surface
             </p>
             <p class="p-id3-12345">ALICE LASCELLES</p>
           </div>
-        </div>
+        </a>
       </section>
       <section>
-        <div class="most-1">
+        <a class="most-1" href="trang1.html">
           <div class="img12345">
-            <img class="img-id-12345" src="/assets/img/Danhid2.webp " alt="" />
+            <img
+              class="img-id-12345"
+              src="./assets/img/trangphu/trang2-1.webp "
+              alt=""
+            />
           </div>
           <div class="list12345">
-            <p class="p-idAuthor-12345">NENA FARRELL AND JAINA GREY</p>
-            <p class="p-id2-12345">The Best Home Depot Black Friday Deals</p>
-            <p class="p-id3-12345">NENA FARRELL AND JAINA GREY</p>
+            <!-- <p class="p-idAuthor-12345">NENA FARRELL AND JAINA GREY</p> -->
+            <p class="p-id2-12345">Get Ready for a ‘Tsunami’ of AI at CES</p>
+            <p class="p-id3-12345">Rebecca Bellan</p>
           </div>
-        </div>
+        </a>
       </section>
 
       <section>
-        <div class="most-1">
+        <a class="most-1" href="trang1.html">
           <div class="img12345">
-            <img class="img-id-12345" src="/assets/img/Danhid3.webp " alt="" />
+            <img
+              class="img-id-12345"
+              src="./assets/img/trangphu/trang3-1.webp "
+              alt=""
+            />
           </div>
           <div class="list12345">
-            <p class="p-idAuthor-12345">NENA FARRELL AND JAINA GREY</p>
-            <p class="p-id2-12345">The Best Home Depot Black Friday Deals</p>
-            <p class="p-id3-12345">NENA FARRELL AND JAINA GREY</p>
+            <p class="p-id2-12345">
+              The Tantalizing Mystery of the Solar System’s Hidden Oceans
+            </p>
+            <p class="p-id3-12345">ROBIN ANDREWS</p>
           </div>
-        </div>
+        </a>
       </section>
       <section>
-        <div class="most-1">
+        <a class="most-1" href="trang1.html">
           <div class="img12345">
-            <img class="img-id-12345" src="/assets/img/Danhid4.webp " alt="" />
+            <img
+              class="img-id-12345"
+              src="./assets/img/trangphu/trang4.webp "
+              alt=""
+            />
           </div>
           <div class="list12345">
-            <p class="p-idAuthor-12345">NENA FARRELL AND JAINA GREY</p>
-            <p class="p-id2-12345">The Best Home Depot Black Friday Deals</p>
-            <p class="p-id3-12345">NENA FARRELL AND JAINA GREY</p>
+            <p class="p-id2-12345">
+              The overlooked tech that kept cities moving in 2023
+            </p>
+            <p class="p-id3-12345">TIM BARBER</p>
           </div>
-        </div>
+        </a>
       </section>
       <section>
-        <div class="most-1">
+        <a class="most-1" href="trang1.html">
           <div class="img12345">
-            <img class="img-id-12345" src="/assets/img/Danhid5.webp " alt="" />
+            <img
+              class="img-id-12345"
+              src="./assets/img/trangphu/trang5-1.webp "
+              alt=""
+            />
           </div>
           <div class="list12345">
-            <p class="p-idAuthor-12345">NENA FARRELL AND JAINA GREY</p>
-            <p class="p-id2-12345">The Best Home Depot Black Friday Deals</p>
-            <p class="p-id3-12345">NENA FARRELL AND JAINA GREY</p>
+            <p class="p-id2-12345">
+              Best budgeting apps for individuals, startups and small businesses
+            </p>
+            <p class="p-id3-12345">TIM BARBER</p>
           </div>
-        </div>
+        </a>
       </section>
     </main>
     <footer>
-      <p>&copy; 2023 Your Website</p>
+      <div class="footer-contain">
+        <div class="contain-1">
+          <div>
+            <h1>NEWS</h1>
+            <p>
+              Chúng tôi sẽ cập nhật tin tức mới nhất trên toàn thế giới cho bạn
+            </p>
+          </div>
+          <div class="social-network">
+            <p>Các trang thông tin khác</p>
+            <ul class="social-icon">
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-rss"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contain-2">
+          <h1>Other News</h1>
+          <div class="list">
+            <li>
+              <a href="#" class="white-link-color">Media</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Events</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Spaces</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Enterprise</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Media</a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="copytext">
+        <p>©2023 Web tin tức nhóm 9</p>
+      </div>
     </footer>
   </body>
 </html>

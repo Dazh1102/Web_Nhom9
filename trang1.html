@@ -3,6 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Undersea-Aged Champagne Is Starting to Surface</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
     <style>
       body {
         font-family: sans-serif;
@@ -17,14 +22,54 @@
         padding: 1em;
         font-size: 2rem;
       }
+      nav {
+        background-color: aliceblue;
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
+      ul {
+        list-style-type: none;
+        padding: 0;
+        display: flex;
+      }
+
+      li {
+        margin: 0 15px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #000000;
+        font-weight: bold;
+        font-size: 1rem;
+      }
+      a:hover {
+        background-color: yellow;
+      }
       main {
-        padding: 100px;
-        margin-left: 200px;
+        display: flex;
+        text-align: justify;
+      }
+      .left {
+        flex-basis: 70%;
+      }
+      .right {
+        flex-basis: 30%;
       }
       .sec2 {
         margin-left: 100px;
         margin-right: 100px;
+      }
+      .most {
+        background-color: rgb(112, 237, 237);
+        margin-top: 16px;
+        border: solid;
+      }
+      .most-1 {
+        height: 60px;
       }
       .p1 {
         font-size: 16px;
@@ -33,31 +78,166 @@
         height: 300px;
         width: 500px;
       }
+      .right-img {
+        width: 300px;
+        height: 200px;
+      }
+      .div-right {
+        border-top-style: solid;
+
+        border-bottom-style: solid;
+        margin-bottom: 20px;
+      }
+
       footer {
-        background-color: #333;
-        color: #fff;
-        text-align: center;
-        padding: 1em;
-        /* position: absolute; */
-        bottom: 0;
+        background-color: rgb(65, 65, 65);
         width: 100%;
       }
+      .footer-contain {
+        display: flex;
+      }
+      .footer-contain ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .footer-contain ul li {
+        display: inline-block;
+      }
+      .contain-1 {
+        flex: 1;
+        color: rgb(255, 255, 255);
+        font-size: 20px;
+        padding-left: 50px;
+        padding-right: 50px;
+      }
+      .contain-1 h1 {
+        font-size: 60px;
+        font-weight: bold;
+      }
+      .social-network {
+        margin-top: 50px;
+      }
+      .social-network ul li {
+        margin: 0 3px;
+      }
+      .social-network ul li a {
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+        line-height: 40px;
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 20px;
+        transition: all 0.5s;
+      }
+      .social-network ul li a:hover {
+        background-color: #fff;
+        color: #4e4e4e;
+      }
+      .contain-2 {
+        flex: 1;
+        padding-left: 80px;
+        padding-top: 25px;
+        color: white;
+      }
+
+      .list li {
+        margin-top: 10px;
+        font-size: 20px;
+        padding-bottom: 13px;
+        list-style-type: none;
+      }
+      .list li a {
+        text-decoration: none;
+      }
+      .white-link-color {
+        color: white;
+        transition: all 0.5s;
+      }
+      .white-link-color:hover {
+        color: rgb(112, 211, 241);
+      }
+
+      .copytext {
+        text-align: center;
+        position: relative;
+        margin-top: 20px;
+        color: #fff;
+      }
+      .copytext p {
+        border-top: 3px solid rgba(250, 250, 250, 0.1);
+        display: inline-block;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 30px;
+        font-size: 25px;
+      }
     </style>
-    </style>
-    <title>Undersea-Aged Champagne Is Starting to Surface</title>
   </head>
   <body>
-    <header>
-      <h1>Undersea-Aged Champagne Is Starting to Surface</h1>
-    </header>
+    <nav>
+      <ul>
+        <li>
+          <a href="web-news.html" style="border-bottom: black solid 0.1rem">
+            <i class="fa fa-home" aria-hidden="true"></i>
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-desktop" aria-hidden="true"></i>
+            Smart Device
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-rss" aria-hidden="true"></i>
+            Internet And SocialNetWork
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-flask" aria-hidden="true"></i>
+            Scientific Discovery
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-camera" aria-hidden="true"></i>
+            Exhibition
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-lock" aria-hidden="true"></i>
+            NextWork Security
+          </a>
+        </li>
+        <li>
+          <a href="">
+            <i class="fa fa-car" aria-hidden="true"></i>
+            Traffic technology
+          </a>
+        </li>
+        <li><a href="#section2"> Electronic</a></li>
+      </ul>
+    </nav>
+    <header></header>
+
     <main id="articles-list">
       <div class="left">
         <section class="sec2">
-          <p class="p1">
+          <h1>Undersea-Aged Champagne Is Starting to Surface</h1>
+          <h2 class="p1">
             Some experts believe the science of champagne has applications in
             ballistics and rocketry, and now producers are trialing deep-sea
             aging, seeking the salty superiority of a life under pressure.
-          </p>
+          </h2>
+
           <img src="./assets/img/sec1.webp" alt="" />
         </section>
         <section class="sec2">
@@ -190,11 +370,148 @@
         </section>
       </div>
 
-      <div class="right"></div>
-    </main>
+      <div class="right">
+        <div class="most">
+          <section class="sec2">
+            <a class="most-1" href="most.html">MOST RECENT</a>
+          </section>
+        </div>
+        <!-- 1 -->
+        <div class="div-right">
+          <a href="trang1.html">
+            <h3>Undersea-Aged Champagne Is Starting to Surface</h3>
+            <img class="right-img" src="./assets/img/sec1.webp" alt="" />
+            <p class="p1">
+              Some experts believe the science of champagne has applications in
+              ballistics and rocketry, and now producers are trialing deep-sea
+              aging, seeking the salty superiority of a life under pressure.
+            </p>
+          </a>
+        </div>
+        <!-- 2 -->
+        <div class="div-right">
+          <a href="trang2.html">
+            <img
+              class="right-img"
+              src="./assets/img/trangphu/trang2-1.webp"
+              alt=""
+            />
+            <h3>Get Ready for a ‘Tsunami’ of AI at CES</h3>
+            <p class="p1">
+              CES, which kicks off January 9 in Las Vegas, will feature the
+              usual assortment of new consumer tech products. This year, even
+              more of that stuff will be empowered by machine intelligence.
+            </p></a
+          >
+        </div>
 
+        <!-- 3 -->
+        <div class="div-right">
+          <a href="trang3.html">
+            <h3>The Tantalizing Mystery of the Solar System’s Hidden Oceans</h3>
+            <img
+              class="right-img"
+              src="./assets/img/trangphu/trang3-1.webp"
+              alt=""
+            />
+            <p class="p1">
+              The moons orbiting Jupiter and Saturn appear to have subsurface
+              oceans which could support life beyond Earth. But it’s not clear
+              why these seas exist at all.
+            </p>
+          </a>
+        </div>
+        <!-- 4 -->
+        <div class="div-right">
+          <a href="trang4.html">
+            <h3>The overlooked tech that kept cities moving in 2023</h3>
+            <img
+              class="right-img"
+              src="./assets/img/trangphu/trang4.webp"
+              alt=""
+            />
+            <p class="p1">
+              Some experts believe the science of champagne has applications in
+              ballistics and rocketry, and now producers are trialing deep-sea
+              aging, seeking the salty superiority of a life under pressure.
+            </p>
+          </a>
+        </div>
+        <div class="div-right">
+          <a href="trang5.html">
+            <h3>
+              Best budgeting apps for individuals, startups and small
+              businessese
+            </h3>
+            <img
+              class="right-img"
+              src="./assets/img/trangphu/trang5-1.webp"
+              alt=""
+            />
+            <p class="p1">
+              Some experts believe the science of champagne has applications in
+              ballistics and rocketry, and now producers are trialing deep-sea
+              aging, seeking the salty superiority of a life under pressure.
+            </p>
+          </a>
+        </div>
+      </div>
+      <!-- 5 -->
+    </main>
     <footer>
-      <p>&copy; 2023 Your Website</p>
+      <div class="footer-contain">
+        <div class="contain-1">
+          <div>
+            <h1>NEWS</h1>
+            <p>
+              Chúng tôi sẽ cập nhật tin tức mới nhất trên toàn thế giới cho bạn
+            </p>
+          </div>
+          <div class="social-network">
+            <p>Các trang thông tin khác</p>
+            <ul class="social-icon">
+              <li>
+                <a href="#"><i class="fab fa-facebook"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-tiktok"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fa fa-rss"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="contain-2">
+          <h1>Other News</h1>
+          <div class="list">
+            <li>
+              <a href="#" class="white-link-color">Media</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Events</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Spaces</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Enterprise</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Media</a>
+            </li>
+          </div>
+        </div>
+      </div>
+      <div class="copytext">
+        <p>©2023 Web tin tức nhóm 9</p>
+      </div>
     </footer>
   </body>
 </html>
