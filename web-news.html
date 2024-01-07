@@ -397,5 +397,20 @@
     </div>
    </footer>
     <link rel="stylesheet" href="JavaScript/index.js" />
+   <script>
+     const actionbtn = document.querySelector('.ml')
+const actionbtnIcon = document.querySelector('.ml i')
+const dropDrowMenu = document.querySelector('.hidden-menu')
+
+actionbtn.onclick = function(){
+    dropDrowMenu.classList.toggle('open')
+    const isOpen = dropDrowMenu.classList.contains('open')
+
+
+    actionbtnIcon.classList = isOpen
+    ? 'fa fa-times'
+    : 'fa fa-bars'
+}
+   </script>
   </body>
 </html>
