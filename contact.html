@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liên hệ</title>
+    <link rel="stylesheet" href="./Css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    :root{
+    --primary-color: #f24137;
+    --white-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #e5e5e5;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body{
+    font-size: 100%;
+    font-family: Roboto;
+}
+
+/*footer*/
+.footer__top{
+    background: #efefef;
+    padding: 1.6rem 0;
+}
+
+.footer__top-intro-heading, .footer__top-policy-heading, .footer__top-contact-heading {
+    font-size: 1.7rem;
+    color: var(--text-color);
+    padding: 1.2rem 0;
+}
+
+.footer__top-intro-content {
+    font-size: 1.5rem;
+}
+
+.footer__top-policy-list {
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+.footer__top-policy-link {
+    font-size: 1.5rem;
+    color: var(--text-color);
+}
+
+.footer__top-policy-link:hover{
+    color: var(--text-color);
+    opacity: 0.8;
+    text-decoration: none;
+}
+
+
+.footer__top-contact {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+
+.footer__top-contact-icon {
+    margin-right: 2.6rem;
+}
+
+
+
+.footer__top-contact-phone {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--black-color);
+    margin-bottom: 1rem;
+}
+
+.footer__top-contact-des {
+    font-size: 1.3rem;
+    color: var(--text-color);
+}
+
+
+
+.footer__bottom {
+    height: 3.4rem;
+    background: #666;
+    text-align: center;
+}
+
+.footer__bottom-content {
+    font-size: 1.4rem;
+    color: var(--white-color);
+    margin: 0 auto;
+    line-height: 3.4rem;
+}
+
+#myBtn-scroll{
+
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: rgba(238, 0, 0,0.5);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 4px;
+  
+}
+#myBtn-scroll:hover{
+   
+    background-color: red;
+}
+.contact__self h3, .contact__regist h3 {
+	font-size: 2rem;
+	color: #000;
+}
+
+.contact__self p, .contact__regist p{
+	font-size: 1.4rem;
+}
+
+
+.contact__self-list {
+	list-style: none;
+}
+
+.contact__self-link {
+	color: var(--text-color);
+	font-size: 1.4rem;
+	display: block;
+	padding: 0.5rem 0;
+}
+
+.contact__self-item:first-child .contact__self-link{
+	font-weight: 500;
+}
+
+.contact__self-link:hover{
+	color: var(--black-color);
+	text-decoration: none;
+}
+
+.contact__regist form input{
+	margin: 1rem 0;
+	padding: 0.8rem 1rem;
+	border-radius: 0.2rem;
+	outline: none;
+	font-size: 1.4rem;
+	border: 1px solid #ccc;
+	width: 100%;
+}
+
+
+.contact__regist form textarea{
+	width: 100%;
+	padding: 0.6rem 1.4rem;
+	font-size: 1.4rem;
+	height: 10rem;
+	outline: none;
+	border-radius: .2rem;
+	margin-top: 1rem;
+}
+
+.mb-50{
+	margin-bottom: 3rem;
+}
+
+.contact__regist form button{
+	font-size: 1.4rem;
+	background: var(--primary-color);
+	padding: 0.6rem 1.4rem;
+	outline: none;
+	color: var(--white-color);
+	border-radius: 0.2rem;
+	border: none;
+	cursor: pointer;
+	margin-top: 1rem;
+}
+
+.contact__regist form button:hover{
+	opacity: 0.8;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+input[type=number] {
+-moz-appearance: textfield;
+}
+
+
+.pc{
+	position: relative;
+}
+
+.menu__nav{
+	position: absolute;
+	top: -1.4rem;
+	left: 0;
+	z-index: 10;
+	box-shadow: 1px 1px 5px 1px #ccc;
+	display: none;
+}
+
+.menu__nav{
+	padding: 0;
+	
+}
+.menu__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu__item{
+   padding-left: .15rem;
+}
+
+.menu__item-icon{
+	width: 1.6rem;
+	height: 1.6rem;
+	display: inline-block;
+	margin-right: 1.5rem;
+}
+.menu__item:hover {
+    background: var(--primary-color);
+    
+}
+
+.menu__item:hover .menu__link{
+    color: var(--white-color);
+    background: var(--primary-color);
+    text-decoration: none;
+    fill: var(--white-color);
+}
+
+.menu__item--active .menu__link{
+    color: var(--primary-color);
+    fill: var(--primary-color);
+}
+.menu__link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text-color);
+    display: block;
+    padding: 1rem 2.8rem;
+    text-decoration: none;
+    border-top: 1px solid #eff0f3;
+    background: var(--white-color);
+    background-clip: padding-box;
+    display: flex;
+    align-items: center;
+}
+
+</style>
+<body>
+    <section class="contact">
+    	<div class="container">
+    		<div class="row mt-4 mb-50 pc">
+    			<div class="col-12 contact__map">
+    				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.214525515939!2d106.78918677408875!3d10.871281657438855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276398969f7b%3A0x9672b7efd0893fc4!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOw7RuZyBMw6JtIFRQLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1704550870483!5m2!1svi!2s" width="1100" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    			</div>
+    		</div>
+
+    		<div class="row mt-4 mb-4">
+                <div class="col-lg-6 col-md-6 col-sm-12 contact__self">
+                    <h3 class="mb-4">
+                        Liên hệ với chúng tôi
+                    </h3>
+                    <p>
+                        Để không ngừng nâng cao chất lượng dịch vụ và đáp ứng tốt hơn nữa các yêu cầu sử dụng sách của Quý khách, chúng tôi mong muốn nhận được các thông tin phản hồi. Nếu Quý khách có bất kỳ thắc mắc hoặc đóng góp nào, xin vui lòng liên hệ với chúng tôi theo thông tin dưới đây. Chúng tôi sẽ phản hồi lại Quý khách trong thời gian sớm nhất.
+                    </p>
+                    <h3 class="mt-4 mb-4">
+                        Thông tin liên hệ
+                    </h3>
+                    
+                    <ul class="contact__self-list">
+                        <li class="contact__self-item">
+                            <a class="contact__self-link" href="#">nhóm 9</a>
+                        </li>
+                        <li class="contact__self-item">
+                            <a class="contact__self-link" href="#">SĐT: +0848082324</a>
+                        </li>
+                        <li class="contact__self-item">
+                            <a class="contact__self-link" href="#">Email: info@st.hcmuaf.edu.com</a>
+                        </li>
+                        <li class="contact__self-item">
+                            <a class="contact__self-link" href="#">Địa chỉ: Khu Pho 6 ,Linh Trung, Thu Duc,TP Ho Chi Minh </a>
+                        </li>
+                    </ul>
+                </div>
+    			<div class="col-lg-6 col-md-6 col-sm-12 contact__regist">
+    				<h3 class="mb-4">
+    					Tư vấn miễn phí
+    				</h3>
+
+    				<p>Quý khách vui lòng để lại thông tin để nhân viên tư vấn điện lại cho bạn sớm nhất!</p>
+
+    				<form>
+					    <input type="text" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Họ tên của bạn...">
+
+					    <input type="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email của bạn...">
+
+					    <input type="number" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Số điện thoại...">
+						
+						<textarea name="" id="" cols="200" rows="15" placeholder="Nội dung cần tư vấn..."></textarea> 
+					  <button type="submit">Gửi liên hệ</button>
+					</form>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+    <!--end contact -->
+
+    <!-- footer -->
+    <footer>
+        <section class="footer__top">
+            <div class="container">
+                <div class="row">
+                    <article class="footer__top-intro col-lg-5 col-md-4 col-sm-6">
+                        <h4 class="footer__top-intro-heading">
+                            Về chúng tôi
+                        </h4>
+                        <div class="footer__top-intro-content">
+                            Edubook là cửa hàng luôn cung cấp cho các bạn tìm tòi tri thức, đam mê 
+                            đọc sách trên khắp cả nước.Chúng tôi sẽ liên tục cập 
+                            nhật những cuốn sách hay nhất, mới nhất, chất lượng nhất 
+                            giúp người đọc có những cuốn sách hay nhất để đọc! <br> <br>
+                            Điện thoại: +0848082324 <br>
+                            Email: info@st.hcmuaf.edu.com <br>
+                           
+                        </div>
+                    </article>
+
+                    <article class="footer__top-policy col-lg-3 col-md-4 col-sm-6">
+                        <h4 class="footer__top-policy-heading">
+                            Chính sách mua hàng
+                        </h4>
+
+                        <ul class="footer__top-policy-list">
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Hình thức đặt hàng</a>
+                            </li>
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Hình thức thanh toán</a>
+                            </li>
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Phương thức vận chuyển</a>
+                            </li>
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Chính sách đổi trả</a>
+                            </li>
+                            <li class="footer__top-policy-item">
+                                <a href="#" class="footer__top-policy-link">Hướng dẫn sử dụng</a>
+                            </li>
+                        </ul>
+                    </article>
+
+                    <article class="footer__top-contact-wrap col-lg-4 col-md-4 col-sm-6">
+                        <h4 class="footer__top-contact-heading">
+                            Hotline liên hệ
+                        </h4>
+
+                        <div class="footer__top-contact">
+                            <div class="footer__top-contact-icon">
+                                <img src="./assets/img/phone_top.png" class="footer__top-contact-img">
+                            </div>
+
+                            <div class="footer__top-contact-phone-wrap">
+                                <div class="footer__top-contact-phone">
+                                    +0848082324
+                                </div>
+                                <div class="footer__top-contact-des">
+                                    (Giải đáp thắc mắc 24/24)
+                                </div>
+                            </div>
+                        </div>
+                    
+                        <h4 class="footer__top-contact-heading">
+                            Kết nối với chúng tôi
+                        </h4>
+
+                        <div class="footer__top-contact-social">
+                            <a href="#" class="footer__top-contact-social-link">
+                                <img src="./assets/img/facebook.png">
+                            </a>
+                            <a href="#" class="footer__top-contact-social-link">
+                                <img src="./assets/img/youtube.png">
+                            </a>
+                            <a href="#" class="footer__top-contact-social-link">
+                                <img src="./assets/img/tiktok.png">
+                            </a>
+                            <a href="#" class="footer__top-contact-social-link">
+                                <img src="./assets/img/zalo.png">
+                            </a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+        <section class="footer__bottom">
+            <div class="container">
+                <div class="row">
+                    <span class="footer__bottom-content">©2023 Web tin tức nhóm 9</span>
+                </div>
+            </div>
+        </section>
+    </footer>
+</body>
+</html>
