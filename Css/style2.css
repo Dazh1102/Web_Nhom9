@@ -251,14 +251,11 @@ div.item-1 {
   font-weight: 700;
   text-align: left;
   position: absolute;
-  bottom: -78px;
-  transition: all 0.45s ease-in-out;
-  opacity: 0;
   font-size: 15px;
   list-style: none;
+  bottom: 0;
 }
 .container_bao:hover .style-bao {
-  bottom: 0;
   opacity: 1;
 }
 .style-bao a {
@@ -266,7 +263,7 @@ div.item-1 {
   color: black;
 }
 .style-bao a:hover {
-  box-shadow: 0 2px red;
+  box-shadow: 0 2px black;
 }
 
 /* kết thúc phần của Bảo */
