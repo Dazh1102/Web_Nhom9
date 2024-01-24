@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.jpg" rel="icon" />
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon" />
+    <title>Soccer</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Roboto&display=swap");
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --main-color: #d3ad7f;
+        --black: #13131a;
+        --bg: #010103;
+        --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* header */
+
+      header {
+        width: 100%;
+        height: auto;
+        border-bottom: #b8b7b7 solid 0.2rem;
+        background-color: #eef5ff;
+        position: relative;
+      }
+
+      header .container_phat .menu {
+        width: 100%;
+        height: 225px;
+      }
+
+      header .container_phat .menu .up {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 80px;
+      }
+
+      .ml {
+        margin: 10px;
+        font-size: 30px;
+        display: none;
+        font-size: 2.5rem;
+      }
+
+      .up .up-left {
+        display: flex;
+      }
+
+      .up .up-left img {
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+
+      .up .up-left h1 {
+        margin: 20px 15px 0 10px;
+        font-family: "Times New Roman", Times, serif;
+        color: black;
+        font-size: 40px;
+      }
+
+      .up .up-left p {
+        margin: 0px 15px 80px 15px;
+        font-size: 15px;
+      }
+
+      .up .up-right img {
+        margin-top: 20px;
+        margin-right: 200px;
+        border: none;
+      }
+
+      .mid {
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+      }
+
+      .mid .mid-left #search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 150px;
+        width: 300px;
+        height: 25px;
+      }
+
+      #search {
+        /* border-radius: 30px; */
+        background-color: #eef5ff;
+      }
+
+      #search #search-text {
+        outline: none;
+        border: none;
+        background-color: none;
+        font-size: 18px;
+        width: 0;
+        padding: 0;
+        transition: all 0.25s ease-in-out;
+      }
+
+      #search:hover #search-text {
+        width: 300px;
+        padding: 10px 0 10px 15px;
+        border: rgb(129, 129, 129) solid 0.2rem;
+        border-radius: 30px;
+      }
+
+      #search-btn {
+        background-color: white;
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 18px;
+      }
+
+      .mid .mid-right {
+        margin-right: 110px;
+      }
+
+      .mid .mid-right .item-button button {
+        width: 80px;
+        height: 30px;
+        background-color: #eef5ff;
+        border: rgba(255, 255, 255, 0.007) solid 0.2rem;
+        outline: none;
+        font-weight: 300;
+        border-radius: 10px;
+        transition: 0.4s;
+        font-family: "Times New Roman", Times, serif;
+        margin: 10px;
+        border: #b8b7b7 solid 0.1rem;
+        transition: 0.15s ease;
+      }
+
+      .mid .mid-right .item-button button:hover {
+        background-color: gray;
+        border-style: outset;
+        scale: 1.05;
+      }
+
+      .mid .mid-right .item-button button a {
+        color: black;
+        font-size: 17px;
+        text-decoration: none;
+      }
+
+      .mid .mid-right .item-button button a:hover {
+        color: #fff;
+      }
+
+      .mid .Notification {
+        font-size: 30px;
+        margin-right: 50px;
+      }
+
+      header .container_phat .menu .down ul {
+        list-style: none;
+        justify-content: center;
+        align-content: center;
+        margin: 10px;
+        margin-top: 20px;
+        margin-left: 120px;
+      }
+
+      .down ul li {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .down ul li button {
+        border: none;
+        outline: none;
+        /* border-radius: 10px; */
+        transition: 0.4s;
+        background-color: #eef5ff;
+        height: 20px;
+        /* border-right: 1px solid black; */
+        padding-right: 10px;
+        transition: 0.15s ease;
+      }
+
+      .down ul li button:hover {
+        background-color: gray;
+        scale: 1.05;
+      }
+
+      .down ul li button a {
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+      }
+
+      .down ul li button a:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .down,
+        .mid-right {
+          display: none;
+        }
+
+        .ml {
+          display: block;
+        }
+      }
+
+      .hidden-menu {
+        /* display: none; */
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        height: 0;
+        width: 300px;
+        background: rgba(245, 243, 243, 0.904);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        /* overflow: hidden; */
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-top: 40px;
+        margin-right: 20px;
+        overflow: scroll;
+      }
+
+      .hidden-menu.open {
+        height: 250px;
+      }
+
+      .hidden-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hidden-menu li button {
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+
+      .hidden-menu li a {
+        color: #505050;
+        text-decoration: none;
+        font-size: small;
+      }
+
+      .hidden-menu li a:hover {
+        scale: 1.05;
+        color: rgb(75, 180, 75);
+        font-weight: 600;
+      }
+
+      @media (max-width: 576px) {
+        .hidden-menu {
+          left: 2rem;
+          width: unset;
+        }
+      }
+
+      nav {
+        padding: 20px;
+        text-align: center;
+        margin-left: 300px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        size: 20px;
+        font-weight: 700;
+      }
+      #nav a:hover {
+        color: orange;
+        transition: 0.3s;
+      }
+
+      main {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        margin-top: 20px;
+      }
+      .content {
+        margin: auto;
+        max-width: 870px;
+        /* font-weight: 900; */
+      }
+
+      .content p {
+        font-size: 15px;
+      }
+      .content h3 {
+        color: darkgray;
+        margin-left: 13%;
+      }
+      .comment {
+        display: flex;
+      }
+
+      section {
+        flex: 1;
+      }
+
+      aside {
+        width: 250px;
+        background-color: #eee;
+        padding: 15px;
+      }
+
+      aside a {
+        text-decoration: none;
+        color: black;
+      }
+      aside a:hover {
+        color: orange;
+        transition: 0.3s;
+      }
+
+      .contact1 .row {
+        display: flex;
+        background: var(--black);
+        flex-wrap: wrap;
+        gap: 1rem;
+      }
+      .contact1 .row .maps {
+        flex: 1 1 30rem;
+        width: 100%;
+        object-fit: cover;
+      }
+      .contact1 .row form {
+        flex: 1 1 30rem;
+        padding: 3rem 1rem;
+        text-align: center;
+      }
+      .contact1 .row form h3 {
+        text-transform: uppercase;
+        font-size: 2rem;
+        color: #fff;
+      }
+      .contact1 .row form .inputBox {
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        background: var(--black);
+        border: var(--border);
+        border-radius: 8px;
+      }
+      .contact1 .row form .inputBox span {
+        color: #fff;
+        font-size: 1rem;
+        padding-left: 1rem;
+        margin-left: 10px;
+        margin-right: 20px;
+      }
+      .contact1 .row form .inputBox input {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1.1rem;
+        color: #fff;
+        text-transform: none;
+        background: nonew;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+      .btn {
+        margin-top: 1rem;
+        display: inline-block;
+        padding: 0.7rem 3rem;
+        font-size: 1.7rem;
+        color: #fff;
+        background: var(--main-color);
+        cursor: pointer;
+      }
+      .btn:hover {
+        letter-spacing: 0.1rem;
+      }
+      footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+      }
+
+      @media (max-width: 991px) {
+        html {
+          font-size: 55%;
+        }
+        header {
+          padding: 1.5rem 2rem;
+        }
+        section {
+          padding: 2rem;
+        }
+        footer {
+          padding: 2rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <header>
+        <div class="Phat">
+          <div class="container_phat">
+            <div class="menu">
+              <div class="up">
+                <div class="up-left">
+                  <div class="logo">
+                    <img
+                      src="./assets/img/logo.webp"
+                      style="width: 70px; height: 70px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="title">
+                    <h1>GR9.VN</h1>
+                    <br />
+                    <p>Online news</p>
+                  </div>
+                </div>
+                <div class="up-right">
+                  <img
+                    src="./assets/img/tech.webp"
+                    style="width: 800px; height: 70px"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="mid">
+                <div class="mid-left">
+                  <form action="" id="search">
+                    <input type="text" id="search-text" placeholder="Search" />
+                    <button id="search-btn">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
+                <div class="mid-right">
+                  <div class="item-button">
+                    <button>
+                      <a href="./login.html">Sign In</a>
+                    </button>
+                    <button>
+                      <a href="contact.html">Contact</a>
+                    </button>
+                  </div>
+                </div>
+                <div class="ml">
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="down">
+                <ul>
+                  <li>
+                    <button>
+                      <a href="web-news.html">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Home
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a
+                        href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                      >
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        Smart Device
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.socialmediatoday.com/">
+                        <i class="fa fa-rss" aria-hidden="true"></i>
+                        Internet And SocialNetWork
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.sciencenews.org/">
+                        <i class="fa fa-flask" aria-hidden="true"></i>
+                        Scientific Discovery
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.wired.com/category/security/">
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                        Exhibition
+                      </a>
+                    </button>
+                  </li>
+                  <!-- <li>
+                        <button>
+                         <a href="">
+                          <i class="fa fa-lock" aria-hidden="true"></i>
+                          NextWork Security
+                         </a>
+                        </button>
+                       </li> -->
+                  <li>
+                    <button>
+                      <a href="https://www.traffictechnologytoday.com/">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        Traffic technology
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.electronicsweekly.com/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        Electronic
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="hidden-menu">
+                <ul>
+                  <li>
+                    <button>
+                      <a href="">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Home
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a
+                        href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                      >
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        Smart Device
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.socialmediatoday.com">
+                        <i class="fa fa-rss" aria-hidden="true"></i>
+                        Internet And SocialNetWork
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.sciencenews.org/">
+                        <i class="fa fa-flask" aria-hidden="true"></i>
+                        Scientific Discovery
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://exhibitionnews.uk/category/type/news/">
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                        Exhibition
+                      </a>
+                    </button>
+                  </li>
+                  <!-- <li>
+                        <button>
+                          <a href="https://www.wired.com/category/security/">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            NextWork Security
+                          </a>
+                        </button>
+                      </li> -->
+                  <li>
+                    <button>
+                      <a href="https://www.traffictechnologytoday.com/">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        Traffic technology
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.electronicsweekly.com/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        Electronic
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </header>
+
+    <main>
+      <section>
+        <div class="content">
+          <h1>
+            Mbappe scored a hat-trick to help France secure a record-breaking
+            14-0 victory.
+          </h1>
+          <p>
+            Mbappe shone with a hat-trick and three assists, helping the French
+            national team achieve their most emphatic victory in history (14-0)
+            against Gibraltar in the early morning of November 19 in the Euro
+            2024 qualifiers.
+          </p>
+
+          <h3>
+            <img
+              src="./assets/img/Soccer.webp"
+              alt="Mbappé scored a hat-trick to help France win a record 14-0. "
+              width="85%"
+            />
+            <br />
+            Mbappé scored a hat-trick to help France win a record 14-0.
+          </h3>
+          <p>
+            Facing a significantly inferior Gibraltar side in all aspects and
+            enjoying the home advantage, the French national team played a
+            comprehensive and dominating game. Throughout the match, France
+            controlled the ball for 66% of the time, attempted 31 shots, while
+            Gibraltar failed to register a single shot in the entire 90 minutes.
+          </p>
+          <p>
+            However, the opening goal for the French national team came from an
+            own goal by defender Ethan Santos in the 3rd minute. Just 1 minute
+            later, Marcus Thuram scored, making it 2-0 for the Gallic roosters.
+          </p>
+          <p>
+            In the 16th minute, Zaire-Emery extended the lead to 3-0 for France,
+            and shortly after, Gibraltar suffered a setback as defender Ethan
+            Santos received a straight red card. By this point, Gibraltar's
+            fighting spirit had officially crumbled, and Mbappe and his
+            teammates from the French national team unleashed a goal-scoring
+            spree.
+          </p>
+          <p>
+            Trong những phút còn lại, tuyển Pháp đã ghi thêm 11 bàn thắng nữa,
+            với cú hat-trick của Mbappe, để ấn định chiến thắng chung cuộc 14-0.
+            Trong đó bàn thắng nâng tỉ số lên 12-0 của Mbappe là một siêu phẩm,
+            khi anh tung cú sút từ khoảng cách hơn 40m đưa bóng vào lưới thủ môn
+            Dayle Coleing (Gibraltar).
+          </p>
+          <h3>
+            <img
+              src="./assets/img/soccer1.webp"
+              alt="France won the Euro 2024 qualifiers.   "
+              width="85%"
+            />
+            <br />France won the Euro 2024 qualifiers.
+          </h3>
+          <p>
+            In addition to his hat-trick, Mbappe also provided 3 assists for
+            Clauss, Fofana, and Coman to score.
+          </p>
+          <p>
+            The 14-0 win is the largest in the history of the French national
+            team. Their previous most significant victory was a 10-0 triumph
+            over Azerbaijan in 1995.
+          </p>
+          <p>
+            Gibraltar, on the other hand, suffered their heaviest defeat in
+            history, as their previous worst loss was a 0-9 defeat against
+            Belgium in 2017."
+          </p>
+          <p>
+            The two European football powerhouses, England and France, secured
+            emphatic victories in the Euro 2024 qualifiers on the early morning
+            of June 17.
+          </p>
+        </div>
+      </section>
+
+      <aside>
+        <h2>newspaper</h2>
+        <div class="image">
+          <a href="soccer_bao.html"
+            ><img src="./assets/img/Soccer.webp" alt="" width="250px" />
+            Mbappe scores a hat-trick to help France win a record-breaking 14-0
+            victory.
+          </a>
+        </div>
+        <div class="image">
+          <a href="chatgpt_bao.html"
+            ><img src="./assets/img/Open-AI.webp" alt="" width="250px" />
+
+            Just one day after being fired, OpenAI is negotiating to invite the
+            'father' of ChatGPT to return to work.
+          </a>
+        </div>
+        <div class="image">
+          <a href="Shark.html"
+            ><img src="./assets/img/Shark-Hung-Anh.webp" alt="" width="250px" />
+            How does the Meliwa air purifier 'convince' Shark Hùng Anh?
+          </a>
+        </div>
+        <div class="image">
+          <a href="Russia.html"
+            ><img src="./assets/img/Russia.webp" alt="" width="250px" />
+            Russia resumes the offensive on the Ukrainian capital Kiev, after 52
+            days.
+          </a>
+        </div>
+      </aside>
+    </main>
+    <section class="contact1" id="contact1">
+      <div class="row">
+        <iframe
+          class="maps"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.214525515939!2d106.78918677408875!3d10.871281657438855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3175276398969f7b%3A0x9672b7efd0893fc4!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBOw7RuZyBMw6JtIFRQLiBI4buTIENow60gTWluaA!5e0!3m2!1svi!2s!4v1703927297175!5m2!1svi!2s"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+
+        <form action="">
+          <h3>get in touch</h3>
+          <div class="inputBox">
+            <span class="fas fa-user"></span>
+            <input type="text" placeholder="name" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-envelope"></span>
+            <input type="text" placeholder="email" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-phone"></span>
+            <input type="text" placeholder="number" />
+          </div>
+          <div class="inputBox">
+            <span class="fas fa-message"></span>
+            <input type="text" placeholder="Feedback" />
+          </div>
+          <input type="submit" value="contact now" class="btn" />
+        </form>
+      </div>
+    </section>
+    <footer>
+      <p>©2023 Web tin tức nhóm 9</p>
+    </footer>
+  </body>
+</html>

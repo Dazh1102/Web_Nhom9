@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    
+  <!-- Favicons -->
+  <link href="assets/img/logo.jpg" rel="icon">
+  <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <title>Trang 3</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;500&family=Roboto&display=swap");
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --main-color: #d3ad7f;
+        --black: #13131a;
+        --bg: #010103;
+        --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* header */
+
+      header {
+        width: 100%;
+        height: auto;
+        border-bottom: #b8b7b7 solid 0.2rem;
+        background-color: #eef5ff;
+        position: relative;
+      }
+
+      header .container_phat .menu {
+        width: 100%;
+        height: 225px;
+      }
+
+      header .container_phat .menu .up {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 80px;
+      }
+
+      .ml {
+        margin: 10px;
+        font-size: 30px;
+        display: none;
+        font-size: 2.5rem;
+      }
+
+      .up .up-left {
+        display: flex;
+      }
+
+      .up .up-left img {
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+
+      .up .up-left p {
+        margin: 0px 15px 80px 15px;
+        font-size: 15px;
+      }
+
+      .up .up-right img {
+        margin-top: 20px;
+        margin-right: 200px;
+        border: none;
+      }
+
+      .mid {
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+      }
+
+      .mid .mid-left #search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 150px;
+        width: 300px;
+        height: 25px;
+      }
+
+      #search {
+        /* border-radius: 30px; */
+        background-color: #eef5ff;
+      }
+
+      #search #search-text {
+        outline: none;
+        border: none;
+        background-color: none;
+        font-size: 18px;
+        width: 0;
+        padding: 0;
+        transition: all 0.25s ease-in-out;
+      }
+
+      #search:hover #search-text {
+        width: 300px;
+        padding: 10px 0 10px 15px;
+        border: rgb(129, 129, 129) solid 0.2rem;
+        border-radius: 30px;
+      }
+
+      #search-btn {
+        background-color: white;
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 18px;
+      }
+
+      .mid .mid-right {
+        margin-right: 110px;
+      }
+
+      .mid .mid-right .item-button button {
+        width: 80px;
+        height: 30px;
+        background-color: #eef5ff;
+        border: rgba(255, 255, 255, 0.007) solid 0.2rem;
+        outline: none;
+        font-weight: 300;
+        border-radius: 10px;
+        transition: 0.4s;
+        font-family: "Times New Roman", Times, serif;
+        margin: 10px;
+        border: #b8b7b7 solid 0.1rem;
+        transition: 0.15s ease;
+      }
+
+      .mid .mid-right .item-button button:hover {
+        background-color: gray;
+        border-style: outset;
+        scale: 1.05;
+      }
+
+      .mid .mid-right .item-button button a {
+        color: black;
+        font-size: 17px;
+        text-decoration: none;
+      }
+
+      .mid .mid-right .item-button button a:hover {
+        color: #fff;
+      }
+
+      .mid .Notification {
+        font-size: 30px;
+        margin-right: 50px;
+      }
+
+      header .container_phat .menu .down ul {
+        list-style: none;
+        justify-content: center;
+        align-content: center;
+        margin: 10px;
+        margin-top: 20px;
+        margin-left: 120px;
+      }
+
+      .down ul li {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .down ul li button {
+        border: none;
+        outline: none;
+        /* border-radius: 10px; */
+        transition: 0.4s;
+        background-color: #eef5ff;
+        height: 20px;
+        /* border-right: 1px solid black; */
+        padding-right: 10px;
+        transition: 0.15s ease;
+      }
+
+      .down ul li button:hover {
+        background-color: gray;
+        scale: 1.05;
+      }
+
+      .down ul li button a {
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+      }
+
+      .down ul li button a:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .down,
+        .mid-right {
+          display: none;
+        }
+
+        .ml {
+          display: block;
+        }
+      }
+
+      .hidden-menu {
+        /* display: none; */
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        height: 0;
+        width: 300px;
+        background: rgba(245, 243, 243, 0.904);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        /* overflow: hidden; */
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-top: 40px;
+        margin-right: 20px;
+        overflow: scroll;
+      }
+
+      .hidden-menu.open {
+        height: 250px;
+      }
+
+      .hidden-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hidden-menu li button {
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+
+      .hidden-menu li a {
+        color: #505050;
+        text-decoration: none;
+        font-size: small;
+      }
+
+      .hidden-menu li a:hover {
+        scale: 1.05;
+        color: rgb(75, 180, 75);
+        font-weight: 600;
+      }
+
+      @media (max-width: 576px) {
+        .hidden-menu {
+          left: 2rem;
+          width: unset;
+        }
+      }
+
+      nav {
+        padding: 20px;
+        text-align: center;
+        margin-left: 300px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        size: 20px;
+        font-weight: 600;
+      }
+      #nav a:hover {
+        color: orange;
+        transition: 0.3s;
+      }
+      /* main */
+      .section1 {
+        margin-left: 200px;
+        margin-right: 300px;
+      }
+      img {
+        max-height: 40vw;
+      }
+      .section2 {
+        margin-left: 280px;
+        margin-right: 100px;
+        display: flex;
+        gap: 100px;
+        text-align: justify;
+      }
+      .left {
+        flex-basis: 60%;
+      }
+      .article1 {
+        height: 100px;
+      }
+      .article2 {
+        height: 100px;
+      }
+      .rightMain {
+        display: flex;
+        height: 80px;
+        border-style: solid none none none;
+        border-width: 2px;
+        gap: 20px;
+        align-items: center;
+        line-height: 5px;
+      }
+
+      .rightOne {
+        height: 40px;
+        border-style: solid none solid none;
+        border-width: 2px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .imgWeb {
+        max-height: 35vw;
+      }
+
+      .right {
+        flex-basis: 40%;
+      }
+      .rightImg {
+        width: 60px;
+      }
+      a.pragrap1:visited,
+      a.pragrap1:link {
+        text-decoration: none;
+      }
+      a.pragrap1:hover,
+      a.pragrap1:active {
+        text-decoration: underline;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .p1 {
+        font-size: 16px;
+      }
+      .pragrap {
+        font-size: 10px;
+        line-height: 10px;
+      }
+      .pragrap1 {
+        font-size: 13px;
+        line-height: 12px;
+      }
+      .most {
+        /* font-weight: 700; */
+      }
+      .today {
+      }
+      .space {
+        height: 200px;
+      }
+      /* main */
+      /* footer */
+      footer {
+        background-color: rgb(0, 0, 0);
+      }
+      .footer-contain {
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .footer-contain ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .footer-contain ul li {
+        display: inline-block;
+      }
+      .contain-1 {
+        flex: 1;
+        color: rgb(255, 255, 255);
+        font-size: 17px;
+        padding-left: 50px;
+        margin: 0 auto;
+      }
+      .contain-1 h1 {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .social-network {
+        margin-top: 50px;
+      }
+      .social-network ul li {
+        margin: 0 3px;
+      }
+      .social-network ul li a {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 20px;
+        transition: all 0.5s;
+      }
+      .social-network ul li a:hover {
+        background-color: #fff;
+        color: #4e4e4e;
+      }
+      .contain-1 img {
+        width: 70px;
+        height: 70px;
+        float: left;
+        margin-right: 10px;
+        margin-top: 20px;
+      }
+      .contain-2 {
+        flex: 1;
+        padding-left: 150px;
+        padding-top: 20px;
+        color: white;
+      }
+      .contain-2 h1 {
+        font-size: 23px;
+        padding-bottom: 10px;
+      }
+      .contain-3 {
+        padding-right: 50px;
+        flex: 1;
+        padding-top: 15px;
+        color: white;
+        line-height: 36px;
+      }
+
+      .contain-3 p {
+        font-size: 15px;
+      }
+      .contain-3 h1 {
+        font-size: 23px;
+      }
+      .contain-2 .list li {
+        margin-top: 15px;
+        font-size: 17px;
+        list-style-type: none;
+      }
+
+      .contain-2 .list li a {
+        text-decoration: none;
+      }
+      .contain-2 .white-link-color {
+        color: white;
+        transition: all 0.5s;
+      }
+      .contain-2 .white-link-color:hover {
+        color: rgb(112, 211, 241);
+      }
+
+      .contain-3 .social-links a {
+        display: inline-block;
+        background: #333;
+        color: #eee;
+        line-height: 1;
+        margin-right: 4px;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        transition: 0.3s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contain-3 .social-links a i {
+        line-height: 0;
+        font-size: 16px;
+      }
+      .contain-3 .social-links a:hover {
+        background: #4a4a4a;
+        color: #fff;
+      }
+      .contain-4 {
+        padding-right: 50px;
+        flex: 1;
+        padding-top: 20px;
+        color: white;
+        margin-bottom: 30px;
+      }
+      .contain-4 input[type="email"] {
+        border: 0;
+        padding: 6px 8px;
+        width: 65%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .contain-4 input[type="submit"] {
+        background: #14b0ae;
+        border: 0;
+        width: 35%;
+        padding: 6px 0;
+        text-align: center;
+        color: #fff;
+        transition: 0.3s;
+        cursor: pointer;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .contain-4 input[type="submit"]:hover {
+        background: #1dcdd3;
+        border-radius: 5px;
+        color: black;
+      }
+      .contain-4 h1 {
+        font-size: 23px;
+      }
+      .contain-4 p {
+        font-size: 15px;
+      }
+      .copytext {
+        text-align: center;
+        position: relative;
+        color: #fff;
+      }
+      .copytext p {
+        border-top: 3px solid rgba(250, 250, 250, 0.1);
+        display: inline-block;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 15px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="Phat">
+        <div class="container_phat">
+          <div class="menu">
+            <div class="up">
+              <div class="up-left">
+                <div class="logo">
+                  <img
+                    src="./assets/img/logo.webp"
+                    style="width: 70px; height: 70px"
+                    alt=""
+                  />
+                </div>
+                <div class="title">
+                  <h1>GR9.VN</h1>
+                  <br />
+                  <p>Online news</p>
+                </div>
+              </div>
+              <div class="up-right">
+                <img
+                  src="./assets/img/tech.webp"
+                  style="width: 800px; height: 70px"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mid">
+              <div class="mid-left">
+                <form action="" id="search">
+                  <input type="text" id="search-text" placeholder="Search" />
+                  <button id="search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+              <div class="mid-right">
+                <div class="item-button">
+                  <button>
+                    <a href="./login.html">Sign In</a>
+                  </button>
+                  <button>
+                    <a href="contact.html">Contact</a>
+                  </button>
+                </div>
+              </div>
+              <div class="ml">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="down">
+              <ul>
+                <li>
+                  <button>
+                    <a href="web-news.html">
+                      <i class="fa fa-home" aria-hidden="true"></i>
+                      Home
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a
+                      href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                    >
+                      <i class="fa fa-desktop" aria-hidden="true"></i>
+                      Smart Device
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.socialmediatoday.com/">
+                      <i class="fa fa-rss" aria-hidden="true"></i>
+                      Internet And SocialNetWork
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.sciencenews.org/">
+                      <i class="fa fa-flask" aria-hidden="true"></i>
+                      Scientific Discovery
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.wired.com/category/security/">
+                      <i class="fa fa-camera" aria-hidden="true"></i>
+                      Exhibition
+                    </a>
+                  </button>
+                </li>
+                <!-- <li>
+                        <button>
+                         <a href="">
+                          <i class="fa fa-lock" aria-hidden="true"></i>
+                          NextWork Security
+                         </a>
+                        </button>
+                       </li> -->
+                <li>
+                  <button>
+                    <a href="https://www.traffictechnologytoday.com/">
+                      <i class="fa fa-car" aria-hidden="true"></i>
+                      Traffic technology
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.electronicsweekly.com/">
+                      <i class="fa fa-cog" aria-hidden="true"></i>
+                      Electronic
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="hidden-menu">
+              <ul>
+                <li>
+                  <button>
+                    <a href="">
+                      <i class="fa fa-home" aria-hidden="true"></i>
+                      Home
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a
+                      href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                    >
+                      <i class="fa fa-desktop" aria-hidden="true"></i>
+                      Smart Device
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.socialmediatoday.com">
+                      <i class="fa fa-rss" aria-hidden="true"></i>
+                      Internet And SocialNetWork
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.sciencenews.org/">
+                      <i class="fa fa-flask" aria-hidden="true"></i>
+                      Scientific Discovery
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://exhibitionnews.uk/category/type/news/">
+                      <i class="fa fa-camera" aria-hidden="true"></i>
+                      Exhibition
+                    </a>
+                  </button>
+                </li>
+                <!-- <li>
+                        <button>
+                          <a href="https://www.wired.com/category/security/">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            NextWork Security
+                          </a>
+                        </button>
+                      </li> -->
+                <li>
+                  <button>
+                    <a href="https://www.traffictechnologytoday.com/">
+                      <i class="fa fa-car" aria-hidden="true"></i>
+                      Traffic technology
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.electronicsweekly.com/">
+                      <i class="fa fa-cog" aria-hidden="true"></i>
+                      Electronic
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section1">
+        <h2>The overlooked tech that kept cities moving in 2023</h2>
+        <p>
+          The moons orbiting Jupiter and Saturn appear to have subsurface oceans
+          which could support life beyond Earth. But it’s not clear why these
+          seas exist at all.
+        </p>
+        <img class="imgWeb" src="./assets/img/trangphu/trang4.webp" alt="" />
+      </section>
+
+      <section class="section2">
+        <div class="left">
+          <section class="sec2">
+            <p class="p1">
+              Over here at TechCrunch, our time is often spent finding and
+              reporting on the next new new thing in mobility, from autonomous
+              drones and electric air taxis to self-driving trucks and even
+              batteries made of paper. While this tech, in theory, may someday
+              help people and goods move from point A to B, much of it is just
+              that — theory. Hope. Promise. Showy demos to impress VC investors.
+            </p>
+            <p class="p1">
+              That’s why we dug into the technology that’s helping cities move
+              today. Some of it is unsexy, but transportation is, more often
+              than not, a utility.
+            </p>
+            <p class="p1">
+              We’ll take a close look at the tech helping move two U.S. cities —
+              Miami and New York City — and run through a few other standout
+              innovations in 2023.
+            </p>
+            <h2 class="p1">How Miami uses on-demand transit</h2>
+            <img
+              class="imgWeb"
+              src="./assets/img/trangphu/trangg4-2.webp"
+              alt=""
+            />
+            <p class="p1">
+              Miami has been working with transit tech company Via to bring in
+              on-demand transit since 2020. The service, formerly called GO
+              Connect, launched during the COVID-19 pandemic as a first- and
+              last-mile solution, filling in the gaps between where people live
+              and major transit hubs. Three years later, Miami-Dade rebranded
+              the service to MetroConnect, adopted it into its broader public
+              transit network and added four new service zones.
+            </p>
+
+            <p class="p1">
+              Within a month of rebranding and expanding, MetroConnect completed
+              69% more rides and saw a 70% increase in ridership, according to
+              Via. The company also said MetroConnect has, since its inception,
+              increased access to 57% more jobs within a 45-minute commute by
+              connecting riders to transit hubs, two-thirds of whom report that
+              they do not have access to a car.
+            </p>
+            <p class="p1">
+              Carlos Cruz-Casas, chief innovation officer at Miami’s department
+              of transportation and public works, told TechCrunch MetroConnect
+              has helped boost public transit ridership, which saw a drop during
+              the COVID-19 pandemic.
+            </p>
+            <p class="p1">
+              “There’s no substitute for well-run fixed-route service,” said
+              Cruz-Casas. “We actually realized that the best marketing tool for
+              getting people back on transit is frequency.”
+            </p>
+            <p class="p1">
+              While the city expanded MetroConnect’s on-demand microtransit, it
+              also worked with one of Via’s planning products to optimize its
+              bus network. The city used Remix, the transit planning tech that
+              was acquired by Via in 2021, to build its Better Bus Network plan.
+              The plan, which went live in November, involved realigning 99 bus
+              routes to create a network of high-frequency corridors.
+            </p>
+
+            <p class="p1">
+              “We went from five corridors that were frequent to more than 20 —
+              for us that means running every seven and a half minutes, 10
+              minutes, 15 minutes. All day, everyday,” said Cruz-Casas.
+              “Miami-Dade county is bigger than some states, though. We can’t
+              provide that frequency everywhere. That’s where the on-demand
+              transit comes in.”
+            </p>
+            <p class="p1">
+              Eventually, Via will add vehicles from May Mobility, a driverless
+              technology company, to its MetroConnect fleet in Miami. May
+              Mobility and Via recently announced a partnership to provide a
+              rider-only on-demand microtransit service in the retirement
+              community of Sun City, Arizona. May’s style has so far been to
+              move carefully, so we don’t expect to see a widespread Miami
+              launch for some time.
+            </p>
+            <p class="p1">
+              Cruz-Casas also noted that Miami is working with Via on a full
+              intermodal trip planning solution between fixed-route and
+              on-demand services. Miami’s transportation department has been
+              partnering with a company called Swiftly to provide big data
+              analytics and more accurate real-time information for its GO app.
+            </p>
+            <p class="p1">
+              “I am a big fan of the technologies that allow for real-time
+              feedback because you feel empowered to make decisions and it’s a
+              lot more comfortable to use public transit when you have accurate
+              real-time information,” said Cruz-Casas.
+            </p>
+          </section>
+
+          <section class="sec2">
+            <h2 class="p1">
+              The moons orbiting Jupiter and Saturn appear to have subsurface
+              oceans which could support life beyond Earth. But it’s not clear
+              why these seas exist at all.
+            </h2>
+            <img
+              class="imgWeb"
+              src="./assets/img/trangphu/trang4-3.webp"
+              alt=""
+              style="height: 410px"
+            />
+          </section>
+          <section class="sec2">
+            <p class="p1">
+              New York City’s iconic subway system is more than 100 years old.
+              Most of the investment into the subway today is focused on
+              modernization to help the century-old system meet the needs and
+              expectations of customers living in an era of high technology.
+            </p>
+            <p class="p1">
+              Part of that has been reducing the friction to ride. Anyone who’s
+              ridden the NYC subway will know that frustrating, and bizarrely
+              nostalgic, feeling of rushing to make your train, swiping your
+              MetroCard and barreling forward through the turnstiles in one
+              motion, only to be bodily met with an unmoving metal bar because
+              you didn’t swipe correctly or, even worse, have INSUFFICIENT FARE.
+            </p>
+            <p class="p1">
+              The Metropolitan Transport Authority (MTA) is phasing out the
+              MetroCard in favor of the OMNY system, a contactless, open-loop
+              payment system. Riders can tap their credit and debit cards or
+              their phones (if they have a digital wallet) to quickly and easily
+              pay the subway fare and move through the turnstiles. For those who
+              are unbanked and need to pay with cash, the MTA is introducing an
+              OMNY card, which can be accessed via vending machines throughout
+              the city.
+            </p>
+            <p class="p1">
+              “We’re up to over 50% of subway riders and a significant
+              percentage of bus riders using tap-and-go one way or another,”
+              Jamie Torres-Springer, president of MTA construction and
+              development, told TechCrunch. “And it’s actually even better.
+              Seventy percent of the riders who are currently eligible to use
+              OMNY are using it.”
+            </p>
+            <p class="p1">
+              During the COVID-19 pandemic, the MTA’s ridership fell to about
+              5%. Today, the service is at around 80% of pre-COVID ridership,
+              according to Torres-Springer.
+            </p>
+            <p class="p1">
+              “Very interestingly, as we’ve recovered ridership over the last
+              year or so, that entire recovery has been using OMNY, and
+              MetroCard users have been flat,” he said. “Which means that
+              through the convenience, we are attracting people back or
+              attracting new riders to the system.”
+            </p>
+            <p class="p1">
+              The full phase-out of the MetroCard won’t happen until all MTA
+              users can easily access the OMNY payment platform.
+            </p>
+            <p class="p1">
+              Another quintessential NYC subway experience is riding to work
+              when suddenly the train stops in a tunnel. And it doesn’t move.
+              The conductor’s voice crackles over the loudspeaker and you think
+              you hear something about a signal malfunction. You check your
+              phone and have no reception. There will be no texting your boss to
+              let them know you’ll be late. All you can do is pray for movement.
+            </p>
+            <p class="p1">
+              The MTA is working on making experiences like that less common,
+              and we’ll get to that in a minute, but probably a nearer-term
+              Band-Aid for such an occasion is the agency’s plan to bring cell
+              service to all subway stations and tunnels. The city signed a deal
+              in 2022 with Boldyn, formerly Transit Wireless, to build out cell
+              signal in all subway tunnels. Today, it’s in stations citywide,
+              which can carry you through to many of the tunnels as long as
+              they’re not of a significant length.
+            </p>
+            <p class="p1">
+              Having service in the tunnels will be helpful for trip planning,
+              and the city is working to ensure better real-time information
+              through communication-based train control (CBTC). CBTC uses
+              telecommunications between the train and track equipment to manage
+              traffic. “Now you always know exactly where the trains are, and
+              you can run them closer together and faster,” said
+              Torres-Springer, noting that the 7 line saw on-time performance
+              improve from 68% to 91%, and speeds increase from 8% to 14%, after
+              implementation of the technology.
+            </p>
+            <p class="p1">
+              CBTC isn’t exactly new technology. It was initially adopted close
+              to 30 years ago, but the MTA is ramping up installations. The
+              agency is investing $6.7 billion out of a total $55 billion
+              five-year program into CBTC improvements, and currently has five
+              lines under construction, with plans to do another two
+              “substantial, long lines.” The MTA works with telecommunications
+              providers Siemens, Thales and Hitachi to make the signals work.
+              “We’ve been around for 100 years. A lot of the information about
+              the assets is tucked into somebody’s notebook in a shop
+              somewhere,” he said. “First we got to get the inventory. Once we
+              do that, we can really work with predictive maintenance analytics
+              tools.”
+            </p>
+          </section>
+        </div>
+
+        <div class="right">
+          <div class="mostrecent">
+            <article class="article1">
+              <div class="rightOne">
+                <a href="most.html" class="most">MOST RECENT</a>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang1.html"
+                    ><img src="./assets/img/sec1.webp" alt="" class="rightImg"
+                  /></a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang1.html" class="pragrap">ALICE LASCELLES </a>
+                  <br />
+                  <a
+                    href="trang1.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                    >Undersea-Aged Champagne Is Starting to Surface</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang2.html">
+                    <img
+                      src="./assets/img/trang2.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang2.html" class="pragrap">REBECCA BELLAN </a>
+                  <br />
+                  <a
+                    href="trang2.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                  >
+                    Get Ready for a ‘Tsunami’ of AI at CES</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang3.html"
+                    ><img
+                      src="./assets/img/trangphu/trang3-1.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang3.html" class="pragrap">ROBIN ANDREWS </a>
+                  <br />
+                  <a
+                    href="trang3.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                  >
+                    The Tantalizing Mystery of the Solar System’s Hidden
+                    Oceans</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang4.html"
+                    ><img
+                      src="./assets/img/trangphu/trang4.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang4.html" class="pragrap">TIMEN BARBER </a> <br />
+                  <a
+                    href="trang4.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                  >
+                    The overlooked tech that kept cities moving in 2023</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang5.html">
+                    <img
+                      src="./assets/img/trangphu/trang5-1.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang5.html" class="pragrap">TIFFANY LUMIE</a> <br />
+                  <a
+                    href="trang5.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                  >
+                    Best budgeting apps for individuals, startups and small
+                    businesses</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Khoảng trắng -->
+          <div class="space">
+            <p>&nbsp;</p>
+          </div>
+          <!--todaypicks -->
+          <div class="today-pick">
+            <article class="article1">
+              <div class="rightOne">
+                <a href="most.html" class="most">TODAY'S PICKS</a>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="https://duyanh242.github.io/Link02/"
+                    ><img src="./assets/img/img_1.webp" alt="" class="rightImg"
+                  /></a>
+                </div>
+                <div class="rightTwo2" style="height: 70px">
+                  <a href="https://duyanh242.github.io/Link02/" class="pragrap"
+                    >WILL KNIGHT
+                  </a>
+                  <br />
+                  <a
+                    href="https://duyanh242.github.io/Link02/"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    CTRL-ALTMAN-DELETE Sam Altman’s Sudden Exit Sends Shockwaves
+                    Through OpenAI and Beyond</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="https://duyanh242.github.io/Link3/">
+                    <img
+                      src="./assets/img/img_2.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="https://duyanh242.github.io/Link3/" class="pragrap"
+                    >AMIN SKIBBA
+                  </a>
+                  <br />
+                  <a
+                    href="https://duyanh242.github.io/Link3/"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    TAKE TWO SpaceX’s Starship Lost Shortly After Launch of
+                    Second Test Flight</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="https://duyanh242.github.io/Link1/"
+                    ><img
+                      src="./assets/img/img_3.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="https://duyanh242.github.io/Link1/" class="pragrap"
+                    >STEVEN LEVY
+                  </a>
+                  <br />
+                  <a
+                    href="https://duyanh242.github.io/Link1/"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    POSISION VACANT WHAT SAM ALTMAN'S FIRING MEANS FOR THE
+                    FUTURE OF OPENAI</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="space">
+            <p>&nbsp;</p>
+          </div>
+          <div class="most-popular">
+            <article class="article1">
+              <div class="rightOne">
+                <a href="most.html" class="most">MOST POPULAR</a>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="chatgpt_bao.html"
+                    ><img
+                      src="./assets/img/Open-AI.webp"
+                      alt=""
+                      class="rightImg"
+                  /></a>
+                </div>
+                <div class="rightTwo2">
+                  <br />
+                  <a
+                    href="chatgpt_bao.html"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                    >Just one day after being fired, OpenAI is negotiating to
+                    invite the 'father' of ChatGPT to return to work.</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="soccer_bao.html"
+                    ><img
+                      src="./assets/img/soccer.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a
+                    href="soccer_bao.html"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    Mbappe scores a hat-trick to help France win a
+                    record-breaking 14-0 victory.</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="Russia.html"
+                    ><img
+                      src="./assets/img/russia.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a
+                    href="Russia.html"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    Russia resumes the offensive on the Ukrainian capital Kiev,
+                    after 52 days.</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="Shark.html">
+                    <img
+                      src="./assets/img/Shark-Hung-Anh.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a
+                    href="Shark.html"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    How does the Meliwa air purifier 'convince' Shark Hùng
+                    Anh?</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-contain">
+        <div class="contain-1">
+          <h1>NEWS</h1>
+          <p>
+            GR9.VN is where tomorrow is realized. It is the essential source of information and ideas that make sense of a world in constant transformation. The GR9.VN conversation illuminates how technology is changing every aspect of our lives—from culture to business, science to design. The breakthroughs and innovations that we uncover lead to new ways of thinking, new connections, and new industries.
+          </p>
+        </div>
+        <div class="contain-2">
+          <h1>Other News</h1>
+          <div class="list">
+            <li>
+              <a href="#" class="white-link-color">Media</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Events</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Spaces</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Enterprise</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Social</a>
+            </li>
+          </div>
+        </div>
+        <div class="contain-3">
+          <h1>Contact us</h1>
+          <p>
+            Khu Pho 6 <br />
+            Linh Trung, Thu Duc<br />
+            TP Ho Chi Minh <br />
+            <strong>Phone:</strong> +0848082324<br />
+            <strong>Email:</strong> info@st.hcmuaf.edu.com<br />
+          </p>
+          <div class="social-links">
+            <a href="https://web.facebook.com/phat.ngo.370177"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/pkats2104?igsh=OGQ5ZDc2ODk2ZA=="
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.tiktok.com/@tienphat2104?_t=8ioO7aL2fvL&_r=1"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="#"><i class="fa fa-rss"></i></a>
+          </div>
+        </div>
+        <div class="contain-4">
+          <h1>Our Newsletter</h1>
+          <p>
+            "Today's information flow, rapid and dynamic, shapes our
+            perspectives. From breaking news to trending topics, staying
+            informed empowers individuals in navigating an ever-evolving global
+            landscape."
+          </p>
+          <form action="" method="post">
+            <input type="email" name="email" /><input
+              type="submit"
+              value="Subscribe"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="copytext">
+        <p>2023 Web tin tức nhóm 9</p>
+      </div>
+    </footer>
+  </body>
+</html>

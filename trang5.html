@@ -1,0 +1,1252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    
+  <!-- Favicons -->
+  <link href="assets/img/logo.jpg" rel="icon">
+  <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <title>Trang 3</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;500&family=Roboto&display=swap");
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --main-color: #d3ad7f;
+        --black: #13131a;
+        --bg: #010103;
+        --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* header */
+
+      header {
+        width: 100%;
+        height: auto;
+        border-bottom: #b8b7b7 solid 0.2rem;
+        background-color: #eef5ff;
+        position: relative;
+      }
+
+      header .container_phat .menu {
+        width: 100%;
+        height: 225px;
+      }
+
+      header .container_phat .menu .up {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 80px;
+      }
+
+      .ml {
+        margin: 10px;
+        font-size: 30px;
+        display: none;
+        font-size: 2.5rem;
+      }
+
+      .up .up-left {
+        display: flex;
+      }
+
+      .up .up-left img {
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+
+      .up .up-left p {
+        margin: 0px 15px 80px 15px;
+        font-size: 15px;
+      }
+
+      .up .up-right img {
+        margin-top: 20px;
+        margin-right: 200px;
+        border: none;
+      }
+
+      .mid {
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+      }
+
+      .mid .mid-left #search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 150px;
+        width: 300px;
+        height: 25px;
+      }
+
+      #search {
+        /* border-radius: 30px; */
+        background-color: #eef5ff;
+      }
+
+      #search #search-text {
+        outline: none;
+        border: none;
+        background-color: none;
+        font-size: 18px;
+        width: 0;
+        padding: 0;
+        transition: all 0.25s ease-in-out;
+      }
+
+      #search:hover #search-text {
+        width: 300px;
+        padding: 10px 0 10px 15px;
+        border: rgb(129, 129, 129) solid 0.2rem;
+        border-radius: 30px;
+      }
+
+      #search-btn {
+        background-color: white;
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 18px;
+      }
+
+      .mid .mid-right {
+        margin-right: 110px;
+      }
+
+      .mid .mid-right .item-button button {
+        width: 80px;
+        height: 30px;
+        background-color: #eef5ff;
+        border: rgba(255, 255, 255, 0.007) solid 0.2rem;
+        outline: none;
+        font-weight: 300;
+        border-radius: 10px;
+        transition: 0.4s;
+        font-family: "Times New Roman", Times, serif;
+        margin: 10px;
+        border: #b8b7b7 solid 0.1rem;
+        transition: 0.15s ease;
+      }
+
+      .mid .mid-right .item-button button:hover {
+        background-color: gray;
+        border-style: outset;
+        scale: 1.05;
+      }
+
+      .mid .mid-right .item-button button a {
+        color: black;
+        font-size: 17px;
+        text-decoration: none;
+      }
+
+      .mid .mid-right .item-button button a:hover {
+        color: #fff;
+      }
+
+      .mid .Notification {
+        font-size: 30px;
+        margin-right: 50px;
+      }
+
+      header .container_phat .menu .down ul {
+        list-style: none;
+        justify-content: center;
+        align-content: center;
+        margin: 10px;
+        margin-top: 20px;
+        margin-left: 120px;
+      }
+
+      .down ul li {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .down ul li button {
+        border: none;
+        outline: none;
+        /* border-radius: 10px; */
+        transition: 0.4s;
+        background-color: #eef5ff;
+        height: 20px;
+        /* border-right: 1px solid black; */
+        padding-right: 10px;
+        transition: 0.15s ease;
+      }
+
+      .down ul li button:hover {
+        background-color: gray;
+        scale: 1.05;
+      }
+
+      .down ul li button a {
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+      }
+
+      .down ul li button a:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .down,
+        .mid-right {
+          display: none;
+        }
+
+        .ml {
+          display: block;
+        }
+      }
+
+      .hidden-menu {
+        /* display: none; */
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        height: 0;
+        width: 300px;
+        background: rgba(245, 243, 243, 0.904);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        /* overflow: hidden; */
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-top: 40px;
+        margin-right: 20px;
+        overflow: scroll;
+      }
+
+      .hidden-menu.open {
+        height: 250px;
+      }
+
+      .hidden-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hidden-menu li button {
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+
+      .hidden-menu li a {
+        color: #505050;
+        text-decoration: none;
+        font-size: small;
+      }
+
+      .hidden-menu li a:hover {
+        scale: 1.05;
+        color: rgb(75, 180, 75);
+        font-weight: 600;
+      }
+
+      @media (max-width: 576px) {
+        .hidden-menu {
+          left: 2rem;
+          width: unset;
+        }
+      }
+
+      nav {
+        padding: 20px;
+        text-align: center;
+        margin-left: 300px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        size: 20px;
+        font-weight: 600;
+      }
+      #nav a:hover {
+        color: orange;
+        transition: 0.3s;
+      }
+      /* main */
+      .section1 {
+        margin-left: 200px;
+        margin-right: 300px;
+      }
+      img {
+        max-height: 40vw;
+      }
+      .section2 {
+        margin-left: 280px;
+        margin-right: 100px;
+        display: flex;
+        gap: 100px;
+        text-align: justify;
+      }
+      .left {
+        flex-basis: 60%;
+      }
+      .article1 {
+        height: 100px;
+      }
+      .article2 {
+        height: 100px;
+      }
+      .rightMain {
+        display: flex;
+        height: 80px;
+        border-style: solid none none none;
+        border-width: 2px;
+        gap: 20px;
+        align-items: center;
+        line-height: 5px;
+      }
+
+      .rightOne {
+        height: 40px;
+        border-style: solid none solid none;
+        border-width: 2px;
+        text-align: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .imgWeb {
+        max-height: 35vw;
+      }
+
+      .right {
+        flex-basis: 40%;
+      }
+      .rightImg {
+        width: 60px;
+      }
+      a.pragrap1:visited,
+      a.pragrap1:link {
+        text-decoration: none;
+      }
+      a.pragrap1:hover,
+      a.pragrap1:active {
+        text-decoration: underline;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .p1 {
+        font-size: 16px;
+      }
+      .pragrap {
+        font-size: 10px;
+        line-height: 10px;
+      }
+      .pragrap1 {
+        font-size: 13px;
+        line-height: 12px;
+      }
+      .most {
+        /* font-weight: 700; */
+      }
+      .today {
+      }
+      .space {
+        height: 200px;
+      }
+      /* main */
+      /* footer */
+      footer {
+        background-color: rgb(0, 0, 0);
+      }
+      .footer-contain {
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .footer-contain ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .footer-contain ul li {
+        display: inline-block;
+      }
+      .contain-1 {
+        flex: 1;
+        color: rgb(255, 255, 255);
+        font-size: 17px;
+        padding-left: 50px;
+        margin: 0 auto;
+      }
+      .contain-1 h1 {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .social-network {
+        margin-top: 50px;
+      }
+      .social-network ul li {
+        margin: 0 3px;
+      }
+      .social-network ul li a {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 20px;
+        transition: all 0.5s;
+      }
+      .social-network ul li a:hover {
+        background-color: #fff;
+        color: #4e4e4e;
+      }
+      .contain-1 img {
+        width: 70px;
+        height: 70px;
+        float: left;
+        margin-right: 10px;
+        margin-top: 20px;
+      }
+      .contain-2 {
+        flex: 1;
+        padding-left: 150px;
+        padding-top: 20px;
+        color: white;
+      }
+      .contain-2 h1 {
+        font-size: 23px;
+        padding-bottom: 10px;
+      }
+      .contain-3 {
+        padding-right: 50px;
+        flex: 1;
+        padding-top: 15px;
+        color: white;
+        line-height: 36px;
+      }
+
+      .contain-3 p {
+        font-size: 15px;
+      }
+      .contain-3 h1 {
+        font-size: 23px;
+      }
+      .contain-2 .list li {
+        margin-top: 15px;
+        font-size: 17px;
+        list-style-type: none;
+      }
+
+      .contain-2 .list li a {
+        text-decoration: none;
+      }
+      .contain-2 .white-link-color {
+        color: white;
+        transition: all 0.5s;
+      }
+      .contain-2 .white-link-color:hover {
+        color: rgb(112, 211, 241);
+      }
+
+      .contain-3 .social-links a {
+        display: inline-block;
+        background: #333;
+        color: #eee;
+        line-height: 1;
+        margin-right: 4px;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        transition: 0.3s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contain-3 .social-links a i {
+        line-height: 0;
+        font-size: 16px;
+      }
+      .contain-3 .social-links a:hover {
+        background: #4a4a4a;
+        color: #fff;
+      }
+      .contain-4 {
+        padding-right: 50px;
+        flex: 1;
+        padding-top: 20px;
+        color: white;
+        margin-bottom: 30px;
+      }
+      .contain-4 input[type="email"] {
+        border: 0;
+        padding: 6px 8px;
+        width: 65%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .contain-4 input[type="submit"] {
+        background: #14b0ae;
+        border: 0;
+        width: 35%;
+        padding: 6px 0;
+        text-align: center;
+        color: #fff;
+        transition: 0.3s;
+        cursor: pointer;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .contain-4 input[type="submit"]:hover {
+        background: #1dcdd3;
+        border-radius: 5px;
+        color: black;
+      }
+      .contain-4 h1 {
+        font-size: 23px;
+      }
+      .contain-4 p {
+        font-size: 15px;
+      }
+      .copytext {
+        text-align: center;
+        position: relative;
+        color: #fff;
+      }
+      .copytext p {
+        border-top: 3px solid rgba(250, 250, 250, 0.1);
+        display: inline-block;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 15px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="Phat">
+        <div class="container_phat">
+          <div class="menu">
+            <div class="up">
+              <div class="up-left">
+                <div class="logo">
+                  <img
+                    src="./assets/img/logo.webp"
+                    style="width: 70px; height: 70px"
+                    alt=""
+                  />
+                </div>
+                <div class="title">
+                  <h1>GR9.VN</h1>
+                  <br />
+                  <p>Online news</p>
+                </div>
+              </div>
+              <div class="up-right">
+                <img
+                  src="./assets/img/tech.webp"
+                  style="width: 800px; height: 70px"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mid">
+              <div class="mid-left">
+                <form action="" id="search">
+                  <input type="text" id="search-text" placeholder="Search" />
+                  <button id="search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+              <div class="mid-right">
+                <div class="item-button">
+                  <button>
+                    <a href="./login.html">Sign In</a>
+                  </button>
+                  <button>
+                    <a href="contact.html">Contact</a>
+                  </button>
+                </div>
+              </div>
+              <div class="ml">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="down">
+              <ul>
+                <li>
+                  <button>
+                    <a href="web-news.html">
+                      <i class="fa fa-home" aria-hidden="true"></i>
+                      Home
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a
+                      href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                    >
+                      <i class="fa fa-desktop" aria-hidden="true"></i>
+                      Smart Device
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.socialmediatoday.com/">
+                      <i class="fa fa-rss" aria-hidden="true"></i>
+                      Internet And SocialNetWork
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.sciencenews.org/">
+                      <i class="fa fa-flask" aria-hidden="true"></i>
+                      Scientific Discovery
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.wired.com/category/security/">
+                      <i class="fa fa-camera" aria-hidden="true"></i>
+                      Exhibition
+                    </a>
+                  </button>
+                </li>
+                <!-- <li>
+                        <button>
+                         <a href="">
+                          <i class="fa fa-lock" aria-hidden="true"></i>
+                          NextWork Security
+                         </a>
+                        </button>
+                       </li> -->
+                <li>
+                  <button>
+                    <a href="https://www.traffictechnologytoday.com/">
+                      <i class="fa fa-car" aria-hidden="true"></i>
+                      Traffic technology
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.electronicsweekly.com/">
+                      <i class="fa fa-cog" aria-hidden="true"></i>
+                      Electronic
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="hidden-menu">
+              <ul>
+                <li>
+                  <button>
+                    <a href="">
+                      <i class="fa fa-home" aria-hidden="true"></i>
+                      Home
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a
+                      href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                    >
+                      <i class="fa fa-desktop" aria-hidden="true"></i>
+                      Smart Device
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.socialmediatoday.com">
+                      <i class="fa fa-rss" aria-hidden="true"></i>
+                      Internet And SocialNetWork
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.sciencenews.org/">
+                      <i class="fa fa-flask" aria-hidden="true"></i>
+                      Scientific Discovery
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://exhibitionnews.uk/category/type/news/">
+                      <i class="fa fa-camera" aria-hidden="true"></i>
+                      Exhibition
+                    </a>
+                  </button>
+                </li>
+                <!-- <li>
+                        <button>
+                          <a href="https://www.wired.com/category/security/">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            NextWork Security
+                          </a>
+                        </button>
+                      </li> -->
+                <li>
+                  <button>
+                    <a href="https://www.traffictechnologytoday.com/">
+                      <i class="fa fa-car" aria-hidden="true"></i>
+                      Traffic technology
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.electronicsweekly.com/">
+                      <i class="fa fa-cog" aria-hidden="true"></i>
+                      Electronic
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="section1">
+        <h2>
+          Best budgeting apps for individuals, startups and small businesses
+        </h2>
+
+        <img class="imgWeb" src="./assets/img/trangphu/trang5-1.webp" alt="" />
+      </section>
+
+      <section class="section2">
+        <div class="left">
+          <section class="sec2">
+            <p class="p1">
+              As we head into the New Year, you might be interested in creating
+              a budget for yourself or you may be looking for a new tool to help
+              manage your startup or small business’s budget. You may be looking
+              to switch out your current budgeting app for a better one, or
+              perhaps you’re someone who has traditionally relied on
+              spreadsheets. Although spreadsheets can be a simple way to manage
+              and track a budget, it could be worth checking out budgeting apps
+              to save yourself some time and effort. We’ve compiled two lists of
+              apps that we think are great budgeting tools for individuals and
+              startups.
+            </p>
+            <p class="p1">
+              For individuals, a good budgeting app can help you save money by
+              creating and sticking to a monthly budget. For startups and small
+              businesses, a good budgeting app can help you understand your
+              company’s financial health and make informed decisions. Whichever
+              way you go, the best budgeting app for you will depend on your
+              individual or business needs, so we’ve included a variety of apps
+              to help you find one that works best for you. AI.
+            </p>
+          </section>
+          <section class="sec2">
+            <p class="p1">
+              Over here at TechCrunch, our time is often spent finding and
+              reporting on the next new new thing in mobility, from autonomous
+              drones and electric air taxis to self-driving trucks and even
+              batteries made of paper. While this tech, in theory, may someday
+              help people and goods move from point A to B, much of it is just
+              that — theory. Hope. Promise. Showy demos to impress VC investors.
+            </p>
+            <p class="p1">
+              That’s why we dug into the technology that’s helping cities move
+              today. Some of it is unsexy, but transportation is, more often
+              than not, a utility.
+            </p>
+            <p class="p1">
+              We’ll take a close look at the tech helping move two U.S. cities —
+              Miami and New York City — and run through a few other standout
+              innovations in 2023.
+            </p>
+            <h2 class="p1">Best apps for individuals</h2>
+            <b>Goodbudget</b>
+            <img
+              class="imgWeb"
+              src="./assets/img/trangphu/trang5-2.webp"
+              alt=""
+            />
+
+            <p class="p1">
+              Goodbudget is a good app if you’re a beginner and just getting
+              started out with budgeting. It uses the envelope system, which is
+              one of the original ways of managing money. Goodbudget helps
+              ensure that you are never caught off-guard by a bill or sudden
+              expense. Each month, you set aside money for things that you need,
+              like groceries and gas. Once you have set aside money for your
+              essentials, you can then choose how to use the rest based on
+              what’s important to you.
+            </p>
+
+            <p class="p1">
+              The app is also a great option if you have a shared household, as
+              it lets you sync your budget with another person. Goodbudget
+              offers both a free version and a paid version, which costs $8 per
+              month. The free version includes everything you need to manage a
+              budget, while the paid version gives you additional capabilities,
+              such as email support, unlimited envelopes and the ability to use
+              the service on five devices versus just two. One possible downside
+              is that you have to manually enter your transactions in the app,
+              as the app doesn’t connect to your bank account.
+            </p>
+          </section>
+          <section class="sec2">
+            <h2 class="p1">PocketGuard</h2>
+
+            <img
+              class="imgWeb"
+              src="./assets/img/trangphu/trang5-3.webp"
+              alt=""
+            />
+
+            <p class="p1">
+              If your main goal is to track your spending, PocketGuard might be
+              the best app for you. PocketGuard shows you how much spendable
+              money you have after you set aside enough for your bills, goals
+              and necessities. The app shows you a pie chart so you can
+              visualize which expenses are taking up the most money. You can set
+              spending limits in the app to make sure you’re not spending beyond
+              your means.
+            </p>
+
+            <p class="p1">
+              PocketGuard links your banks, credit cards, loans and investments
+              in one place in order to help you keep track of your account
+              balances, net worth and more. There’s a limited free version of
+              the app and a paid version, which costs $8 per month and unlocks
+              features like the ability to create your own spending categories,
+              set a debt payoff plan, attach receipts, export transaction data
+              and more.
+            </p>
+          </section>
+        </div>
+
+        <div class="right">
+          <div class="mostrecent">
+            <article class="article1">
+              <div class="rightOne">
+                <a href="most.html" class="most">MOST RECENT</a>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang1.html"
+                    ><img src="./assets/img/sec1.webp" alt="" class="rightImg"
+                  /></a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang1.html" class="pragrap">ALICE LASCELLES </a>
+                  <br />
+                  <a
+                    href="trang1.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                    >Undersea-Aged Champagne Is Starting to Surface</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang2.html">
+                    <img
+                      src="./assets/img/trang2.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang2.html" class="pragrap">REBECCA BELLAN </a>
+                  <br />
+                  <a
+                    href="trang2.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                  >
+                    Get Ready for a ‘Tsunami’ of AI at CES</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang3.html"
+                    ><img
+                      src="./assets/img/trangphu/trang3-1.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang3.html" class="pragrap">ROBIN ANDREWS </a>
+                  <br />
+                  <a
+                    href="trang3.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                  >
+                    The Tantalizing Mystery of the Solar System’s Hidden
+                    Oceans</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang4.html"
+                    ><img
+                      src="./assets/img/trangphu/trang4.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang4.html" class="pragrap">TIMEN BARBER </a> <br />
+                  <a
+                    href="trang4.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                  >
+                    The overlooked tech that kept cities moving in 2023</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="trang5.html">
+                    <img
+                      src="./assets/img/trangphu/trang5-1.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="trang5.html" class="pragrap">TIFFANY LUMIE</a> <br />
+                  <a
+                    href="trang5.html"
+                    class="pragrap1"
+                    style="font-weight: 700"
+                  >
+                    Best budgeting apps for individuals, startups and small
+                    businesses</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <!-- Khoảng trắng -->
+          <div class="space">
+            <p>&nbsp;</p>
+          </div>
+          <!--todaypicks -->
+          <div class="today-pick">
+            <article class="article1">
+              <div class="rightOne">
+                <a href="most.html" class="most">TODAY'S PICKS</a>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="https://duyanh242.github.io/Link02/"
+                    ><img src="./assets/img/img_1.webp" alt="" class="rightImg"
+                  /></a>
+                </div>
+                <div class="rightTwo2" style="height: 70px">
+                  <a href="https://duyanh242.github.io/Link02/" class="pragrap"
+                    >WILL KNIGHT
+                  </a>
+                  <br />
+                  <a
+                    href="https://duyanh242.github.io/Link02/"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    CTRL-ALTMAN-DELETE Sam Altman’s Sudden Exit Sends Shockwaves
+                    Through OpenAI and Beyond</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="https://duyanh242.github.io/Link3/">
+                    <img
+                      src="./assets/img/img_2.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="https://duyanh242.github.io/Link3/" class="pragrap"
+                    >AMIN SKIBBA
+                  </a>
+                  <br />
+                  <a
+                    href="https://duyanh242.github.io/Link3/"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    TAKE TWO SpaceX’s Starship Lost Shortly After Launch of
+                    Second Test Flight</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="https://duyanh242.github.io/Link1/"
+                    ><img
+                      src="./assets/img/img_3.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a href="https://duyanh242.github.io/Link1/" class="pragrap"
+                    >STEVEN LEVY
+                  </a>
+                  <br />
+                  <a
+                    href="https://duyanh242.github.io/Link1/"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    POSISION VACANT WHAT SAM ALTMAN'S FIRING MEANS FOR THE
+                    FUTURE OF OPENAI</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+          <div class="space">
+            <p>&nbsp;</p>
+          </div>
+          <div class="most-popular">
+            <article class="article1">
+              <div class="rightOne">
+                <a href="most.html" class="most">MOST POPULAR</a>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="chatgpt_bao.html"
+                    ><img
+                      src="./assets/img/Open-AI.webp"
+                      alt=""
+                      class="rightImg"
+                  /></a>
+                </div>
+                <div class="rightTwo2">
+                  <br />
+                  <a
+                    href="chatgpt_bao.html"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                    >Just one day after being fired, OpenAI is negotiating to
+                    invite the 'father' of ChatGPT to return to work.</a
+                  >
+                </div>
+              </div>
+            </article>
+
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="soccer_bao.html"
+                    ><img
+                      src="./assets/img/soccer.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a
+                    href="soccer_bao.html"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    Mbappe scores a hat-trick to help France win a
+                    record-breaking 14-0 victory.</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="Russia.html"
+                    ><img
+                      src="./assets/img/russia.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a
+                    href="Russia.html"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    Russia resumes the offensive on the Ukrainian capital Kiev,
+                    after 52 days.</a
+                  >
+                </div>
+              </div>
+            </article>
+            <article class="article2">
+              <div class="rightMain">
+                <div class="rightTwo">
+                  <a href="Shark.html">
+                    <img
+                      src="./assets/img/Shark-Hung-Anh.webp"
+                      alt=""
+                      class="rightImg"
+                    />
+                  </a>
+                </div>
+                <div class="rightTwo2">
+                  <a
+                    href="Shark.html"
+                    class="pragrap1"
+                    style="font-weight: 550"
+                  >
+                    How does the Meliwa air purifier 'convince' Shark Hùng
+                    Anh?</a
+                  >
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-contain">
+        <div class="contain-1">
+          <h1>NEWS</h1>
+          <p>
+        GR9.VN is where tomorrow is realized. It is the essential source of information and ideas that make sense of a world in constant transformation. The GR9.VN conversation illuminates how technology is changing every aspect of our lives—from culture to business, science to design. The breakthroughs and innovations that we uncover lead to new ways of thinking, new connections, and new industries.
+          </p>
+        </div>
+        <div class="contain-2">
+          <h1>Other News</h1>
+          <div class="list">
+            <li>
+              <a href="#" class="white-link-color">Media</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Events</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Spaces</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Enterprise</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Social</a>
+            </li>
+          </div>
+        </div>
+        <div class="contain-3">
+          <h1>Contact us</h1>
+          <p>
+            Khu Pho 6 <br />
+            Linh Trung, Thu Duc<br />
+            TP Ho Chi Minh <br />
+            <strong>Phone:</strong> +0848082324<br />
+            <strong>Email:</strong> info@st.hcmuaf.edu.com<br />
+          </p>
+          <div class="social-links">
+            <a href="https://web.facebook.com/phat.ngo.370177"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/pkats2104?igsh=OGQ5ZDc2ODk2ZA=="
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.tiktok.com/@tienphat2104?_t=8ioO7aL2fvL&_r=1"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="#"><i class="fa fa-rss"></i></a>
+          </div>
+        </div>
+        <div class="contain-4">
+          <h1>Our Newsletter</h1>
+          <p>
+            "Today's information flow, rapid and dynamic, shapes our
+            perspectives. From breaking news to trending topics, staying
+            informed empowers individuals in navigating an ever-evolving global
+            landscape."
+          </p>
+          <form action="" method="post">
+            <input type="email" name="email" /><input
+              type="submit"
+              value="Subscribe"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="copytext">
+        <p>2023 Web tin tức nhóm 9</p>
+      </div>
+    </footer>
+  </body>
+</html>

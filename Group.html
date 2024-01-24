@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <title>Grounp Diary</title>
+    <meta content="" name="description" />
+    <meta content="" name="keywords" />
+
+    <!-- Favicons -->
+    <link href="assets/img/logo.jpg" rel="icon">
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700"
+      rel="stylesheet"
+    />
+
+    <!-- Vendor CSS Files -->
+    <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet" />
+    <link href="assets/vendor/aos/aos.css" rel="stylesheet" />
+    <link
+      href="assets/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/bootstrap-icons/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="assets/vendor/glightbox/css/glightbox.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" />
+
+    <!-- Template Main CSS File -->
+    <link href="assets/css/style.css" rel="stylesheet" />
+<style>
+    .tabss {
+        display: flex;
+        padding: 0px 50px;
+        margin-top: 20px;
+      }
+
+      .tab-btn {
+        background-color: #18d26e;
+        color: white;
+        padding: 10px 16px;
+        border: 2px solid #18d26e;
+        cursor: pointer;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
+        font-size: 20px;
+        height: 55px;
+        transition: background-color 0.3s;
+        font-weight: bold;
+      }
+
+      .tab-btn:hover {
+        background-color: #ffffff;
+        color: rgb(1, 126, 55);
+        border: 2px solid #18d26e;
+      }
+      .tab-btn:active {
+        background-color: #ffffff;
+        color: rgb(1, 126, 55);
+      }
+
+      .tab-content {
+        display: none;
+        padding: 20px;
+        border: 1px solid #ddd;
+        margin-top: 20px;
+      }
+
+      .tab-content h2 {
+        color: #3498db;
+      }
+      .khoangTrang{
+        min-height: 700px;
+      }
+      .khoangCach{
+        height: 20px;
+      }
+      .image-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .image-container img {
+            max-width: 48%;
+            height: auto;
+        }
+        .button-container {
+            display: flex;
+            justify-content: space-between;
+            max-width: 800px;
+            margin: 10px auto;
+        }
+        .button {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #18d26e;
+            color: white;
+            border: 2px solid #18d26e;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+          background-color: #ffffff;
+          color: rgb(1, 126, 55);
+          border: 2px solid #18d26e;
+        }
+</style>
+
+  </head>
+
+  <body>
+    <!-- ======= Header ======= -->
+    <header id="header" class="fixed-top d-flex align-items-center ">
+      <div class="container-fluid">
+  
+        <div class="row justify-content-center align-items-center">
+          <div class="col-xl-11 d-flex align-items-center justify-content-between">
+            <h1 class="logo"><a href="index.html">GROUP 9</a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+  
+            <nav id="navbar" class="navbar">
+              <ul>
+                <li><a class="nav-link scrollto" href="index.html">Home</a></li>
+                <li><a class="nav-link scrollto" href="about.html">About</a></li>   
+                <li><a class="nav-link scrollto" href="result.html">Result</a></li>
+                <li><a class="nav-link scrollto" href="project.html">Project</a></li>
+                <li><a class="nav-link scrollto" href="style-guide.html">Style-Guide</a></li>
+                <li><a class="nav-link scrollto" href="technical.html">Technical</a></li>
+                <li><a class="nav-link scrollto active" href="Group.html">Group Diary</a></li>
+                <li><a class="nav-link scrollto" href="contact.html" >Contact</a></li>
+                <li><a class="nav-link scrollto" href="web-news.html" target="_blank">Go to Projects</a></li>
+              </ul>
+              <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- End Header -->
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+      <div class="container">
+        <ol>
+          <li><a href="index.html"></a></li>
+        </ol>
+        <h2></h2>
+      </div>
+    </section>
+    <!-- End Breadcrumbs -->
+      <div>
+        <div class="tabss">
+            <div class="tab-btn" onclick="openTab('tab1')">Week5</div>
+            <div class="tab-btn" onclick="openTab('tab2')">Week6</div>
+            <div class="tab-btn" onclick="openTab('tab3')">Week7</div>
+            <div class="tab-btn" onclick="openTab('tab4')">Week8</div>
+        </div>
+        <div class="tab-content" id="tab1" >
+          <div class="divaaa">
+            <table id="customers">
+              <tr>
+                <th>STT</th>
+                <th>MSSV</th>
+                <th>Họ Và Tên</th>
+                <th>Công Việc Được Giao</th>
+                <th>Ngày Thực Hiện</th>
+                <th>Ngày Kết Thúc</th>
+
+                <th>Kết Quả</th>
+                <th>Tiến Độ</th>
+              </tr>
+              <tr>
+                <td>01</td>
+                <td>22130033</td>
+                <td>Võ Công Danh</td>
+                <td>Tạo Group Diary , tạo Week5 và Trang About</td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>02</td>
+                <td>22130018</td>
+                <td>Hồ Quốc Bảo</td>
+                <td>Tạo 2 trang tin tức</td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>03</td>
+                <td>22130066</td>
+                <td>Đào Đức Hải</td>
+                <td>Tạo chức năng Go to project</td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>04</td>
+                <td>22130205</td>
+                <td>Ngô Tiến Phát</td>
+                <td>Tạo chức năng Result</td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+              <tr>
+                <td>05</td>
+                <td>22130063</td>
+                <td>Trần Anh Duy</td>
+                <td>
+                  Tạo 1 trang viết về tin tức liên kết với trang web tin tức
+                  chính
+                </td>
+                <td>26/11/2023</td>
+                <td>30/11/2023</td>
+                <td>Hoàn Thành</td>
+                <td>100%</td>
+              </tr>
+            </table>
+          </div>  
+        </div>     
+        <div class="tab-content" id="tab2">
+          <div class="divaaa">
+            <table id="customers">
+            <tr>
+              <th>STT</th>
+              <th>MSSV</th>
+              <th>Họ Và Tên</th>
+              <th>Công Việc Được Giao</th>
+              <th>Ngày Thực Hiện</th>
+              <th>Ngày Kết Thúc</th>
+
+              <th>Kết Quả</th>
+              <th>Tiến Độ</th>
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>22130033</td>
+              <td>Võ Công Danh</td>
+              <td>Tạo Group Diary , tạo Week5 và Trang About</td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>22130018</td>
+              <td>Hồ Quốc Bảo</td>
+              <td>Tạo 2 trang tin tức</td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>22130066</td>
+              <td>Đào Đức Hải</td>
+              <td>Liên kết lại các menu</td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>22130205</td>
+              <td>Ngô Tiến Phát</td>
+              <td>Chỉnh sửa lại bài tập nhóm</td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>05</td>
+              <td>22130063</td>
+              <td>Trần Anh Duy</td>
+              <td>
+                Tạo 1 trang viết về tin tức liên kết với trang web tin tức
+              chính 
+              </td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>60%</td>
+            </tr>
+            </table>
+          </div>
+        </div>    
+        <div class="tab-content" id="tab3"><div class="divaaa">
+          <table id="customers">
+            <tr>
+              <th>STT</th>
+              <th>MSSV</th>
+              <th>Họ Và Tên</th>
+              <th>Công Việc Được Giao</th>
+              <th>Ngày Thực Hiện</th>
+              <th>Ngày Kết Thúc</th>
+
+              <th>Kết Quả</th>
+              <th>Tiến Độ</th>
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>22130033</td>
+              <td>Võ Công Danh</td>
+              <td>Đưa cả 3 file này vào bt nhóm</td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>02</td>
+              <td>22130018</td>
+              <td>Hồ Quốc Bảo</td>
+              <td>Làm biểu mẫu liên hệ</td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>03</td>
+              <td>22130066</td>
+              <td>Đào Đức Hải</td>
+              <td>Design trên giấy</td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>04</td>
+              <td>22130205</td>
+              <td>Ngô Tiến Phát</td>
+              <td>Cập nhật bài tập của nhóm đảm bảo có sử dụng Navigation, Animations, Default Settings và Guided Action </td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>100%</td>
+            </tr>
+            <tr>
+              <td>05</td>
+              <td>22130063</td>
+              <td>Trần Anh Duy</td>
+              <td>
+                file thiết kế trên figma
+              </td>
+              <td>25/12/2023</td>
+              <td>29/12/2023</td>
+              <td>Hoàn Thành</td>
+              <td>60%</td>
+            </tr>
+          </table>
+        </div> 
+        <div class="khoangCach"></div>
+
+        
+        <div class="image-container">
+            <img src="assets/img/Design.jpg" alt="Ảnh 1">
+            <img src="assets/img/figma.png" alt="Ảnh 2">
+        </div>
+    
+        <div class="button-container">
+            <a href="assets/img/Design.jpg" download ><button class="button">Download</button></a>
+            <a href="https://www.figma.com/file/b2REDzfSHCNt3MiUM9ox4V/Project-web-tin-t%E1%BB%A9c?type=design&node-id=1-2&mode=design&t=dDFh598ygzIqe7XF-0"><button class="button">Link to figma </button></a>
+        </div>
+      </div>
+      <div class="tab-content" id="tab4"><div class="divaaa">
+        <table id="customers">
+          <tr>
+            <th>STT</th>
+            <th>MSSV</th>
+            <th>Họ Và Tên</th>
+            <th>Công Việc Được Giao</th>
+            <th>Ngày Thực Hiện</th>
+            <th>Ngày Kết Thúc</th>
+
+            <th>Kết Quả</th>
+            <th>Tiến Độ</th>
+          </tr>
+          <tr>
+            <td>01</td>
+            <td>22130033</td>
+            <td>Võ Công Danh</td>
+            <td>Gom nhiệm vụ của các thành viên vào git</td>
+            <td>25/12/2023</td>
+            <td>29/12/2023</td>
+            <td>Hoàn Thành</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>02</td>
+            <td>22130018</td>
+            <td>Hồ Quốc Bảo</td>
+            <td>Kiểm tra lại các web</td>
+            <td>25/12/2023</td>
+            <td>29/12/2023</td>
+            <td>Hoàn Thành</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>03</td>
+            <td>22130066</td>
+            <td>Đào Đức Hải</td>
+            <td>Làm các liên kết trong menu</td>
+            <td>25/12/2023</td>
+            <td>29/12/2023</td>
+            <td>Hoàn Thành</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>04</td>
+            <td>22130205</td>
+            <td>Ngô Tiến Phát</td>
+            <td>Làm phần login </td>
+            <td>25/12/2023</td>
+            <td>29/12/2023</td>
+            <td>Hoàn Thành</td>
+            <td>100%</td>
+          </tr>
+          <tr>
+            <td>05</td>
+            <td>22130063</td>
+            <td>Trần Anh Duy</td>
+            <td>
+              Tiếp tục kiểm tra phần liên kết
+            </td>
+            <td>25/12/2023</td>
+            <td>29/12/2023</td>
+            <td>Hoàn Thành</td>
+            <td>60%</td>
+          </tr>
+        </table>
+      </div>  
+     </div>
+     <div class="khoangCach"></div>
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+  
+            <div class="col-lg-3 col-md-6 footer-info">
+              <h3>Group09</h3>
+              <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-links">
+              <h4>Useful Links</h4>
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Home</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">About us</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Services</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Terms of service</a></li>
+                <li><i class="bi bi-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              </ul>
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-contact">
+              <h4>Contact Us</h4>
+              <p>
+                Khu Pho 6  <br>
+                Linh Trung, Thu Duc<br>
+                TP Ho Chi Minh <br>
+                <strong>Phone:</strong> +0848082324<br>
+                <strong>Email:</strong> info@st.hcmuaf.edu.com<br>
+              </p>
+  
+              <div class="social-links">
+                <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+                <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+              </div>
+  
+            </div>
+  
+            <div class="col-lg-3 col-md-6 footer-newsletter">
+              <h4>Our Newsletter</h4>
+              <p>
+                
+  "Today's information flow, rapid and dynamic, shapes our perspectives. From breaking news to trending topics, staying informed empowers individuals in navigating an ever-evolving global landscape."</p>
+              <form action="" method="post">
+                <input type="email" name="email"><input type="submit" value="Subscribe">
+              </form>
+            </div>
+  
+          </div>
+        </div>
+      </div>
+  
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong>BizPage</strong>. All Rights Reserved
+        </div>
+        <div class="credits">   
+          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer -->
+    <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+    <script src="assets/vendor/aos/aos.js"></script>
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+    <script src="assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="assets/js/main.js"></script>
+    <script>
+      function openTab(tabName) {
+        var i, tabContent;
+  
+        // Ẩn tất cả các tab-content
+        tabContent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabContent.length; i++) {
+          tabContent[i].style.display = "none";
+        }
+  
+        // Hiển thị tab-content tương ứng với tab được chọn
+        document.getElementById(tabName).style.display = "block";
+      }
+      
+      openTab('tab1');
+    </script>
+  </body>
+</html>

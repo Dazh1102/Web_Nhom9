@@ -1,0 +1,849 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    
+  <!-- Favicons -->
+  <link href="assets/img/logo.jpg" rel="icon">
+  <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <title>MOST RECENT</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;700&family=Roboto&display=swap");
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --main-color: #d3ad7f;
+        --black: #13131a;
+        --bg: #010103;
+        --border: 0.1rem solid rgba(255, 255, 255, 0.3);
+      }
+
+      /* header */
+
+      header {
+        width: 100%;
+        height: auto;
+        border-bottom: #b8b7b7 solid 0.2rem;
+        background-color: #eef5ff;
+        position: relative;
+      }
+
+      header .container_phat .menu {
+        width: 100%;
+        height: 225px;
+      }
+
+      header .container_phat .menu .up {
+        width: 100%;
+        height: 70px;
+        display: flex;
+        justify-content: space-between;
+        margin-left: 80px;
+      }
+
+      .ml {
+        margin: 10px;
+        font-size: 30px;
+        display: none;
+        font-size: 2.5rem;
+      }
+
+      .up .up-left {
+        display: flex;
+      }
+
+      .up .up-left img {
+        margin-left: 10px;
+        margin-top: 20px;
+        margin-right: 10px;
+      }
+
+      .up .up-left p {
+        margin: 0px 15px 80px 15px;
+        font-size: 15px;
+      }
+
+      .up .up-right img {
+        margin-top: 20px;
+        margin-right: 200px;
+        border: none;
+      }
+
+      .mid {
+        margin-top: 20px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+      }
+
+      .mid .mid-left #search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left: 150px;
+        width: 300px;
+        height: 25px;
+      }
+
+      #search {
+        /* border-radius: 30px; */
+        background-color: #eef5ff;
+      }
+
+      #search #search-text {
+        outline: none;
+        border: none;
+        background-color: none;
+        font-size: 18px;
+        width: 0;
+        padding: 0;
+        transition: all 0.25s ease-in-out;
+      }
+
+      #search:hover #search-text {
+        width: 300px;
+        padding: 10px 0 10px 15px;
+        border: rgb(129, 129, 129) solid 0.2rem;
+        border-radius: 30px;
+      }
+
+      #search-btn {
+        background-color: white;
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+        border-radius: 50%;
+        font-size: 18px;
+      }
+
+      .mid .mid-right {
+        margin-right: 110px;
+      }
+
+      .mid .mid-right .item-button button {
+        width: 80px;
+        height: 30px;
+        background-color: #eef5ff;
+        border: rgba(255, 255, 255, 0.007) solid 0.2rem;
+        outline: none;
+        font-weight: 300;
+        border-radius: 10px;
+        transition: 0.4s;
+        font-family: "Times New Roman", Times, serif;
+        margin: 10px;
+        border: #b8b7b7 solid 0.1rem;
+        transition: 0.15s ease;
+      }
+
+      .mid .mid-right .item-button button:hover {
+        background-color: gray;
+        border-style: outset;
+        scale: 1.05;
+      }
+
+      .mid .mid-right .item-button button a {
+        color: black;
+        font-size: 17px;
+        text-decoration: none;
+      }
+
+      .mid .mid-right .item-button button a:hover {
+        color: #fff;
+      }
+
+      .mid .Notification {
+        font-size: 30px;
+        margin-right: 50px;
+      }
+
+      header .container_phat .menu .down ul {
+        list-style: none;
+        justify-content: center;
+        align-content: center;
+        margin: 10px;
+        margin-top: 20px;
+        margin-left: 120px;
+      }
+
+      .down ul li {
+        display: inline-block;
+        margin: 5px;
+      }
+
+      .down ul li button {
+        border: none;
+        outline: none;
+        /* border-radius: 10px; */
+        transition: 0.4s;
+        background-color: #eef5ff;
+        height: 20px;
+        /* border-right: 1px solid black; */
+        padding-right: 10px;
+        transition: 0.15s ease;
+      }
+
+      .down ul li button:hover {
+        background-color: gray;
+        scale: 1.05;
+      }
+
+      .down ul li button a {
+        text-decoration: none;
+        font-size: 15px;
+        color: black;
+      }
+
+      .down ul li button a:hover {
+        color: #fff;
+      }
+
+      @media (max-width: 992px) {
+        .down,
+        .mid-right {
+          display: none;
+        }
+
+        .ml {
+          display: block;
+        }
+      }
+
+      .hidden-menu {
+        /* display: none; */
+        position: absolute;
+        right: 2rem;
+        top: 60px;
+        height: 0;
+        width: 300px;
+        background: rgba(245, 243, 243, 0.904);
+        backdrop-filter: blur(15px);
+        border-radius: 10px;
+        /* overflow: hidden; */
+        transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        margin-top: 40px;
+        margin-right: 20px;
+        overflow: scroll;
+      }
+
+      .hidden-menu.open {
+        height: 250px;
+      }
+
+      .hidden-menu li {
+        padding: 0.7rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .hidden-menu li button {
+        border: none;
+        outline: none;
+        width: 100%;
+      }
+
+      .hidden-menu li a {
+        color: #505050;
+        text-decoration: none;
+        font-size: small;
+      }
+
+      .hidden-menu li a:hover {
+        scale: 1.05;
+        color: rgb(75, 180, 75);
+        font-weight: 600;
+      }
+
+      @media (max-width: 576px) {
+        .hidden-menu {
+          left: 2rem;
+          width: unset;
+        }
+      }
+
+      nav {
+        padding: 20px;
+        text-align: center;
+        margin-left: 300px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        text-decoration: none;
+        color: #333;
+        size: 20px;
+        font-weight: 700;
+      }
+      #nav a:hover {
+        color: orange;
+        transition: 0.3s;
+      }
+      /* main */
+      .main {
+        display: flex;
+        margin-bottom: 40px;
+      }
+      .most {
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      
+      }
+      .left {
+        flex-basis: 60%;
+        display: flex;
+        gap: 50px;
+        margin-left: 200px;
+        border-style: none none solid none;
+        border-width: 2px;
+      }
+      section {
+        min-height: 200px;
+      }
+      .pragrap {
+        font-size: 10px;
+        line-height: 30px;
+        text-decoration: none;
+      }
+      
+      a.pragrap1:visited, a.pragrap1:link {text-decoration: none;}
+      a.pragrap1:hover, a.pragrap1:active {text-decoration: underline;}
+
+      a {
+        color: black;
+        font-size: 20px;
+        
+      }
+      .leftonr{
+        line-height: 50px;
+      }
+      img {
+        width: 230px;
+      }
+
+      /* main */
+      /* footer */
+      footer {
+        background-color: rgb(0, 0, 0);
+      }
+      .footer-contain {
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      .footer-contain ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+      }
+
+      .footer-contain ul li {
+        display: inline-block;
+      }
+      .contain-1 {
+        flex: 1;
+        color: rgb(255, 255, 255);
+        font-size: 17px;
+        padding-left: 50px;
+        margin: 0 auto;
+      }
+      .contain-1 h1 {
+        font-size: 40px;
+        font-weight: bold;
+      }
+      .social-network {
+        margin-top: 50px;
+      }
+      .social-network ul li {
+        margin: 0 3px;
+      }
+      .social-network ul li a {
+        text-decoration: none;
+        width: 40px;
+        height: 40px;
+        display: inline-block;
+        text-align: center;
+
+        background-color: rgba(0, 0, 0, 0.2);
+        color: #fff;
+        font-size: 20px;
+        transition: all 0.5s;
+      }
+      .social-network ul li a:hover {
+        background-color: #fff;
+        color: #4e4e4e;
+      }
+      .contain-1 img {
+        width: 70px;
+        height: 70px;
+        float: left;
+        margin-right: 10px;
+        margin-top: 20px;
+      }
+      .contain-2 {
+        flex: 1;
+        padding-left: 150px;
+        padding-top: 20px;
+        color: white;
+      }
+      .contain-2 h1 {
+        font-size: 23px;
+        padding-bottom: 10px;
+      }
+      .contain-3 {
+        padding-right: 50px;
+        flex: 1;
+        padding-top: 15px;
+        color: white;
+        line-height: 36px;
+      }
+
+      .contain-3 p {
+        font-size: 15px;
+      }
+      .contain-3 h1 {
+        font-size: 23px;
+      }
+      .contain-2 .list li {
+        margin-top: 15px;
+        font-size: 17px;
+        list-style-type: none;
+      }
+
+      .contain-2 .list li a {
+        text-decoration: none;
+      }
+      .contain-2 .white-link-color {
+        color: white;
+        transition: all 0.5s;
+      }
+      .contain-2 .white-link-color:hover {
+        color: rgb(112, 211, 241);
+      }
+
+      .contain-3 .social-links a {
+        display: inline-block;
+        background: #333;
+        color: #eee;
+        line-height: 1;
+        margin-right: 4px;
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        transition: 0.3s;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .contain-3 .social-links a i {
+        line-height: 0;
+        font-size: 16px;
+      }
+      .contain-3 .social-links a:hover {
+        background: #4a4a4a;
+        color: #fff;
+      }
+      .contain-4 {
+        padding-right: 50px;
+        flex: 1;
+        padding-top: 20px;
+        color: white;
+        margin-bottom: 30px;
+      }
+      .contain-4 input[type="email"] {
+        border: 0;
+        padding: 6px 8px;
+        width: 65%;
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+      .contain-4 input[type="submit"] {
+        background: #14b0ae;
+        border: 0;
+        width: 35%;
+        padding: 6px 0;
+        text-align: center;
+        color: #fff;
+        transition: 0.3s;
+        cursor: pointer;
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+      .contain-4 input[type="submit"]:hover {
+        background: #1dcdd3;
+        border-radius: 5px;
+        color: black;
+      }
+      .contain-4 h1 {
+        font-size: 23px;
+      }
+      .contain-4 p {
+        font-size: 15px;
+      }
+      .copytext {
+        text-align: center;
+        position: relative;
+        color: #fff;
+      }
+      .copytext p {
+        border-top: 3px solid rgba(250, 250, 250, 0.1);
+        display: inline-block;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 15px;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="Phat">
+        <div class="container_phat">
+          <div class="menu">
+            <div class="up">
+              <div class="up-left">
+                <div class="logo">
+                  <img
+                    src="./assets/img/logo.webp"
+                    style="width: 70px; height: 70px"
+                    alt=""
+                  />
+                </div>
+                <div class="title">
+                  <h1>GR9.VN</h1>
+                  <br />
+                  <p>Online news</p>
+                </div>
+              </div>
+              <div class="up-right">
+                <img
+                  src="./assets/img/tech.webp"
+                  style="width: 800px; height: 70px"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div class="mid">
+              <div class="mid-left">
+                <form action="" id="search">
+                  <input type="text" id="search-text" placeholder="Search" />
+                  <button id="search-btn">
+                    <i class="fa fa-search" aria-hidden="true"></i>
+                  </button>
+                </form>
+              </div>
+              <div class="mid-right">
+                <div class="item-button">
+                  <button>
+                    <a href="./login.html">Sign In</a>
+                  </button>
+                  <button>
+                    <a href="contact.html">Contact</a>
+                  </button>
+                </div>
+              </div>
+              <div class="ml">
+                <i class="fa fa-bars" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="down">
+              <ul>
+                <li>
+                  <button>
+                    <a href="web-news.html">
+                      <i class="fa fa-home" aria-hidden="true"></i>
+                      Home
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a
+                      href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                    >
+                      <i class="fa fa-desktop" aria-hidden="true"></i>
+                      Smart Device
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.socialmediatoday.com/">
+                      <i class="fa fa-rss" aria-hidden="true"></i>
+                      Internet And SocialNetWork
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.sciencenews.org/">
+                      <i class="fa fa-flask" aria-hidden="true"></i>
+                      Scientific Discovery
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.wired.com/category/security/">
+                      <i class="fa fa-camera" aria-hidden="true"></i>
+                      Exhibition
+                    </a>
+                  </button>
+                </li>
+                <!-- <li>
+                        <button>
+                         <a href="">
+                          <i class="fa fa-lock" aria-hidden="true"></i>
+                          NextWork Security
+                         </a>
+                        </button>
+                       </li> -->
+                <li>
+                  <button>
+                    <a href="https://www.traffictechnologytoday.com/">
+                      <i class="fa fa-car" aria-hidden="true"></i>
+                      Traffic technology
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.electronicsweekly.com/">
+                      <i class="fa fa-cog" aria-hidden="true"></i>
+                      Electronic
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="hidden-menu">
+              <ul>
+                <li>
+                  <button>
+                    <a href="">
+                      <i class="fa fa-home" aria-hidden="true"></i>
+                      Home
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a
+                      href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                    >
+                      <i class="fa fa-desktop" aria-hidden="true"></i>
+                      Smart Device
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.socialmediatoday.com">
+                      <i class="fa fa-rss" aria-hidden="true"></i>
+                      Internet And SocialNetWork
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.sciencenews.org/">
+                      <i class="fa fa-flask" aria-hidden="true"></i>
+                      Scientific Discovery
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://exhibitionnews.uk/category/type/news/">
+                      <i class="fa fa-camera" aria-hidden="true"></i>
+                      Exhibition
+                    </a>
+                  </button>
+                </li>
+                <!-- <li>
+                        <button>
+                          <a href="https://www.wired.com/category/security/">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            NextWork Security
+                          </a>
+                        </button>
+                      </li> -->
+                <li>
+                  <button>
+                    <a href="https://www.traffictechnologytoday.com/">
+                      <i class="fa fa-car" aria-hidden="true"></i>
+                      Traffic technology
+                    </a>
+                  </button>
+                </li>
+                <li>
+                  <button>
+                    <a href="https://www.electronicsweekly.com/">
+                      <i class="fa fa-cog" aria-hidden="true"></i>
+                      Electronic
+                    </a>
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section>
+        <div class="most">
+          <a href="most.html"><h1>MOSTRECENT</h1></a>
+        </div>
+      </section>
+
+      <section>
+        <div class="main">
+          <div class="left">
+            <a href="trang1.html"
+              ><img src="./assets/img/sec1.webp" alt="" class="rightImg"
+            /></a>
+            <div class="leftonr">
+              <a href="trang1.html" class="pragrap">ALICE LASCELLES </a> <br />
+              <a href="trang1.html" class="pragrap1" style="font-weight: 700">Undersea-Aged Champagne Is Starting to Surface</a>
+
+            </div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </section>
+
+      <section>
+        <div class="main">
+          <div class="left">
+            <a href="trang2.html">
+              <img src="./assets/img/trang2.webp" alt="" class="rightImg" />
+            </a>
+            <div class="leftonr">
+              <a href="trang2.html" class="pragrap">REBECCA BELLAN</a>  <br>   
+              <a href="trang2.html" class="pragrap1" style="font-weight: 700;"> Get Ready for a ‘Tsunami’ of AI at CES</a>
+          </div>
+          <div class="right"></div>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <div class="left">
+            <a href="trang3.html"><img src="./assets/img/trangphu/trang3-1.webp" alt="" class="rightImg"> </a>    
+            <div class="leftonr">
+              <a href="trang3.html" class="pragrap">ROBIN ANDREWS  </a>     <br>
+              <a href="trang3.html" class="pragrap1" style="font-weight: 700;"> The Tantalizing Mystery of the Solar System’s Hidden Oceans</a>
+            </div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <div class="left">
+            <a href="trang4.html"><img src="./assets/img/trangphu/trang4.webp" alt="" class="rightImg"> </a>   
+            <div class="leftonr">
+              <a href="trang4.html" class="pragrap">TIMEN BARBER</a> <br>
+            <a href="trang4.html" class="pragrap1" style="font-weight: 700;">The overlooked tech that kept cities moving in 2023</a>
+            </div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </section>
+      <section>
+        <div class="main">
+          <div class="left">
+            <a href="trang5.html"> <img src="./assets/img/trangphu/trang5-1.webp" alt="" class="rightImg">  </a>  
+            <div class="leftonr">
+              <a href="trang5.html" class="pragrap">TIFFANY LUMIE</a>  <br>   
+              <a href="trang5.html" class="pragrap1" style="font-weight: 700;">Best budgeting apps for individuals, startups and small businesses</a>
+            </div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-contain">
+        <div class="contain-1">
+          <h1>NEWS</h1>
+          <p>
+            GR9.VN is where tomorrow is realized. It is the essential source of information and ideas that make sense of a world in constant transformation. The GR9.VN conversation illuminates how technology is changing every aspect of our lives—from culture to business, science to design. The breakthroughs and innovations that we uncover lead to new ways of thinking, new connections, and new industries.
+          </p>
+        </div>
+        <div class="contain-2">
+          <h1>Other News</h1>
+          <div class="list">
+            <li>
+              <a href="#" class="white-link-color">Media</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Events</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Spaces</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Enterprise</a>
+            </li>
+            <li>
+              <a href="#" class="white-link-color">Social</a>
+            </li>
+          </div>
+        </div>
+        <div class="contain-3">
+          <h1>Contact us</h1>
+          <p>
+            Khu Pho 6 <br />
+            Linh Trung, Thu Duc<br />
+            TP Ho Chi Minh <br />
+            <strong>Phone:</strong> +0848082324<br />
+            <strong>Email:</strong> info@st.hcmuaf.edu.com<br />
+          </p>
+          <div class="social-links">
+            <a href="https://web.facebook.com/phat.ngo.370177"
+              ><i class="fab fa-facebook"></i
+            ></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/pkats2104?igsh=OGQ5ZDc2ODk2ZA=="
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://www.tiktok.com/@tienphat2104?_t=8ioO7aL2fvL&_r=1"
+              ><i class="fab fa-tiktok"></i
+            ></a>
+            <a href="#"><i class="fa fa-rss"></i></a>
+          </div>
+        </div>
+        <div class="contain-4">
+          <h1>Our Newsletter</h1>
+          <p>
+            "Today's information flow, rapid and dynamic, shapes our
+            perspectives. From breaking news to trending topics, staying
+            informed empowers individuals in navigating an ever-evolving global
+            landscape."
+          </p>
+          <form action="" method="post">
+            <input type="email" name="email" /><input
+              type="submit"
+              value="Subscribe"
+            />
+          </form>
+        </div>
+      </div>
+      <div class="copytext">
+        <p>2023 Web tin tức nhóm 9</p>
+      </div>
+    </footer>
+  </body>
+</html>
