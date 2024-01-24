@@ -26,21 +26,129 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
+  <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+    }
+    .contain {
+      display: flex;
+      width: 100%;
+      padding-left: 20px;
+    }
 
-  <!-- =======================================================
- 
+    .tabs-container {
+      display: flex;
+      flex-direction: column;
+      width: 200px; /* Độ rộng của menu */
+      margin: 30px; /* Khoảng cách giữa menu và nội dung */
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px;
+      
+      background-color: #34e89a;
+      margin-bottom: 10px; /* Khoảng cách giữa các tab */
+      color: black;
+    }
+
+    .tab:hover {
+      background-color: #00ff6a;
+      color: black;
+    }
+
+    .tab-content-container {
+      flex-grow: 1;
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tab-content {
+      display: none;
+      flex-grow: 1;
+      background-color: #fff;
+      padding-left: 20px;
+      padding-top: 20px;
+    }
+    .left-right-content {
+      display: flex;
+    }
+    .left-right-content h5{
+      font-weight: bold;
+    }
+    .left-right-content h4{
+      color: red;
+    }
+    .left-content {
+      flex: 1;
+    }
+    .right-content {
+      flex: 1;
+    }
+    .layout-web {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      max-height: 40px;
+      margin: auto;
+     }
+    .header-web, .footer-web {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+    }
+    .content-web {
+      padding: 20px;
+      text-align: center;
+    }
+    .layout-project {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      max-width: 400px;
+      max-height: 40px;
+      margin: auto;
+    }
+    .header-project {
+      background-color: #57cfff;
+      color: #000000;
+      text-align: center;
+      padding: 5px;
+    }
+    .footer-project {
+      background-color: #000000;
+      color: #fff;
+      text-align: center;
+      padding: 5px;
+    }
+    .content-project {
+      padding: 20px;
+      text-align: center;
+    }
+    .color{
+      display: flex;
+      padding-top: 30px;
+    }
+    .color-pallete {
+      width: 80px;
+      height: 80px;
+      margin-right: 30px;
+    }
+  </style>
 </head>
 
 <body>
 
-  
   <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top d-flex align-items-center header-transparent">
+  <header id="header" class="fixed-top d-flex align-items-center ">
     <div class="container-fluid">
 
       <div class="row justify-content-center align-items-center">
         <div class="col-xl-11 d-flex align-items-center justify-content-between">
-          <h1 class="logo"><a href="index.html">GROUP 09</a></h1>
+          <h1 class="logo"><a href="index.html">GROUP 9</a></h1>
           <!-- Uncomment below if you prefer to use an image logo -->
           <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
@@ -60,10 +168,187 @@
           </nav><!-- .navbar -->
         </div>
       </div>
-
     </div>
   </header>
-  
+  <!-- End Header -->
+  <!-- ======= Breadcrumbs ======= -->
+  <section id="breadcrumbs" class="breadcrumbs">
+    <div class="container">
+      <ol>
+        <li><a href="index.html"></a></li>
+      </ol>
+      <h2></h2>
+    </div>
+  </section>
+  <div class="contain">
+    <div class="tabs-container">
+      <div class="tab" onclick="openTab('tab1')">Typography</div>
+      <div class="tab" onclick="openTab('tab2')">Layout</div>
+      <div class="tab" onclick="openTab('tab3')">Color pallete</div>
+      <div class="tab" onclick="openTab('tab4')">Images</div>
+      <div class="tab" onclick="openTab('tab5')">File and Directory</div>
+    </div>
+    
+    <div class="tab-content-container">
+      <div class="tab-content" id="tab1">
+        <div class="left-right-content">
+          <div class="left-content">
+            <h5>Group web:</h5>
+            <h4>1. Typography</h4>
+            <h1>Heading level 1</h1>
+            <h2>Heading level 2</h2>
+            <h3>Heading level 3</h3>
+            <h4>2.Font</h4>
+            <p>Font of web: "Open Sans", sans-serif;</p>
+            <h4>3.Text</h4>
+            <p>This is paragraph</p>
+          </div>
+          <div class="right-content">
+            <h5>Project web: </h5>
+            <h4>1. Typography</h4>
+            <h1>Heading level 1</h1>
+            <h2>Heading level 2</h2>
+            <h3>Heading level 3</h3>
+            <h4>2.Font</h4>
+            <p>Font of project: Apercu, helvetica, sans-serif</p>
+            <h4>3.Text</h4>
+            <p>This is paragraph</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab2">
+        <div class="left-right-content">
+          <div class="left-content">
+            <h5>Group web:</h5>
+            <div class="layout-web">
+              <div class="header-web">
+                  <p>Header</p>
+              </div>
+              <div class="content-web">
+                  <p>content</p>
+              </div>
+          
+              <div class="footer-web">
+                  <p>Footer &copy; 2024</p>
+              </div>
+          </div>
+            
+          </div>
+          <div class="right-content">
+            <h5>Project web: </h5>
+            <div class="layout-project">
+              <div class="header-project">
+                  <p>Header</p>
+              </div>
+              <div class="content-project">
+                  <p>content</p>
+              </div>
+          
+              <div class="footer-project">
+                  <p>Footer &copy; 2024</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab3">
+        <div class="left-right-content">
+          <div class="left-content">
+            <h5>Group web:</h5>
+            <div class="color">
+              <div class="color-pallete" style="background-color: #18d26e;">
+                <p style="color: white; text-align: center; padding-top: 25px;">#18d26e</p>
+              </div>
+              <div class="color-pallete" style="background-color: #000000;">
+                <p style="color: white; text-align: center; padding-top: 25px;">#000000</p>
+              </div>
+              <div class="color-pallete" style="background-color: #11a254;">
+                <p style="color: white; text-align: center; padding-top: 25px;">#11a254</p>
+              </div>
+              <div class="color-pallete" style="background-color: #ff0000;">
+                <p style="color: rgb(0, 0, 0); text-align: center; padding-top: 25px;">#ff0000</p>
+              </div>
+            </div>
+            <div class="color">
+              <div class="color-pallete" style="background-color: #10e2e9;">
+                <p style="color: rgb(0, 0, 0); text-align: center; padding-top: 25px;">#10e2e9</p>
+              </div>
+            </div>
+
+          </div>
+          <div class="right-content">
+            <h5>Project web: </h5>
+            <div class="color">
+              <div class="color-pallete" style="background-color: #EEF5FF;">
+                <p style="color: rgb(0, 0, 0); text-align: center; padding-top: 25px;">#EEF5FF</p>
+              </div>
+              <div class="color-pallete" style="background-color: #000000;">
+                <p style="color: white; text-align: center; padding-top: 25px;">#000000</p>
+              </div>
+              <div class="color-pallete" style="background-color: #fdf900;">
+                <p style="color: rgb(0, 0, 0); text-align: center; padding-top: 25px;">#fdf900</p>
+              </div>
+              <div class="color-pallete" style="background-color: #ff0000;">
+                <p style="color: rgb(0, 0, 0); text-align: center; padding-top: 25px;">#ff0000</p>
+              </div>
+            </div>
+            <div class="color">
+              <div class="color-pallete" style="background-color: #10e2e9;">
+                <p style="color: rgb(0, 0, 0); text-align: center; padding-top: 25px;">#10e2e9</p>
+              </div>
+              <div class="color-pallete" style="background-color: #646464;">
+                <p style="color: rgb(255, 255, 255); text-align: center; padding-top: 25px;">#646464</p>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+      <div class="tab-content" id="tab4">
+        <div class="left-right-content">
+          <div class="left-content">
+            <h5>Group web:</h5>
+            <p style="color: #444444;">Avatar:</p>
+            <div class="img-avatar" style="background-color: #636363; border-radius: 50%; width: 150px; height: 150px;">
+              <p style="color: rgb(255, 255, 255); text-align: center; padding-top: 60px;">150px x 150px</p>
+            </div>
+            <p style="color: #444444; padding-top: 30px;">Design of project</p>
+            <div class="img-avatar" style="background-color: #636363; width: 300px; height: 450px;">
+              <p style="color: rgb(255, 255, 255); text-align: center; padding-top: 200px;">450px x 300px</p>
+            </div>
+
+          </div>
+          <div class="right-content">
+            <h5>Project web: </h5>
+            <p style="color: #444444;">Product</p>
+            <div class="img-avatar" style="background-color: #636363; width: 350px; height: 200px;">
+              <p style="color: rgb(255, 255, 255); text-align: center; padding-top: 85px;">200px x 350px</p>
+            </div>
+            <p style="color: #444444; padding-top: 30px;">Product</p>
+            <div class="img-avatar" style="background-color: #636363; width: 400px; height: 200px;">
+              <p style="color: rgb(255, 255, 255); text-align: center; padding-top: 90px;">200px x 400px</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="tab-content" id="tab5">
+        <div class="left-right-content">
+          <div class="left-content">
+            <h5>Css, Image, Scss, Java Script</h5>
+            <img src="assets/img/Css-Image-Scss-Java-Script.png" alt=""  width="170px" height="auto">
+
+          </div>
+          <div class="right-content">
+            <h5>Html</h5>
+            <img src="assets/img/html1.png" alt="" width="200px" height="auto">
+            <img src="assets/img/html2.png" alt="" style="padding-left: 20px;"  width="200px" height="auto">
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <footer id="footer">
     <div class="footer-top">
@@ -146,7 +431,21 @@
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    function openTab(tabId) {
+        // Ẩn tất cả nội dung tab
+        var tabContents = document.getElementsByClassName("tab-content");
+        for (var i = 0; i < tabContents.length; i++) {
+            tabContents[i].style.display = "none";
+        }
+
+        // Hiển thị nội dung tab được chọn
+        document.getElementById(tabId).style.display = "block";
+    }
+    openTab('tab1');
+  </script>
 
 </body>
 
 </html>
+
