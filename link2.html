@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Css/mainnew.css">
+    <link href="assets/img/logo.jpg" rel="icon">
+    <link href="assets/img/logo.jpg" rel="apple-touch-icon">
+    <style>
+        :root{
+          max-width: 100%;
+          max-height: 100%;
+        }
+         /* style header */
+  header {
+    width: 100%;
+    height: auto;
+    border-bottom: #b8b7b7 solid 0.2rem;
+    background-color: #EEF5FF;
+    position: relative;
+  }
+  
+  header .container_phat .menu {
+    width: 100%;
+    height: 225px;
+  }
+  
+  header .container_phat .menu .up {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 80px;
+  }
+  
+  .ml {
+    margin: 10px;
+    font-size: 30px;
+    display: none;
+    font-size: 2.5rem;
+  }
+  
+  .up .up-left {
+    display: flex;
+  }
+  
+  .up .up-left img {
+    margin-left: 10px;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+  
+  .up .up-left h1 {
+    margin: 20px 15px 0 10px;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-size: 40px;
+  }
+  
+  .up .up-left p {
+    margin: 0px 15px 80px 15px;
+    font-size: 15px;
+  }
+  
+  .up .up-right img {
+    margin-top: 20px;
+    margin-right: 200px;
+    border: none;
+  }
+  
+  .mid {
+    margin-top: 20px;
+    /* border: rgba(255, 255, 255, 0.329) solid 0.2rem; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+  
+  }
+  
+  .mid .mid-left #search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 150px;
+    width: 300px;
+    height: 25px;
+  }
+  
+  #search {
+    /* border-radius: 30px; */
+    background-color: #EEF5FF;
+  }
+  
+  #search #search-text {
+    outline: none;
+    border: none;
+    background-color: none;
+    font-size: 18px;
+    width: 0;
+    padding: 0;
+    transition: all 0.25s ease-in-out;
+  }
+  
+  #search:hover #search-text {
+    width: 300px;
+    padding: 10px 0 10px 15px;
+    border: rgb(129, 129, 129) solid 0.2rem;
+    border-radius: 30px;
+  }
+  
+  #search-btn {
+    background-color: white;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+  }
+  
+  .mid .mid-right {
+    margin-right: 110px;
+  }
+  
+  .mid .mid-right .item-button button {
+    width: 80px;
+    height: 30px;
+    background-color: #EEF5FF;
+    border: rgba(255, 255, 255, 0.007)solid 0.2rem;
+    outline: none;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: 0.4s;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 10px;
+    border: #b8b7b7 solid 0.1rem;
+    transition: 0.15s ease;
+  
+  }
+  
+  .mid .mid-right .item-button button:hover {
+    background-color: gray;
+    border-style: outset;
+    scale: 1.05;
+  }
+  
+  .mid .mid-right .item-button button a {
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  
+  .mid .mid-right .item-button button a:hover {
+    color: #fff;
+  }
+  
+  .mid .Notification {
+    font-size: 30px;
+    margin-right: 50px;
+  }
+  
+  header .container_phat .menu .down{
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+  }
+  header .container_phat .menu .down ul {
+    list-style: none;
+    margin: 10px;
+    margin-top: 20px;
+  }
+  
+  .down ul li {
+    display: inline-block;
+    margin: 5px;
+  }
+  
+  .down ul li button {
+    border: none;
+    outline: none;
+    /* border-radius: 10px; */
+    transition: 0.4s;
+    background-color: #EEF5FF;
+    height: 20px;
+    /* border-right: 1px solid black; */
+    padding-right: 10px;
+    transition: 0.15s ease;
+  }
+  
+  .down ul li button:hover {
+    background-color: gray;
+    scale: 1.05;
+  }
+  
+  .down ul li button a {
+    text-decoration: none;
+    font-size: 15px;
+    color: black;
+  }
+  
+  .down ul li button a:hover {
+    color: #fff;
+  }
+  
+  @media(max-width:992px) {
+  
+    .down,
+    .mid-right {
+      display: none;
+    }
+  
+  
+    .ml {
+      display: block;
+    }
+  
+    /* .hidden-menu{
+        display: block;
+      } */
+  }
+  
+  .hidden-menu {
+    /* display: none; */
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(245, 243, 243, 0.904);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    /* overflow: hidden; */
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-top: 40px;
+    margin-right: 20px;
+    overflow: scroll;
+  }
+  
+  .hidden-menu.open {
+    height: 250px;
+  }
+  
+  .hidden-menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .hidden-menu li button {
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  
+  .hidden-menu li a {
+    color: #505050;
+    text-decoration: none;
+    font-size: small;
+  }
+  
+  .hidden-menu li a:hover {
+    scale: 1.05;
+    color: rgb(75, 180, 75);
+    font-weight: 600;
+  }
+  
+  @media (max-width:576px) {
+    .hidden-menu {
+      left: 2rem;
+      width: unset;
+    }
+  }
+      </style>
+</head>
+<body>
+     <!-- <header class="header_container">
+        <i class="fa-sharp fa-solid fa-bars icon" ></i>
+        <span class="label">W I R E D</span>
+        <a href="https://www.wired.com/category/backchannel/" class="link-head">BACKCHANNEL</a>
+        <a href="https://www.wired.com/category/business/" class="link-head">BUSINESS</a>
+        <a href="https://www.wired.com/category/culture/" class="link-head">CULTURE</a>
+        <a href="https://www.wired.com/category/gear/" class="link-head">GEAR</a>
+        <a href="https://www.wired.com/category/ideas/" class="link-head">IDEAS</a>
+        <a href="https://www.wired.com/category/science/" class="link-head">SCIENCE</a>
+        <a href="https://www.wired.com/category/politics/" class="link-head">SECURITY</a>
+        <a href="https://shop.wired.com/" class="link-head">MERCH</a>
+        <a href="https://www.wired.com/category/politics/" class="link-head">CYBER  MONDAY</a>
+        <a href="" class="link-head-sign">SIGN IN</a>
+        <a href="https://www.wired.com/subscribe/"><button class="btn-sub">SUBSCRIBE</button></a>
+        <a href="https://www.wired.com/search/"><i class="fa-sharp fa-solid fa-magnifying-glass icon"></i></a>
+     </header> -->
+     <header>
+        <div class="Phat">
+          <div class="container_phat">
+            <div class="menu">
+              <div class="up">
+                <div class="up-left">
+                  <div class="logo">
+                    <img
+                      src="./assets/img/logo.webp"
+                      style="width: 70px; height: 70px"
+                      alt=""
+                    />
+                  </div>
+                  <div class="title">
+                    <h1>GR9.VN</h1>
+                    <br />
+                    <p>Online news</p>
+                  </div>
+                </div>
+                <div class="up-right">
+                  <img
+                    src="./assets/img/tech.webp"
+                    style="width: 800px; height: 70px"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="mid">
+                <div class="mid-left">
+                  <form action="" id="search">
+                    <input type="text" id="search-text" placeholder="Search" />
+                    <button id="search-btn">
+                      <i class="fa fa-search" aria-hidden="true"></i>
+                    </button>
+                  </form>
+                </div>
+                <div class="mid-right">
+                  <div class="item-button">
+                    <button>
+                      <a href="./login.html">Sign In</a>
+                    </button>
+                    <button>
+                      <a href="contact.html">Contact</a>
+                    </button>
+                  </div>
+                </div>
+                <div class="ml">
+                  <i class="fa fa-bars" aria-hidden="true"></i>
+                </div>
+              </div>
+              <div class="down">
+                <ul>
+                  <li>
+                    <button>
+                      <a href="web-news.html">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Home
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a
+                        href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                      >
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        Smart Device
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.socialmediatoday.com/">
+                        <i class="fa fa-rss" aria-hidden="true"></i>
+                        Internet And SocialNetWork
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.sciencenews.org/">
+                        <i class="fa fa-flask" aria-hidden="true"></i>
+                        Scientific Discovery
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.wired.com/category/security/">
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                        Exhibition
+                      </a>
+                    </button>
+                  </li>
+                  <!-- <li>
+                          <button>
+                           <a href="">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                            NextWork Security
+                           </a>
+                          </button>
+                         </li> -->
+                  <li>
+                    <button>
+                      <a href="https://www.traffictechnologytoday.com/">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        Traffic technology
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.electronicsweekly.com/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        Electronic
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="hidden-menu">
+                <ul>
+                  <li>
+                    <button>
+                      <a href="">
+                        <i class="fa fa-home" aria-hidden="true"></i>
+                        Home
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a
+                        href="https://www.trendmicro.com/vinfo/us/security/news/smart-devices"
+                      >
+                        <i class="fa fa-desktop" aria-hidden="true"></i>
+                        Smart Device
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.socialmediatoday.com">
+                        <i class="fa fa-rss" aria-hidden="true"></i>
+                        Internet And SocialNetWork
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.sciencenews.org/">
+                        <i class="fa fa-flask" aria-hidden="true"></i>
+                        Scientific Discovery
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://exhibitionnews.uk/category/type/news/">
+                        <i class="fa fa-camera" aria-hidden="true"></i>
+                        Exhibition
+                      </a>
+                    </button>
+                  </li>
+                  <!-- <li>
+                          <button>
+                            <a href="https://www.wired.com/category/security/">
+                              <i class="fa fa-lock" aria-hidden="true"></i>
+                              NextWork Security
+                            </a>
+                          </button>
+                        </li> -->
+                  <li>
+                    <button>
+                      <a href="https://www.traffictechnologytoday.com/">
+                        <i class="fa fa-car" aria-hidden="true"></i>
+                        Traffic technology
+                      </a>
+                    </button>
+                  </li>
+                  <li>
+                    <button>
+                      <a href="https://www.electronicsweekly.com/">
+                        <i class="fa fa-cog" aria-hidden="true"></i>
+                        Electronic
+                      </a>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+     <div class="container-center">
+        <div class="center-top">
+            <img src="assets/img/img2/img_21.jpg" alt="" class="img">
+            <div class="label-con">
+                <span>STEVEN</span>
+                <span>BUSINESS</span>
+                <span>NOV 18. 2023 3:58 PM</span>
+            </div>
+            <h2 class="title">What Sam Altman’s Firing Means for the Future of</br> OpenAl</h2>
+            <p class="para">Sam Altman made OpenAI into a powerhouse by adding a profit-seeking arm to its utopian mission. After the board rejected</br> his vision, the company’s remaining leaders must figure out a new path forward.</p>
+            <img src="assets/img/img2/img_1.webp" alt="" class="img_1">
+            <span class="author">PHOTOGRAPH:  JUSTIN SULLIVAN/GETTY IMAGES</span>
+        </div>
+        <div class="center-mid">
+            <div class="center-mid-left">
+                <p class="paragraph">Sam Altman always insisted that he wasn’t the most important</br> person at OpenAI despite being its CEO. As he traveled the</br> world this year meeting world leaders—the world’s unofficial</br> ambassador of AI—Altman would soft-pedal his role, even as he</br> stole glances at his phone to keep up with what was happening </br>in OpenAI’s luxe San Francisco offices.</br> </br>
+
+                    “We have an incredibly great team here that can do a lot of</br> things, so mostly, I defer to them,” he told me in May when I</br> asked him how the company ran in his absence. “But some</br> things only a CEO can do—some HR thing of the moment, or</br> you have to kill some project, or something with a major</br> partner.” Those items would accumulate on his phone and at</br> the end of the day he’d bat out responses. Then he would go</br> back to speechifying, meeting developers, and taking tea with</br> prime ministers.</br></br>
+                    
+                    On Friday, the mother of all “HR things of the moment” hit Sam</br> Altman like a Cybertruck. Around midday, according to OpenAI</br> cofounder and Altman ally Greg Brockman, the board of</br> directors of the nonprofit that governs the AI company suddenly</br> fired its CEO. A detail-free statement more worthy of a</br> company called ClosedAI said that the directors “concluded that</br> he was not consistently candid in his communications with the</br> board, hindering its ability to exercise its responsibilities.” An</br> internal memo to OpenAI staff, first reported by Axios, later said</br> the move wasn’t a “response to malfeasance” but offered little</br> further explanation.</br></br>
+                    
+                    It gradually leaked out that Altman’s exit was supported by chief</br> scientist Ilya Sutskever and CTO Mura Murati, who became </br>interim CEO. Before Friday night was through, Brockman,</br> OpenAI’s president, had quit the company and reports came</br> that several other key employees were leaving, too.</br></br>
+                    
+                    With more shoes still to drop than a Nike clearance sale, it’s too </br>soon to know precisely what’s next for OpenAI. But already the </br>apparent boardroom coup stands with Apple’s 1985 dismissal of</br> Steve Jobs as the most shocking execution in Silicon Valley</br> history. From studying OpenAI closely this year for WIRED’s</br> October cover story, I can say some things about the impact of</br> Altman’s loss.</br></br>
+                    
+                    First, it’s important to remember that OpenAI was founded by</br> Altman and Elon Musk to fulfill a mission. “The organization is</br> trying to develop a human-positive AI. And because it’s a</br> nonprofit, it will be owned by the world,” Altman told me in</br> December 2015, just before the project was revealed to the</br> world.</br></br>
+                    Though it seemed clear that Altman was the primary instigator,</br> he was not yet OpenAI’s leader. But the company was squarely</br> under his bailiwick: OpenAI was to be part of the research wing </br>of the startup incubator Y Combinator, where Altman was CEO.</br> Altman had started the division to chase the dream of using</br> tech to solve the world’s knottiest problems when he became</br> YC’s top executive. The original plan for OpenAI was to gather a</br> relatively low number of the world’s best AI scientists and</br> discover the keys to artificial general intelligence able to</br> outperform humans on every dimension, inside a structure that</br> gave ownership of this unimaginably powerful technology to</br> the people, not giant corporations.</br></br></p>
+                    <!-- <span class="title-new">Rocky Start</span>
+                    <p class="paragraph">OpenAI floundered in its early years, struggling to come up with</br> a scheme that made leaps, not baby steps, toward its goal. In</br> early 2018, Altman turned down Musk’s bid to take over the</br> company, and put himself in the hot seat as CEO, easing out of</br> Y Combinator to make the quest for AI the focus of his energies.</br> As he told me later, he realized that humanity had the chance to</br> create AGI only once, and he wanted in. Under his guidance, the</br> company transformed itself from a small research lab to the</br> world’s leading developer of the century’s most powerful</br> technology. After ChatGPT’s debut, Altman was the face of not</br> just OpenAI but the poster child for artificial intelligence’s</br> promise and potentially dangerous power. Inside Silicon Valley,</br> he was arguably the tech industry’s most admired leader.</br></br>
+
+                        Can OpenAI maintain its track record of breakthroughs without</br> him? Altman is not a scientist, so it’s unsurprising that he did</br> not directly coauthor any of the company’s significant technical</br> achievements. But his dedication to the quest for AGI made him</br> a faithful servant and cheerleader of OpenAI’s machine-</br>learning mavens. When it comes to algorithms, the heart of the</br> company is Sutskever, an AI pioneer whose passion to create</br> AGI is just as strong as Altman’s. I saw the dynamic exemplified</br> when OpenAI gave me a preview of how its text generator GPT-3</br> could write code. Altman first outlined the significance of the</br> product, framing its place in the great journey toward general</br> intelligence, and then excused himself as Sutskever and his</br> technical team went through the demo and explained the magic</br> behind it.</br></br></p>
+                        <p class="paragraph">Altman was more directly critical in addressing an existential</br> challenge for OpenAI when it became clear that systems like</br> GPT-3 could open a breakthrough new era in AI that we now</br> identify with ChatGPT. Training such large language models</br> would require billions of dollars and immense computing</br> infrastructure. Altman executed a pivot to an unusual corporate</br> structure where a for-profit corporation controlled by the</br> original nonprofit’s board took over the mission of building AGI.</br> He also struck a transformational $13 billion partnership with</br> Microsoft that gave OpenAI funding and access to its servers</br> and AI chips.</br></br>
+
+                            These moves set OpenAI on a path that made it the</br> phenomenon that it became in the past year—but one that </br>apparently, for some insiders, looked like it was morphing into</br> the kind of corporate giant OpenAI was created to</br> counterweight. Altman’s departure this week potentially</br> imperils its relationship with Microsoft, whose CEO Satya </br>Nadella publicly bromanced Altman even as recently as</br> OpenAI’s developer conference last week. Though Microsoft</br> released a statement from Nadella reaffirming its support of</br> OpenAI on Friday, he has to be unhappy to see a project he has</br> bet billions and his own company’s future on in such turmoil.</br></p> -->
+
+            </div>
+            <div class="center-mid-right">
+                <div class="center-mid-right-1">
+                    <img src="assets/img/img2/img_22.jpg" alt="" class="img_2">
+                </div>
+                <div class="con-label-m">
+                    <span class="title-n">MOST POPULAR</span>
+                </div>
+                <div class="con-qc">
+                    <img src="assets/img/img2/img_2.webp" alt="" class="img_3">
+                    <div class="title_1">
+                        <span class="label_1">GEAR</span>
+                        <a href="https://www.wired.com/story/27-year-old-codebreaker-busted-myth-bitcoins-anonymity/#intcid=_wired-right-rail_1c8aa201-b0a9-4bf2-860b-67b0559551b4_popular4-1-reranked-by-vidi" class="link_qc">31 Best Caffe Deals for Cycber</br>Monday-Markers, Grinders, Mugs</a>
+                        <span class ="label_1">JAINA GREY</span>
+                    </div>
+                </div>
+                <div class="con-qc">
+                    <img src="assets/img/img2/img_3.webp" alt="" class="img_3">
+                    <div class="title_1">
+                        <span class="label_1">GEAR</span>
+                        <a href="https://www.wired.com/story/plaintext-apple-secret-40-year-old-mac-still-rules/#intcid=_wired-right-rail_1c8aa201-b0a9-4bf2-860b-67b0559551b4_popular4-1-reranked-by-vidi" class="link_qc">How to Use Obsidian for Writing</br>and Productivity</a>
+                        <span class ="label_1">JAINA GREY</span>
+                    </div>
+                </div>
+                <div class="con-qc">
+                    <img src="assets/img/img2/img_4.webp" alt="" class="img_3">
+                    <div class="title_1">
+                        <span class="label_1">SECURITY</span>
+                        <a href="https://www.wired.com/story/one-part-of-apple-vision-pro-apple-doesnt-want-you-to-see/#intcid=_wired-right-rail_1c8aa201-b0a9-4bf2-860b-67b0559551b4_popular4-1-reranked-by-vidi" class="link_qc">No, You Don't Need to Turn Off</br>Apple's NameDrop Feature in IOS</br> 17</a>
+                        <span class ="label_1">JUSTY POT</span>
+                    </div>
+                </div>
+                <div class="con-qc">
+                    <img src="assets/img/img2/img_5.webp" alt="" class="img_3">
+                    <div class="title_1">
+                        <span class="label_1">SCIENCE</span>
+                        <a href="https://www.wired.com/review/sony-a7c-r/#intcid=_wired-right-rail_1c8aa201-b0a9-4bf2-860b-67b0559551b4_popular4-1-reranked-by-vidi" class="link_qc">How to Set Your TherMostat's-</br>According to Science</a>
+                        <span class ="label_1">CHRIS BARANIUK</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="con-mid-2" >
+            <span class="label-5">You Might Also Like...</span>
+            <ul class="con-li">
+                <li class="li">Get the long view on tech with Steven Levy's <a href="https://www.wired.com/newsletter/Plaintext?sourceCode=BottomStories" class="a-li">Plaintext</br>newsletter</a></li>
+                <li class="li"><a href="https://www.wired.com/story/parents-dementia-robots-warm-technology/" class="a-li">The Mirai Confessions:</a>Three young hackers who built a</br>web-killing monster finally tell their story</li>
+                <li class="li"><a href="https://www.wired.com/story/hilke-schellmann-algorithm-book-ai-jobs-hiring/" class="a-li">Underage workers are training AI</a></li>
+                <li class="li">The long quest for a <a href="https://www.wired.com/story/eco-friendly-myth/" class="a-li">universal flu vaccine</a> finally takes its first</br> steps</li>
+                <li class="li"><a href="https://www.wired.com/story/how-to-be-more-anonymous-online/" class="a-li">Secretive White House surveillance program</a> gives cops</br> access to trillions of US phone records</li>
+                <li class="li"><a href="https://www.wired.com/story/best-paper-planners/" class="a-li">Wish List 2023</a>: 47 awesome gifts for all the enthusiasts,</br> connoisseurs, and fanatics in your circle </li>
+                <li class="li">Our Gear team has branched out with a new guide to the</br>best<a href="https://www.wired.com/story/best-sleeping-pads/" class="a-li"> sleeping pads</a> and fresh picks for the <a href="https://www.wired.com/gallery/best-coolers/" class="a-li"> best coolers</a> and</br> <a href="https://www.wired.com/story/best-binoculars/" class="a-li">binoculars</a></li>
+            </ul>
+        </div>
+        <div class="con-author">
+            <img src="assets/img/img2/img_6.webp" alt="" class="img-7">
+            <div>
+                <p><a href="https://www.wired.com/author/steven-levy/" class="a-li">Steven Levy</a> covers the gamut of tech subjects for WIRED, in print</br> and online, and has been contributing to the magazine since its</br> inception. His weekly column, <a href="https://www.wired.com/tag/plaintext/" style="font-weight: bold;" class="a-li">Plaintext</a>, is exclusive to subscribers</br> online but the newsletter version is open to all—<a href="https://www.wired.com/newsletter/Plaintext?sourceCode=authorpage" class="a-li" style="font-weight: bold;">sign up here</a> .He</br> has been writing about... <a href="https://www.wired.com/author/steven-levy/" class="a-li">Read more</a></p>
+                <span class="label-6">EDITOR AT LARGE</span>
+            </div>
+        </div>
+        <div class="con-a">
+            <span class="label-tp">TOPICS</span>
+            <a href="https://www.wired.com/tag/openai/" class="a">OPENAL</a>
+            <a href="https://www.wired.com/tag/artificial-intelligence/" class="a">ARTIFICIAL INTELLIGENCE</a>
+            <a href="https://www.wired.com/tag/startups/" class="a">STARTUPS</a>
+            <a href="https://www.wired.com/tag/chatgpt/" class="a">CHATGPT</a>
+            <a href="https://www.wired.com/tag/silicon-valley/" style="display: block;" class="a-m">SILICON VALLEY</a>
+        </div>
+        <div class="con-infor">
+            <div class ="con-label">
+                <span class="label-o">MORE FROM WIRED</span>
+            </div>
+            <div class="con-img-infor">
+                <div class="con-img-1">
+                    <img src="assets/img/img2/img_7.webp" alt="" class="img-8">
+                    <a href="https://www.wired.com/story/tech-layoffs-2024-amazon-google-discord-twitch/#intcid=_wired-bottom-recirc-version3_c905cdbd-775f-4917-acbb-fb759df750a3_roberta-similarity1" class="div-a">No, the Great Tech</br> Layoffs of 2023 Aren’t</br> Happening Again</a>
+                    <p class="p">Microsoft’s Satya Nadella is reportedly</br> “furious” following Altman's dramatic</br> departure from OpenAI Friday.</br> Meanwhile, OpenAI’s president and</br> three senior researchers have resigned.</p>
+                    <span class="author-label">WILL KNIGHT</span>
+                </div>
+                <div class="con-img-1">
+                    <img src="assets/img/img2/img_8.webp" alt="" class="img-8">
+                    <a href="https://www.wired.com/story/scammy-ai-generated-books-flooding-amazon/#intcid=_wired-bottom-recirc-version3_c905cdbd-775f-4917-acbb-fb759df750a3_roberta-similarity1" class="div-a">Scammy AI-Generated </br>Book Rewrites Are</br> Flooding Amazon</a>
+                    <p class="p">Microsoft’s Satya Nadella is reportedly</br> “furious” following Altman's dramatic</br> departure from OpenAI Friday.</br> Meanwhile, OpenAI’s president and</br> three senior researchers have resigned.</p>
+                    <span class="author-label">WILL KNIGHT</span>
+                </div>
+                <div class="con-img-1">
+                    <img src="assets/img/img2/img_9.webp" alt="" class="img-8">
+                    <a href="https://www.wired.com/story/congress-senate-tech-companies-pay-ai-training-data/#intcid=_wired-bottom-recirc-version3_c905cdbd-775f-4917-acbb-fb759df750a3_roberta-similarity1" class="div-a">Congress Wants Tech</br> Companies to Pay Up</br> for AI Training Data</a>
+                    <p class="p">Microsoft’s Satya Nadella is reportedly</br> “furious” following Altman's dramatic</br> departure from OpenAI Friday.</br> Meanwhile, OpenAI’s president and</br> three senior researchers have resigned.</p>
+                    <span class="author-label">WILL KNIGHT</span>
+                </div>
+                <div class="con-img-1">
+                    <img src="assets/img/img2/img_10.webp" alt="" class="img-8">
+                    <a href="https://www.wired.com/story/artificial-intelligence-meta-yann-lecun-interview/#intcid=_wired-bottom-recirc-version3_c905cdbd-775f-4917-acbb-fb759df750a3_roberta-similarity1" class="div-a">How Not to Be Stupid</br> About AI, With Yann</br> LeCun</a>
+                    <p class="p">Microsoft’s Satya Nadella is reportedly</br> “furious” following Altman's dramatic</br> departure from OpenAI Friday.</br> Meanwhile, OpenAI’s president and</br> three senior researchers have resigned.</p>
+                    <span class="author-label">WILL KNIGHT</span>
+                </div>
+            </div>
+            <div class="con-img-infor-2">
+                <div class="con-img-1">
+                    <img src="assets/img/img2/img_11.webp" alt="" class="img-8">
+                    <a href="https://www.wired.com/story/google-circle-to-search-ai-powered-multi-search/#intcid=_wired-bottom-recirc-version3_c905cdbd-775f-4917-acbb-fb759df750a3_roberta-similarity1" class="div-a">Google Search Is a Mess.</br> Can Mobile AI Make It</br> Better?</a>
+                    <p class="p">Microsoft’s Satya Nadella is reportedly</br> “furious” following Altman's dramatic</br> departure from OpenAI Friday.</br> Meanwhile, OpenAI’s president and</br> three senior researchers have resigned.</p>
+                    <span class="author-label">WILL KNIGHT</span>
+                </div>
+                <div class="con-img-1">
+                    <img src="assets/img/img2/img_12.webp" alt="" class="img-8">
+                    <a href="https://www.wired.com/story/bitcoin-etf-cryptocurrencies-split/#intcid=_wired-bottom-recirc-version3_c905cdbd-775f-4917-acbb-fb759df750a3_roberta-similarity1" class="div-a">Why Crypto Idealogues</br> Won’t Touch Bitcoin</br> ETFs</a>
+                    <p class="p">Microsoft’s Satya Nadella is reportedly</br> “furious” following Altman's dramatic</br> departure from OpenAI Friday.</br> Meanwhile, OpenAI’s president and</br> three senior researchers have resigned.</p>
+                    <span class="author-label">WILL KNIGHT</span>
+                </div>
+                <div class="con-img-1">
+                    <img src="assets/img/img2/img_13.webp" alt="" class="img-8">
+                    <a href="https://www.wired.com/story/mickey-mouse-steamboat-willie-public-domain-artificial-intelligence/#intcid=_wired-bottom-recirc-version3_c905cdbd-775f-4917-acbb-fb759df750a3_roberta-similarity1" class="div-a">Sam Altman’s Sudden</br> Exit Sends Shockwaves</br> Through OpenAI and...</a>
+                    <p class="p">Microsoft’s Satya Nadella is reportedly</br> “furious” following Altman's dramatic</br> departure from OpenAI Friday.</br> Meanwhile, OpenAI’s president and</br> three senior researchers have resigned.</p>
+                    <span class="author-label">WILL KNIGHT</span>
+                </div>
+                <div class="con-img-1">
+                    <img src="assets/img/img2/img_14.webp" alt="" class="img-8">
+                    <a href="https://www.wired.com/story/generative-ai-web-2-mistakes/#intcid=_wired-bottom-recirc-version3_c905cdbd-775f-4917-acbb-fb759df750a3_roberta-similarity1" class="div-a">Generative AI Learned</br> Nothing From Web 2.0</a>
+                    <p class="p">Microsoft’s Satya Nadella is reportedly</br> “furious” following Altman's dramatic</br> departure from OpenAI Friday.</br> Meanwhile, OpenAI’s president and</br> three senior researchers have resigned.</p>
+                    <span class="author-label">WILL KNIGHT</span>
+                </div>
+            </div>
+        </div>
+        <div class="img-container">
+            <span class="span">Sponsored Links by Taboola</span>
+            <div class="img-con-infor">
+                <div class="con_infor">
+                    <img src="assets/img/img2/img_15.jpg" alt="" class="img-9">
+                    <a href="https://www.icmarkets-vnc.com/vn/#tblciGiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiDfxFEo3a-P-qecme0C" class="a_img">If you have a mouse, play</br> this game for 1 minute and</br> see why everyone is...</a>
+                    <span class="label-author">Combat Slege</span>
+                </div>  
+                <div class="con_infor">
+                    <img src="assets/img/img2/img_16.jpg" alt="" class="img-9">
+                    <a href="https://www.combatsiege.com/?r=tabcs1wwh&clickid=GiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiD8gFsooMzhq-y1o9sX&utm_source=taboola-condenast1-wired&utm_medium=tabcs1wwh+%28hier%29&utm_term=If+you+have+a+mouse%2C+you+have+to+play+this+game.&tblci=GiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiD8gFsooMzhq-y1o9sX#tblciGiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiD8gFsooMzhq-y1o9sX" class="a_img">If you have a mouse, play</br> this game for 1 minute and</br> see why everyone is...</a>
+                    <span class="label-author">Combat Slege</span>
+                </div>  
+                <div class="con_infor">
+                    <img src="assets/img/img2/img_17.jpg" alt="" class="img-9">
+                    <a href="https://navigator.deakin.edu.au/choosing-the-right-university-degree/?utm_source=taboola&tblci=GiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiCj7UIo7fOH6L3VnIAZ#tblciGiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiCj7UIo7fOH6L3VnIAZ" class="a_img">If you have a mouse, play</br> this game for 1 minute and</br> see why everyone is...</a>
+                    <span class="label-author">Combat Slege</span>
+                </div>  
+            </div>
+            <div class="img-con-infor-3">
+                <div class="con_infor">
+                    <img src="assets/img/img2/img_18.jpg" alt="" class="img-9">
+                    <a href="https://www.combatsiege.com/?r=tabcs1wwh&clickid=GiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiD8gFso167vrZPg8s1t&utm_source=taboola-condenast1-wired&utm_medium=tabcs1wwh+%28hier%29&utm_term=You+will+never+turn+off+your+computer%2C+if+you+have+a+mouse&tblci=GiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiD8gFso167vrZPg8s1t#tblciGiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiD8gFso167vrZPg8s1t" class="a_img">If you have a mouse, play</br> this game for 1 minute and</br> see why everyone is...</a>
+                    <span class="label-author">Combat Slege</span>
+                </div>  
+                <div class="con_infor">
+                    <img src="assets/img/img2/img_19.jpg" alt="" class="img-9">
+                    <a href="https://www.icmarkets-vnc.com/vn/#tblciGiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiDfxFEojY63zKjz7-K1AQ" class="a_img">If you have a mouse, play</br> this game for 1 minute and</br> see why everyone is...</a>
+                    <span class="label-author">Combat Slege</span>
+                </div>  
+                <div class="con_infor">
+                    <img src="assets/img/img2/img_20.jpg" alt="" class="img-9">
+                    <a href="https://adjustable-bed2024.online/?u2=M2024012105-ac292646e2be2d9_6494_3&atxt=The%20Prices%20For%20Unsold%20Smart%20Beds%20In%20Thanh%20Pho%20Ho%20Chi%20Minh%20Might%20Surprise%20You&t1=33086782&t2=1521380_condenast1-wired&t3=GiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiCMtV8o17uQ96nP7LhP&sqs=N%E1%BB%87m+Cao+su+Non+V%E1%BA%A1n+Th%C3%A0nh%2CN%E1%BB%87m+Cao+su+Non+Th%E1%BA%AFng+L%E1%BB%A3i%2CN%E1%BB%87m+Cao+su+Th%E1%BA%AFng+L%E1%BB%A3i%2CN%E1%BB%87m+Cao+su+V%E1%BA%A1n+Th%C3%A0nh%2CN%E1%BB%87m+1m8#tblciGiDe8XCsu1qTrIRCgdNhgT4Idzy_g3NaKiWpzj_wesGgfiCMtV8o17uQ96nP7LhP" class="a_img">If you have a mouse, play</br> this game for 1 minute and</br> see why everyone is...</a>
+                    <span class="label-author">Combat Slege</span>
+                </div>  
+            </div>
+        </div>
+     </div>
+     <footer>
+        <div class="con-footer">
+            <div class="con-footer-1">
+               <span class="label-footer">W I R E D</span> 
+               <p class="para-footer">WIRED is where tomorrow is realized. It is the essential source</br> of information and ideas that make sense of a world in constant</br> transformation. The WIRED conversation illuminates how</br> technology is changing every aspect of our lives—from culture to</br> business, science to design. The breakthroughs and innovations</br> that we uncover lead to new ways of thinking, new connections,</br> and new industries.</p>
+               <div class="icon-con">
+                <a href="https://www.facebook.com/wired/"><i class="fa-brands fa-facebook icon"></i></a>
+                <a href="https://www.youtube.com/user/wired/"><i class="fa-brands fa-youtube icon"></i></a>
+                <a href="https://www.instagram.com/wired/"><i class="fa-brands fa-instagram icon"></i></a>
+                <a href="https://www.tiktok.com/@wired?lang=en"><i class="fa-brands fa-tiktok icon"></i></a>
+               <a href="https://www.pinterest.com/wired/"><i class="fa-brands fa-twitter icon"></i></a>
+               </div>
+            </div>
+            <div class="con-footer-2">
+                <span class="label-footer">MORE FROM WIRED</span>
+                <a href="https://www.wired.com/subscribe/" class="p-a">Subscribe</a>
+                <a href="https://www.wired.com/newsletter?sourceCode=HeaderAndFooter" class="p-a">Newsletters</a>
+                <a href="https://www.wired.com/about/wired-staff/" class="p-a">Mattresses</a>
+                <a href="https://www.wired.com/about/faq/" class="p-a">Reviews</a>
+                <a href="https://www.wired.com/about/wired-on-background-policy/" class="p-a">FAQ</a>
+                <a href="https://archive.wired.com/t/storefront/storefront" class="p-a">Wired Staff</a>
+                <a href="https://archive.wired.com/t/storefront/storefront" class="p-a">Coupons</a>
+                <a href="https://www.wired.com/category/gear/reviews/" class="p-a">Editorial Standards</a>
+                <a href="https://www.wired.com/about/accessibility-help/" class="p-a">Archive</a>
+            </div>
+            <div class="con-footer-3">
+                <span class="label-footer">CONTACT</span>
+                <a href="https://www.condenast.com/brands/wired" class="p-a">Advertise</a>
+                <a href="https://www.wired.com/about/feedback/" class="p-a">Contact Us</a>
+                <a href="https://subscriptions.wired.com/pubs/N3/WIR/Register.jsp?cds_page_id=175371&cds_mag_code=WIR&id=1705815079542&lsid=40202331195012423&vid=1" class="p-a">Customer Care</a>
+                <a href="https://www.wired.com/about/wired-jobs/" class="p-a">Jobs</a>
+                <a href="https://www.wired.com/about/press/" class="p-a">Press Center</a>
+            </div>
+        </div>
+     </footer>
+</body>
+</html>
